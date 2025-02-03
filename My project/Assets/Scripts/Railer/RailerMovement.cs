@@ -8,6 +8,7 @@ public class RailerMovement : MonoBehaviour
     Rigidbody2D rb;
     GameObject player;
     bool tooCloseToPlayer = false;
+    bool isGrounded = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -16,7 +17,7 @@ public class RailerMovement : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
+        if (player != null && isGrounded == true)
         {
             if (tooCloseToPlayer == true)
             {
@@ -38,6 +39,22 @@ public class RailerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             tooCloseToPlayer = false;
+        }
+    }
+
+    private void OnColissionEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnColissionExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("floor"))
+        {
+            isGrounded = false;
         }
     }
 }
