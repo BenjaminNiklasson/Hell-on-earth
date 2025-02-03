@@ -15,7 +15,7 @@ public class EnemyTurn : MonoBehaviour
     {
         if (player.transform.position.x < transform.position.x && facingRight == true)
         {
-            transform.localScale += new Vector3 (-1,0,0)
+            transform.localScale += new Vector3 (-1,0,0);
             facingRight = false;
         }
         else if (player.transform.position.x > transform.position.x && facingRight == false)
