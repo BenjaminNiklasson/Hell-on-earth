@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class FlyingMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [SerializeField] float rotationSpeed = 3f;
     void Update()
     {
-        
+        transform.Rotate(new Vector3(0, 0, rotationSpeed));
     }
 }
