@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3155458463450243349}
   - component: {fileID: 1146186574579779846}
+  - component: {fileID: 5639850611118683275}
+  - component: {fileID: 4354085580563739425}
   m_Layer: 0
   m_Name: Railgun
   m_TagString: Untagged
@@ -84,6 +86,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5639850611118683275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414592706720684821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd605473f464c6479921f620dabbbb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4354085580563739425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414592706720684821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fe69c4d4d1cd340b324f81dd8f95d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5433342212177915559
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +207,7 @@ GameObject:
   - component: {fileID: 6732037888615765755}
   - component: {fileID: 1119856472979615266}
   - component: {fileID: 5945060828077413366}
+  - component: {fileID: 6240009722833002309}
   - component: {fileID: 8271388457297367487}
   m_Layer: 0
   m_Name: Railer
@@ -198,9 +225,9 @@ Transform:
   m_GameObject: {fileID: 8330127110676808297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.23, y: -0.87895614, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3155458463450243349}
   - {fileID: 5505423761858667599}
@@ -343,6 +370,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0393143}
   m_EdgeRadius: 0
+--- !u!114 &6240009722833002309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330127110676808297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fe69c4d4d1cd340b324f81dd8f95d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &8271388457297367487
 BoxCollider2D:
   m_ObjectHideFlags: 0
