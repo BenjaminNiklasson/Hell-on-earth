@@ -33,6 +33,11 @@ public class RailerMovement : MonoBehaviour
         {
             tooCloseToPlayer = true;
         }
+        else if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = true;
+            Debug.Log("on the ground");
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -40,21 +45,10 @@ public class RailerMovement : MonoBehaviour
         {
             tooCloseToPlayer = false;
         }
-    }
-
-    private void OnColissionEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            isGrounded = true;
-        }
-    }
-
-    private void OnColissionExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("floor"))
+        else if (collision.gameObject.CompareTag("Floor"))
         {
             isGrounded = false;
+            Debug.Log("off the ground");
         }
     }
 }
