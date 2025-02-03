@@ -36,7 +36,6 @@ public class AnxiousMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             tooCloseToPlayer = true;
-            Debug.Log("tooCloseToPlayer = true");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
