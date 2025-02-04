@@ -15,10 +15,13 @@ public class bulletDamage : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        //Destroys the object it collides with and istself if tuching an enemy and only itself if tuching anything else.
+        //It does not dissapear when overlaping anything on the "player" layer since the "bullet" and "player" layer doesn't collide.
     }
 
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
+        // Destroy the bullet off-screan.
     }
 }

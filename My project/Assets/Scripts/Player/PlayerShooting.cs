@@ -19,11 +19,6 @@ public class PlayerShooting : MonoBehaviour
         ammo = ammoMax;
     }
 
-    private void ReloadDone()
-    {
-        isReloading = false;
-    }
-
     void OnFire()
     {
         if (ammo < 1)
@@ -31,6 +26,7 @@ public class PlayerShooting : MonoBehaviour
             ammo = ammoMax;
             Invoke("ReloadDone", reloadTime);
             isReloading = true;
+            //If our ammo is 0 or less we start reloading, reset our ammo and makes sure we will stop reloading after reloadTime seconds.
         }
         if (isReloading)
         {
@@ -39,11 +35,19 @@ public class PlayerShooting : MonoBehaviour
         else
         {
             GameObject bullet = Instantiate(PlayerBullet, PlayerGun.transform.position, transform.rotation);
+            //We create a bullet at the guns position and rotation as well as saving the information about that bullet in a gameobject variable.
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            //We grab the rigidbodycomponent from the saved bullet and save it in the variable "rb".
             rb.AddForce(transform.up * playerBulletSpeed, ForceMode2D.Impulse);
             ammo -= 1;
+            //Adds force to the rb of the bullet and increases it acording to bulletSpeed. Also decreses ammo by one.
             Debug.Log($"The pistol has {ammo} ammo!");
         }
+    }
+
+    private void ReloadDone()
+    {
+        isReloading = false;
     }
 
     void OnReload()
@@ -52,4 +56,5 @@ public class PlayerShooting : MonoBehaviour
         Invoke("ReloadDone", reloadTime);
         isReloading = true;
     }
+    //Does the same thing as when you lose all your bullets but is conected to a custom input action called Reload that is activated with "R". AKA, you can reload sooner by pressing "R".
 }
