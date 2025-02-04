@@ -293,8 +293,8 @@ Transform:
   m_GameObject: {fileID: 418723832}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3174, y: 0.4588, z: 0}
-  m_LocalScale: {x: 0.8549, y: 4.3376, z: 1}
+  m_LocalPosition: {x: 5.5154, y: 0.4804, z: 0}
+  m_LocalScale: {x: 0.88567644, y: 4.938358, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -389,10 +389,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBulletSpeed: 20
-  PlayerBullet: {fileID: 2815490948916353751, guid: b0085f1f6590438448ec56a1b8be78ba, type: 3}
-  PlayerGun: {fileID: 571199307}
-  ammoMax: 20
-  reloadTime: 5
+  playerBullet: {fileID: 2815490948916353751, guid: b0085f1f6590438448ec56a1b8be78ba, type: 3}
+  playerGun: {fileID: 571199307}
+  pistolAmmoMax: 20
+  shotgunAmmoMax: 3
+  minigunAmmoMax: 100
+  reloadTime: 1
+  numShotgunShoots: 6
+  shotgunSpreadDegrees: 15
+  shotgunColdownTime: 0.25
 --- !u!114 &571199310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +489,7 @@ Transform:
   m_GameObject: {fileID: 571199307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8372, y: -0.3459, z: 0}
+  m_LocalPosition: {x: -2.41, y: -0.24, z: 0}
   m_LocalScale: {x: 0.3286, y: 0.7389, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
