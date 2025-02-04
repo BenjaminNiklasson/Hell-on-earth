@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,7 +95,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Laser beam for railgun (Player)_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 228
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ed9b7d347da9c4b95241abbe4c6df2
+      internalID: -991931932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser beam for railgun (Player)_1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 227
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f80ef5d83554c43b9f81816039d286
+      internalID: -953477933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser beam for railgun (Player)_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 163
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7650f3feaf2be4742b7e029c7d49cb45
+      internalID: 984190244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser beam for railgun (Player)_3
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 165
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4d7aed7f7a5b947af0c79499a80770
+      internalID: -1980888128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser beam for railgun (Player)_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 97
+        width: 104
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d2ff8180f13ee4c8c5901627d0ef70
+      internalID: 75304038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser beam for railgun (Player)_5
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 97
+        width: 222
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bf0147b9eea464895f2cbb58c734d7
+      internalID: -246317277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser beam for railgun (Player)_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 33
+        width: 230
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216c3fb3ce2f715439de1413f260fbca
+      internalID: 254431638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser beam for railgun (Player)_7
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 33
+        width: 248
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3545bdf0263de774da49ff2df90da23f
+      internalID: 1666523987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +274,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Laser beam for railgun (Player)_0: -991931932
+      Laser beam for railgun (Player)_1: -953477933
+      Laser beam for railgun (Player)_2: 984190244
+      Laser beam for railgun (Player)_3: -1980888128
+      Laser beam for railgun (Player)_4: 75304038
+      Laser beam for railgun (Player)_5: -246317277
+      Laser beam for railgun (Player)_6: 254431638
+      Laser beam for railgun (Player)_7: 1666523987
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
