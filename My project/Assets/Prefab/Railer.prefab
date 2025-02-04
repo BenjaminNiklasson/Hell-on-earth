@@ -254,9 +254,9 @@ GameObject:
   - component: {fileID: 1249635102546544957}
   - component: {fileID: 7344216846219021777}
   - component: {fileID: 6732037888615765755}
-  - component: {fileID: 1119856472979615266}
   - component: {fileID: 5945060828077413366}
   - component: {fileID: 6240009722833002309}
+  - component: {fileID: 5776906813517804426}
   - component: {fileID: 8271388457297367487}
   m_Layer: 0
   m_Name: Railer
@@ -361,19 +361,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1119856472979615266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8330127110676808297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e4aba9ea3c069479a6b867fd7121c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eSpeed: 3
 --- !u!61 &5945060828077413366
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -433,6 +420,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleChange: -1
   scaleY: 1
+--- !u!114 &5776906813517804426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330127110676808297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e4aba9ea3c069479a6b867fd7121c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eSpeed: 3
 --- !u!61 &8271388457297367487
 BoxCollider2D:
   m_ObjectHideFlags: 0
