@@ -421,7 +421,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9737fd018ba8cf84da926a840315e11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
   moveSpeed: 10
+  jumpSpeed: 20
 --- !u!114 &1226456022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,6 +580,14 @@ PrefabInstance:
       propertyPath: railGun
       value: 
       objectReference: {fileID: 424755646}
+    - target: {fileID: 5776906813517804426, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
+      propertyPath: reloadTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776906813517804426, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
+      propertyPath: shootLaser
+      value: 
+      objectReference: {fileID: 55722778285135844, guid: b24fa3111f090b34b95e4e537e116720, type: 3}
     - target: {fileID: 6371296815999337364, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
       propertyPath: railGun
       value: 
@@ -609,7 +632,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railer
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1276503264554252858, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

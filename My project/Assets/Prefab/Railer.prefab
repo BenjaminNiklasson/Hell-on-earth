@@ -433,6 +433,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eSpeed: 3
+  shootLaser: {fileID: 55722778285135844, guid: b24fa3111f090b34b95e4e537e116720, type: 3}
+  railGun: {fileID: 8164299962669862418}
+  targetingLine: {fileID: 2321229483569628536, guid: b32bb8666f900e040936fba35ee1b274, type: 3}
+  reloadTime: 2
 --- !u!61 &8271388457297367487
 BoxCollider2D:
   m_ObjectHideFlags: 0
