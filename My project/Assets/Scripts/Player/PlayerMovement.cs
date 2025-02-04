@@ -8,7 +8,10 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 moveimput;
     Rigidbody2D rb;
+    [SerializeField] ContactFilter2D groundFilter;
     [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float jumpSpeed = 20f;
+    bool IsGrounded;
 
     void Start()
     {
@@ -25,7 +28,20 @@ public class PlayerMovement : MonoBehaviour
         moveimput = value.Get<Vector2>();
         Debug.Log(moveimput);
     }
-  
+
+    void OnJump()
+    {
+        if (IsGrounded)
+        {
+            rb.velocity += new Vector2(0f, jumpSpeed);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        IsGrounded = rb.IsTouching(groundFilter);
+    }
+
 
     void Update()
     {
