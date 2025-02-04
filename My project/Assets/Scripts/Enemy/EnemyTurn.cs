@@ -22,7 +22,7 @@ public class EnemyTurn : MonoBehaviour
         }
         else if (player.transform.position.x > transform.position.x && facingRight == false)
         {
-            transform.Rotate(new Vector3 (0, 180, 0));
+            transform.localScale = new Vector3 (scaleChange, scaleY, 0);
             facingRight = true;
         }
     }

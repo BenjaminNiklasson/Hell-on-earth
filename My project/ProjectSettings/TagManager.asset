@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - Enemy
   - gun
+  - LaserOrigin
   layers:
   - Default
   - TransparentFX

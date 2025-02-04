@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1146186574579779846}
   - component: {fileID: 5639850611118683275}
   - component: {fileID: 4354085580563739425}
+  - component: {fileID: 1276503264554252858}
   m_Layer: 0
   m_Name: Railgun
   m_TagString: gun
@@ -29,9 +30,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.431, y: -0.02, z: -2}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8293341772385006140}
   m_Father: {fileID: 1249635102546544957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1146186574579779846
@@ -110,8 +112,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fe69c4d4d1cd340b324f81dd8f95d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleChange: -3
-  scaleY: 3
+  scaleChange: 7
+  scaleY: -7
+--- !u!114 &1276503264554252858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414592706720684821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d389f567dc6422a468d07775d2519d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootLaser: {fileID: 55722778285135844, guid: b24fa3111f090b34b95e4e537e116720, type: 3}
+  railGun: {fileID: 1414592706720684821}
 --- !u!1 &5433342212177915559
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +212,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8164299962669862418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8293341772385006140}
+  m_Layer: 0
+  m_Name: LaserOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8293341772385006140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164299962669862418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 1.49, y: 0, z: 2}
+  m_LocalScale: {x: 0.14285713, y: 0.14285713, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3155458463450243349}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &8330127110676808297
 GameObject:
   m_ObjectHideFlags: 0
