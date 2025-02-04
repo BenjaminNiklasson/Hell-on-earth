@@ -6,18 +6,22 @@ using UnityEngine;
 
 public class AspidShooting : MonoBehaviour
 {
-    private float timeBtwShoots;
+    private float timeBtwShoots = 2;
     [SerializeField]public float  startTimeBtwShoots;
 
     public GameObject projectile;
     GameObject player;
+   [SerializeField] public float Speed;
+
+    
+    private Vector2 target;
 
 
     private void Start()
     {
         timeBtwShoots = startTimeBtwShoots;
         player = GameObject.FindWithTag("player");
-
+        target = new Vector2(player.transform.position.x, player.transform.position.y);
     }
 
 
@@ -25,7 +29,9 @@ public class AspidShooting : MonoBehaviour
     {
         if(timeBtwShoots >= 0)
         {
-            Instantiate(projectile, transform.position,quaternion.identity);
+            GameObject aspidProjetile = Instantiate(projectile, transform.position,quaternion.identity);
+            Rigidbody2D rb = aspidProjetile.GetComponent<Rigidbody2D>();
+            aspidProjetile.transform.position = Vector2.MoveTowards(aspidProjetile.transform.position, target, Speed * Time.deltaTime);
             timeBtwShoots = startTimeBtwShoots;
         }
         else
@@ -33,5 +39,4 @@ public class AspidShooting : MonoBehaviour
             timeBtwShoots -= Time.deltaTime;
         }
     }
-
 }
