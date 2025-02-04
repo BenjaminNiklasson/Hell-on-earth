@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyLooking : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class EnemyLooking : MonoBehaviour
     }
     void Update()
     {
-        transform.right = player.transform.position - transform.position; 
+        Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+        transform.rotation = new Quaternion(rotation.x, rotation.y, 0,0);
     }
 }

@@ -6,6 +6,8 @@ public class EnemyTurn : MonoBehaviour
 {
     GameObject player;
     bool facingRight = true;
+    [SerializeField] int scaleChange = -1;
+    [SerializeField] int scaleY;
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -15,7 +17,7 @@ public class EnemyTurn : MonoBehaviour
     {
         if (player.transform.position.x < transform.position.x && facingRight == true)
         {
-            transform.localScale += new Vector3 (-1,0,0);
+            transform.localScale = new Vector3 (scaleChange,scaleY,1);
             facingRight = false;
         }
         else if (player.transform.position.x > transform.position.x && facingRight == false)
