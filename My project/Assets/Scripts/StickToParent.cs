@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StickToParent : MonoBehaviour
 {
-    [SerializeField] GameObject parent;
+    GameObject parent;
     // Start is called before the first frame update
     void Start()
     {
-        
+        parent = GameObject.FindWithTag("gun");
     }
 
     // Update is called once per frame
