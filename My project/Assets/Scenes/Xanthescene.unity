@@ -252,6 +252,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &381557746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1414592706720684821, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
+  m_PrefabInstance: {fileID: 1391643858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &381557751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381557746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d389f567dc6422a468d07775d2519d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootLaser: {fileID: 55722778285135844, guid: b24fa3111f090b34b95e4e537e116720, type: 3}
+  railGun: {fileID: 381557746}
 --- !u!1 &1226456016
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,13 +563,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3155458463450243349, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155458463450243349, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4354085580563739425, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
       propertyPath: scaleY
-      value: -3
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 4354085580563739425, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
       propertyPath: scaleChange
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8330127110676808297, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
       propertyPath: m_Name
@@ -559,7 +586,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1414592706720684821, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 381557751}
   m_SourcePrefab: {fileID: 100100000, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
 --- !u!1 &1622247267
 GameObject:
