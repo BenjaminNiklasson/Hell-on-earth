@@ -16,9 +16,13 @@ public class MoneyFall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (transform.rotation.z < 45)
+        if (transform.rotation.z < 45)
         {
             transform.Rotate(0, 0, rotateSpeed);
+        }
+        else if (transform.rotation.z > 45)
+        {
+
         }
     }
 }

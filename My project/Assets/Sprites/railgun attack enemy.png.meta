@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3810788ace1927e43b79f920ccd72bd7
+guid: b79874583ce7a3a4ca6ad8cdd6442fce
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,11 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
   spritePixelsToUnits: 512
-=======
-  spritePixelsToUnits: 256
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,249 +97,154 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<< HEAD
-      name: Laser beam for railgun (Player)_0
-=======
-      name: 1
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      name: railgun attack enemy_0
       rect:
         serializedVersion: 2
         x: 7
         y: 228
-        width: 248
-        height: 15
+        width: 9
+        height: 10
       alignment: 0
-<<<<<<< HEAD
       pivot: {x: 0, y: 0}
-=======
-      pivot: {x: 0.5, y: 0.5}
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: f9ed9b7d347da9c4b95241abbe4c6df2
-      internalID: -991931932
-=======
-      spriteID: 73ae38f038843dd439bdfde93c24017f
-      internalID: 1396975932
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      spriteID: 980f9bf8a46fbc64b98bff5f22840c30
+      internalID: -997393110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<< HEAD
-      name: Laser beam for railgun (Player)_1
-=======
-      name: 2
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      name: railgun attack enemy_1
       rect:
         serializedVersion: 2
         x: 262
         y: 227
-        width: 248
-        height: 15
+        width: 11
+        height: 12
       alignment: 0
-<<<<<<< HEAD
       pivot: {x: 0, y: 0}
-=======
-      pivot: {x: 0.5, y: 0.5}
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: b4f80ef5d83554c43b9f81816039d286
-      internalID: -953477933
-=======
-      spriteID: 846470fa493081d4c901255997806e48
-      internalID: 1352834601
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      spriteID: 3a5e0b8937b337f4dab25ef7172a2ba5
+      internalID: -1010792444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<< HEAD
-      name: Laser beam for railgun (Player)_2
-=======
-      name: 3
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      name: railgun attack enemy_2
       rect:
         serializedVersion: 2
         x: 6
         y: 163
-        width: 248
-        height: 15
+        width: 11
+        height: 12
       alignment: 0
-<<<<<<< HEAD
       pivot: {x: 0, y: 0}
-=======
-      pivot: {x: 0.5, y: 0.5}
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 7650f3feaf2be4742b7e029c7d49cb45
-      internalID: 984190244
-=======
-      spriteID: beb83c0821cc3784d82531fb34f66014
-      internalID: -1464260857
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      spriteID: a89dcc86df6b2734d943f1c1dc388cef
+      internalID: 10130139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<< HEAD
-      name: Laser beam for railgun (Player)_3
-=======
-      name: 4
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      name: railgun attack enemy_3
       rect:
         serializedVersion: 2
         x: 264
         y: 165
-        width: 248
-        height: 15
+        width: 24
+        height: 8
       alignment: 0
-<<<<<<< HEAD
       pivot: {x: 0, y: 0}
-=======
-      pivot: {x: 0.5, y: 0.5}
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 9c4d7aed7f7a5b947af0c79499a80770
-      internalID: -1980888128
-=======
-      spriteID: 2584db58148b17c4f851c7f32e717bef
-      internalID: -1683338750
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      spriteID: 1e94a3e8225bafa4daa1ad426da2c118
+      internalID: 723876352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<< HEAD
-      name: Laser beam for railgun (Player)_4
-=======
-      name: 5
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      name: railgun attack enemy_4
       rect:
         serializedVersion: 2
         x: 8
         y: 97
-        width: 248
+        width: 104
         height: 15
       alignment: 0
-<<<<<<< HEAD
       pivot: {x: 0, y: 0}
-=======
-      pivot: {x: 0.5, y: 0.5}
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 08d2ff8180f13ee4c8c5901627d0ef70
-      internalID: 75304038
-=======
-      spriteID: c493256f2bc513b4db4ed65bc40744b9
-      internalID: 1714446051
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      spriteID: 0796052463a469e4cb08a3ad61767672
+      internalID: 845503708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<< HEAD
-      name: Laser beam for railgun (Player)_5
-=======
-      name: 6
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      name: railgun attack enemy_5
       rect:
         serializedVersion: 2
         x: 264
         y: 97
-        width: 248
-        height: 15
+        width: 222
+        height: 16
       alignment: 0
-<<<<<<< HEAD
       pivot: {x: 0, y: 0}
-=======
-      pivot: {x: 0.5, y: 0.5}
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 97bf0147b9eea464895f2cbb58c734d7
-      internalID: -246317277
-=======
-      spriteID: 1182ee7810465524496a2652f2ab4045
-      internalID: -2099481865
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      spriteID: 51673b85984d6fb4c8540a3b4ffb7a9e
+      internalID: 1637183184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<< HEAD
-      name: Laser beam for railgun (Player)_6
-=======
-      name: 7
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      name: railgun attack enemy_6
       rect:
         serializedVersion: 2
         x: 8
         y: 33
-        width: 248
+        width: 230
         height: 15
       alignment: 0
-<<<<<<< HEAD
       pivot: {x: 0, y: 0}
-=======
-      pivot: {x: 0.5, y: 0.5}
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 216c3fb3ce2f715439de1413f260fbca
-      internalID: 254431638
-=======
-      spriteID: 0569ab35551550a4a9dd6c72938ebd1a
-      internalID: -2018032794
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      spriteID: d5744c3dea13e1c469323596e5dd5f92
+      internalID: 1321887047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<< HEAD
-      name: Laser beam for railgun (Player)_7
-=======
-      name: 8
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      name: railgun attack enemy_7
       rect:
         serializedVersion: 2
         x: 264
@@ -351,44 +252,14 @@ TextureImporter:
         width: 248
         height: 15
       alignment: 0
-<<<<<<< HEAD
       pivot: {x: 0, y: 0}
-=======
-      pivot: {x: 0.5, y: 0.5}
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 3545bdf0263de774da49ff2df90da23f
-      internalID: 1666523987
-=======
-      spriteID: 171a4382d9e2d94419dd1abf8e727f08
-      internalID: -1012858219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Laser beam for railgun (Player)_8
-      rect:
-        serializedVersion: 2
-        x: 370
-        y: 59
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97578d7b05fd1d54c88dc161c716a53d
-      internalID: 541696677
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      spriteID: 9b1de4d053b824d4a853fb9683e7bd37
+      internalID: 2024308074
       vertices: []
       indices: 
       edges: []
@@ -404,26 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<< HEAD
-      Laser beam for railgun (Player)_0: -991931932
-      Laser beam for railgun (Player)_1: -953477933
-      Laser beam for railgun (Player)_2: 984190244
-      Laser beam for railgun (Player)_3: -1980888128
-      Laser beam for railgun (Player)_4: 75304038
-      Laser beam for railgun (Player)_5: -246317277
-      Laser beam for railgun (Player)_6: 254431638
-      Laser beam for railgun (Player)_7: 1666523987
-=======
-      1: 1396975932
-      2: 1352834601
-      3: -1464260857
-      4: -1683338750
-      5: 1714446051
-      6: -2099481865
-      7: -2018032794
-      8: -1012858219
-      Laser beam for railgun (Player)_8: 541696677
->>>>>>> 2a79fa7e08e6bc9c4c773605e332a7340050ddab
+      railgun attack enemy_0: -997393110
+      railgun attack enemy_1: -1010792444
+      railgun attack enemy_2: 10130139
+      railgun attack enemy_3: 723876352
+      railgun attack enemy_4: 845503708
+      railgun attack enemy_5: 1637183184
+      railgun attack enemy_6: 1321887047
+      railgun attack enemy_7: 2024308074
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
