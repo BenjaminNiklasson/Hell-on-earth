@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - Enemy
   - gun
+  - LaserOrigin
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - Water
   - UI
   - Bullet
-  - 
-  - 
-  - 
+  - EnemyLayer
+  - AspidBullet
+  - Ground
   - 
   - 
   - 

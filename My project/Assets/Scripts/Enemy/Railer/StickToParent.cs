@@ -8,12 +8,13 @@ public class StickToParent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        parent = GameObject.FindWithTag("gun");
+        parent = GameObject.FindWithTag("LaserOrigin");
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = parent.transform.position;
+        transform.rotation = parent.transform.rotation;
     }
 }
