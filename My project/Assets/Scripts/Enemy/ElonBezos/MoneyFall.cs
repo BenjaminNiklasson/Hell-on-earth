@@ -10,27 +10,15 @@ public class MoneyFall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int firstRotate = Random.Range(1, 3);
+        int firstRotate = Random.Range(0, 2);
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (firstRotate)
+        while (transform.rotation.z < 45)
         {
-            case 1:
-                while (transform.rotation.z < 45)
-                {
-                    transform.Rotate(0, 0, rotateSpeed);
-                }
-                break;
-            case 2:
-                while (transform.rotation.z > 45)
-                {
-                    transform.Rotate(0, 0, -rotateSpeed);
-                }
-                break;
-
+            transform.Rotate(0, 0, rotateSpeed);
         }
     }
 }
