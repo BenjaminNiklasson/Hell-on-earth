@@ -394,10 +394,15 @@ MonoBehaviour:
   pistolAmmoMax: 20
   shotgunAmmoMax: 3
   minigunAmmoMax: 100
-  reloadTime: 1
+  pistolReloadTime: 1.5
+  shotgunReloadTime: 2.5
+  minigunReloadTime: 5
   numShotgunShoots: 6
   shotgunSpreadDegrees: 15
   shotgunColdownTime: 0.25
+  minMinigunColdownTime: 0.1
+  maxMinigunColdownTime: 1
+  coldownRate: 1
 --- !u!114 &571199310
 MonoBehaviour:
   m_ObjectHideFlags: 0
