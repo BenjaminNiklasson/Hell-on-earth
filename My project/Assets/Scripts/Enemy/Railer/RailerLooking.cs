@@ -11,12 +11,12 @@ public class RailerLooking : MonoBehaviour
     }
     void Update()
     {
-        bool stopMoving = RailerMovement.IsMoving();
-        if (stopMoving == false)
-        {
-            Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
-            transform.rotation = new Quaternion(rotation.x, rotation.y, 0,0);
-        }
+        //bool stopMoving = RailerMovement.IsMoving();
+        //if (stopMoving == false)
+        //{
+        //    Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+        //    transform.rotation = new Quaternion(rotation.x, rotation.y, 0,0);
+        //}
         
     }
 }
