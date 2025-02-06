@@ -739,6 +739,7 @@ MonoBehaviour:
     maxNormalAngle: 135
   moveSpeed: 10
   jumpSpeed: 8
+  maxNumberOfJumps: 1
 --- !u!114 &1308830263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,9 +778,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 649373471574190480, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2571326966528516529, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
       propertyPath: m_Name
       value: Flying Enemy Center
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571326966528516529, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4961975281769912384, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
       propertyPath: Speed
@@ -788,6 +797,14 @@ PrefabInstance:
     - target: {fileID: 4961975281769912384, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
       propertyPath: startTimeBtwShoots
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188501836298036328, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188501836298036328, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8703728482212163778, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
       propertyPath: m_LocalPosition.x
