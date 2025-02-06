@@ -388,21 +388,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a02eb2f493e044eba6fd6831fdabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBulletSpeed: 20
+  playerBulletSpeed: 30
   playerBullet: {fileID: 2815490948916353751, guid: b0085f1f6590438448ec56a1b8be78ba, type: 3}
   playerGun: {fileID: 571199307}
   pistolAmmoMax: 20
   shotgunAmmoMax: 3
-  minigunAmmoMax: 100
+  minigunAmmoMax: 150
   pistolReloadTime: 1.5
   shotgunReloadTime: 2.5
   minigunReloadTime: 5
   numShotgunShoots: 6
   shotgunSpreadDegrees: 15
+  minigunSpreadDegrees: 5
   shotgunColdownTime: 0.25
-  minMinigunColdownTime: 0.1
-  maxMinigunColdownTime: 1
-  coldownRate: 1
+  minMinigunColdownTime: 0.075
+  maxMinigunColdownTime: 1.2
+  coldownChangeRate: 0.3
 --- !u!114 &571199310
 MonoBehaviour:
   m_ObjectHideFlags: 0

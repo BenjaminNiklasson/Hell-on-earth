@@ -49,6 +49,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchToMiniGun",
+                    "type": "Button",
+                    "id": "f7ad6217-4888-4e3b-8fa1-4af79453ebb3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchToShotGun",
+                    "type": "Button",
+                    "id": "db9e43ad-23d4-4168-a055-0c32320c5169",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchToPistol",
+                    "type": "Button",
+                    "id": "15b0bf93-ae4a-41f9-97b5-4df736076b63",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -357,6 +384,39 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "ContinuousFire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7cebf087-0fda-4d90-a204-a29053a2b2cd",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchToMiniGun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d2660a3-be36-403f-bbfc-1bb0ada0fec7",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchToShotGun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "70812f72-6b2d-42dd-b8a1-f74e7f948739",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchToPistol",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

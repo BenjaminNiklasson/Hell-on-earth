@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,29 +8,45 @@ using UnityEngine.InputSystem;
 public class PlayerShooting : MonoBehaviour
 {
     [SerializeField] float playerBulletSpeed = 10f;
+    //When we add force to our bullet we times the added force with this number.
     [SerializeField] GameObject playerBullet;
     [SerializeField] GameObject playerGun;
     [SerializeField] int pistolAmmoMax = 20;
     [SerializeField] int shotgunAmmoMax = 3;
     [SerializeField] int minigunAmmoMax = 100;
+    // Specified gun will be able to fire this many times before invoking a coldown.
     [SerializeField] float pistolReloadTime = 1.5f;
     [SerializeField] float shotgunReloadTime = 2.5f;
     [SerializeField] float minigunReloadTime = 5;
+    // How long coldown specified gun has to wait while reloading.
     [SerializeField] int numShotgunShoots;
+    // How many bullets that are fired from the shotgun;
     [SerializeField] float shotgunSpreadDegrees;
+    [SerializeField] float minigunSpreadDegrees;
+    // How many degrees + and - from the shotguns or miniguns current angle the shots are goining get degrees between, aka firearc.
     [SerializeField] float shotgunColdownTime;
+    // A shorter coldown between shots, so that you can't spam all your shots at once, note that the pistol has no such cap.
     [SerializeField] float minMinigunColdownTime;
     [SerializeField] float maxMinigunColdownTime;
-    [SerializeField] float coldownRate;
+    // The minigun has a windup. Therefor the actuall coldown between shots will start at the maxcoldown but lessen as you shoot but not lower that mincoldown. 
+    // While idle it will go back up to max again but not further.
+    [SerializeField] float coldownChangeRate;
+    // How often the coldowntime will decrees.
     bool isReloading = false;
+    // You can only shoot when this is false and it turns true for a while when you lose all ammo.
     bool gunColdown = false;
+    // You can only shoot when this is false and it turns true for a while when you shoot with the minigun or shotgun.
     int ammo;
     bool playerHasShotgun = false;
-    bool playerHasMinigun = true;
-    bool playerHasPistol = false;
+    bool playerHasMinigun = false;
+    bool playerHasPistol = true;
+    // Desides witch type of shooting should be active. Doesent change currently?
     bool currentlyShooting = false;
+    // Is active while player is pushing down the fire button;
     bool currentlyInvokingWindup = false;
+    // I have a invoke in update, it only ivokes when this bool is false. Otherwise it would start multiple ivokes at once.
     float currentMinigunColdownTime;
+    // The actuall coldowntime between shots for minigun. 
 
     private void Start()
     {
@@ -39,10 +56,12 @@ public class PlayerShooting : MonoBehaviour
 
     private void Update()
     {
-        if (currentlyShooting)
+        if (currentlyShooting && !isReloading)
         {
+            //Checks if we are currently shooting and not reloading. These are in the same so that you cna't negate the windown while reloading by just continuing to press fire.
             if (playerHasMinigun)
             {
+                // Makes sure we have minigun.
                 if (ammo < 1)
                 {
                     ResetAmmo();
@@ -50,35 +69,40 @@ public class PlayerShooting : MonoBehaviour
                     isReloading = true;
                     //If our ammo is 0 or less we start reloading, reset our ammo and makes sure we will stop reloading after reloadTime seconds.
                 }
+                if (gunColdown)
+                {
+                    return;
+                    //Makes it so that you can't shoot while on coldown.
+                }
+                else
+                {
+                    float baseRotationZ = playerGun.transform.rotation.eulerAngles.z;
+                    float randomOffset = Random.Range(-minigunSpreadDegrees, minigunSpreadDegrees);
+                    Quaternion bulletSpawnRotation = Quaternion.Euler(0, 0, baseRotationZ + randomOffset);
+                    
+                    GameObject bullet = Instantiate(playerBullet, playerGun.transform.position, bulletSpawnRotation);
+                    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                    rb.AddForce(transform.up * playerBulletSpeed, ForceMode2D.Impulse);
+                    ammo -= 1;
+                    gunColdown = true;
+                    Invoke("gunColdownDone", currentMinigunColdownTime);
+
+                    // Spawns one bullet per itteration of the forloop.
+                    // First we get the rotation of the wepon, then randomly alters it by a number between the positive and negative version of the firearc.
+                    // Lastly we instantiate the bullet with the randomly given rotation and gives it force in that direction.
+                    // Decreases ammo and puts the gun on coldown.
+                }
                 if (isReloading)
                 {
                     return;
                 }
-                else if (gunColdown)
+                else if (currentMinigunColdownTime >= minMinigunColdownTime)
                 {
-                    return;
-                }
-                else
-                {
-                    GameObject bullet = Instantiate(playerBullet, playerGun.transform.position, transform.rotation);
-                    //We create a bullet at the guns position and rotation as well as saving the information about that bullet in a gameobject variable.
-                    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-                    //We grab the rigidbodycomponent from the saved bullet and save it in the variable "rb".
-                    rb.AddForce(transform.up * playerBulletSpeed, ForceMode2D.Impulse);
-                    ammo -= 1;
-                    //Adds force to the rb of the bullet and increases it acording to bulletSpeed. Also decreses ammo by one.
-                    Debug.Log($"The Minigun has {ammo} ammo!");
-                    gunColdown = true;
-                    Invoke("gunColdownDone", currentMinigunColdownTime);
-                }
-                if (currentMinigunColdownTime >= minMinigunColdownTime)
-                {
-                    Debug.Log("currentMinigunColdownTime >= minMinigunColdownTime");
                     if (currentlyInvokingWindup == false)
                     {
-                        Invoke("DecreaseGunColdown", coldownRate);
+                        Invoke("DecreaseGunColdown", coldownChangeRate);
                         currentlyInvokingWindup = true;
-                        Debug.Log("currentlyInvokingWindup == false");
+                        // When we arren't reloading and we arent at our minimum coldowntime we increas our coldowntime and make sure we can't invoke the method that decreases the coldown time until coldownchangerate seconds have passed.
                     }
                 }
             }
@@ -90,26 +114,13 @@ public class PlayerShooting : MonoBehaviour
                 Debug.Log("currentMinigunColdownTime < maxMinigunColdownTime");
                 if (currentlyInvokingWindup == false)
                 {
-                    Invoke("IncreaseGunColdown", coldownRate);
+                    Invoke("IncreaseGunColdown", coldownChangeRate);
                     currentlyInvokingWindup = true;
                     Debug.Log("currentlyInvokingWindup == false");
+                    // Increses the coldowntime instead. Always does this except when you are fireing.
                 }
             }
         }
-    }
-
-    void IncreaseGunColdown()
-    {
-        currentMinigunColdownTime = currentMinigunColdownTime * 1.25f;
-        currentlyInvokingWindup = false;
-        Debug.Log("IncreaseGunColdown");
-    }
-
-    void DecreaseGunColdown()
-    {
-        currentMinigunColdownTime = currentMinigunColdownTime * 0.8f;
-        currentlyInvokingWindup = false;
-        Debug.Log("DecreaseGunColdown");
     }
 
     void OnFire()
@@ -126,14 +137,15 @@ public class PlayerShooting : MonoBehaviour
             if (isReloading)
             {
                 return;
+                //Makes it so that you can't shoot while reloading.
             }
             else if (gunColdown)
             {
                 return;
+                //Makes it so that you can't shoot while on coldown.
             }
             else
             {
-                Debug.Log(numShotgunShoots);
                 for (int i = 0; i < numShotgunShoots; i++)
                 {
                     Debug.Log("Pang!");
@@ -144,11 +156,14 @@ public class PlayerShooting : MonoBehaviour
                     GameObject bullet = Instantiate(playerBullet, playerGun.transform.position, bulletSpawnRotation);
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                     rb.AddForce(bullet.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
+                    // Spawns one bullet per itteration of the forloop.
+                    // First we get the rotation of the wepon, then randomly alters it by a number between the positive and negative version of the firearc.
+                    // Lastly we instantiate the bullet with the randomly given rotation and gives it force in that direction.
                 }
                 ammo -= 1;
-                Debug.Log($"The shotgun has {ammo} ammo!");
                 gunColdown = true;
                 Invoke("gunColdownDone", shotgunColdownTime);
+                // Decreases ammo and puts the gun on coldown.
             }
         }
         else if (playerHasPistol)
@@ -181,16 +196,33 @@ public class PlayerShooting : MonoBehaviour
     void OnContinuousFire()
     {
         currentlyShooting =! currentlyShooting;
+        // It runs when the player clicks and stops so firering will be active while the player is pushing down specefied button.
+    }
+
+    void IncreaseGunColdown()
+    {
+        currentMinigunColdownTime = currentMinigunColdownTime * 1.25f;
+        currentlyInvokingWindup = false;
+        // Lets other code call upon the method once again as well as incresing the miniguncoldowntime.
+    }
+
+    void DecreaseGunColdown()
+    {
+        currentMinigunColdownTime = currentMinigunColdownTime * 0.8f;
+        currentlyInvokingWindup = false;
+        // Same but decreases. I have the numbers 1.25 and 0.8 because 0.8 *1.25 = 0.
     }
 
     private void ReloadDone()
     {
         isReloading = false;
+        //Makes you able to shoot again.
     }
 
     private void gunColdownDone()
     {
         gunColdown = false;
+        // Makes you able to shoot again.
     }
 
     private void ResetAmmo()
@@ -207,6 +239,7 @@ public class PlayerShooting : MonoBehaviour
         {
             ammo = minigunAmmoMax;
         }
+        // Reloads ammo and makes sure it is as much ammo as the current gun your using.
     }
 
     void OnReload()
@@ -227,4 +260,27 @@ public class PlayerShooting : MonoBehaviour
         isReloading = true;
     }
     //Does the same thing as when you lose all your bullets but is conected to a custom input action called Reload that is activated with "R". AKA, you can reload sooner by pressing "R".
+
+    void OnSwitchToMiniGun()
+    {
+        playerHasMinigun = true;
+        playerHasPistol = false;
+        playerHasShotgun = false;
+        OnReload();
+    }
+    void OnSwitchToShotGun()
+    {
+        playerHasMinigun = false;
+        playerHasPistol = false;
+        playerHasShotgun = true;
+        OnReload();
+    }
+    void OnSwitchToPistol()
+    {
+        playerHasMinigun = false;
+        playerHasPistol = true;
+        playerHasShotgun = false;
+        OnReload();
+    }
+    // You can switch your current wepon with the buttons 1,2 and 3 but you have to reload when doing so.
 }
