@@ -549,6 +549,7 @@ GameObject:
   - component: {fileID: 517676655}
   - component: {fileID: 517676654}
   - component: {fileID: 517676653}
+  - component: {fileID: 517676658}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -712,6 +713,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &517676658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517676652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f47b66bdb77bb4881cb2eaeaf2d38d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwShoots: 5
+  projectile: {fileID: 7346280275693731633, guid: dc02e0270173f3b478519334f6f0e5cd, type: 3}
+  Speed: 1
 --- !u!1 &1308830256
 GameObject:
   m_ObjectHideFlags: 0
