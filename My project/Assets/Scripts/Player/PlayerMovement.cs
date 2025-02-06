@@ -12,10 +12,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float jumpSpeed = 20f;
     bool IsGrounded;
+    [SerializeField]int maxNumberOfJumps = 1;
+    int numberOfJumps = 0;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //numberOfJumps = maxNumberOfJumps;
     }
 
     void OnFire()
@@ -31,15 +34,20 @@ public class PlayerMovement : MonoBehaviour
 
     void OnJump()
     {
-        if (IsGrounded)
+        if (numberOfJumps > 0)
         {
-            rb.velocity += new Vector2(0f, jumpSpeed);
+            rb.velocity = new Vector2(0f, jumpSpeed);
+            numberOfJumps -= 1;
         }
     }
 
     private void FixedUpdate()
     {
         IsGrounded = rb.IsTouching(groundFilter);
+        if(IsGrounded ==true)
+        {
+            numberOfJumps = maxNumberOfJumps;
+        }
     }
 
 

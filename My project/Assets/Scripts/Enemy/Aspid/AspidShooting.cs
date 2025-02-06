@@ -6,9 +6,8 @@ using UnityEngine;
 
 public class AspidShooting : MonoBehaviour
 {
-    private float timeBtwShoots = 2;
     [SerializeField]public float  startTimeBtwShoots;
-
+    bool notOnCooldown = true;
     public GameObject projectile;
     GameObject player;
    [SerializeField] public float Speed;
@@ -19,24 +18,28 @@ public class AspidShooting : MonoBehaviour
 
     private void Start()
     {
-        timeBtwShoots = startTimeBtwShoots;
-        player = GameObject.FindWithTag("player");
+        player = GameObject.FindWithTag("Player");
         target = new Vector2(player.transform.position.x, player.transform.position.y);
     }
 
 
     private void Update()
     {
-        if(timeBtwShoots >= 0)
+        if(notOnCooldown == true && player != null)
         {
             GameObject aspidProjetile = Instantiate(projectile, transform.position,quaternion.identity);
             Rigidbody2D rb = aspidProjetile.GetComponent<Rigidbody2D>();
-            aspidProjetile.transform.position = Vector2.MoveTowards(aspidProjetile.transform.position, target, Speed * Time.deltaTime);
-            timeBtwShoots = startTimeBtwShoots;
-        }
-        else
-        {
-            timeBtwShoots -= Time.deltaTime;
+            target = new Vector2(player.transform.position.x, player.transform.position.y);
+            Vector2 direcetion = new Vector2(target.x - transform.position.x , target.y - transform.position.y );
+            rb.AddForce(direcetion * Speed, ForceMode2D.Impulse);
+            notOnCooldown = false;
+            Invoke("AfterCooldown", startTimeBtwShoots);
         }
     }
+
+    void AfterCooldown()
+    {
+        notOnCooldown = true;
+    }
+    
 }

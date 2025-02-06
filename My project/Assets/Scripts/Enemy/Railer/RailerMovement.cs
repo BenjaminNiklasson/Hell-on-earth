@@ -11,34 +11,36 @@ public class RailerMovement : MonoBehaviour
     GameObject player;
     bool tooCloseToPlayer = false;
     bool isGrounded = false;
-    bool isShooting = false;
-    bool stopMoving = false;
+    public bool isShooting = false;
 
     //variables for shooting
-    [SerializeField] GameObject shootLaser;
-    [SerializeField] GameObject railGun;
+    [SerializeField] GameObject shootLaserLeft;
+    [SerializeField] GameObject shootLaserRight;
     [SerializeField] GameObject targetingLine;
     [SerializeField] float reloadTime = 1.5f;
+    RailerLooking rl;
+    RailerOriginRotation ror;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
+        rl = transform.GetChild(0).GetComponent<RailerLooking>();
+        ror = transform.GetChild(0).GetChild(0).GetComponent<RailerOriginRotation>();
     }
     void Update()
     {
         //When on the ground and too close to player it will move away
-        if (player != null && isGrounded == true && stopMoving == false)
+        if (player != null && isGrounded == true)
         {
-            if (tooCloseToPlayer == true)
+            if (tooCloseToPlayer == true && isShooting == false)
             {
                 Vector2 direction = (player.transform.position - transform.position).normalized;
                 rb.MovePosition(rb.position - direction * eSpeed * Time.fixedDeltaTime);
             }
             else if (isShooting == false && tooCloseToPlayer == false)
             {
-                stopMoving = true;
                 isShooting = true;
-                RailerTargeting(player.transform.position);
+                RailerTargeting();
             }
         }
     }
@@ -64,26 +66,34 @@ public class RailerMovement : MonoBehaviour
             isGrounded = false;
         }
     }
-    private void RailerTargeting(Vector3 playerPos)
+    private void RailerTargeting()
     {
-        GameObject targeting = Instantiate(targetingLine, railGun.transform.position, railGun.transform.rotation);
+        GameObject targeting = Instantiate(targetingLine, transform.GetChild(0).GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
         Debug.Log("Targeting...");
         Invoke("RailerShooting", reloadTime);
     }
+    GameObject laser;
     private void RailerShooting()
     {
-        GameObject laser = Instantiate(shootLaser, railGun.transform.position, railGun.transform.rotation);
+        if (transform.localScale.x == -1)
+        {
+            laser = Instantiate(shootLaserRight, transform.GetChild(0).GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
+        }
+        else if (transform.localScale.x == 1)
+        {
+            laser = Instantiate(shootLaserLeft, transform.GetChild(0).GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
+        }
+        laser.transform.SetParent(transform.GetChild(0).GetChild(0));
+        rl.stopAim = true;
+        ror.stopRotating = true;
         Debug.Log("FIRE!");
         Invoke("Falsify", 4f);
     }
     private void Falsify()
     {
-        stopMoving = false;
         isShooting = false;
-    }
-
-    public bool IsMoving()
-    {
-        return stopMoving;
+        rl.stopAim = false;
+        ror.stopRotating = false;
+        Debug.Log("Falsifying");
     }
 }
