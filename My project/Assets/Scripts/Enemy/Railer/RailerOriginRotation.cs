@@ -12,7 +12,7 @@ public class RailerOriginRotation : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        rm = transform.parent.GetComponent<RailerMovement>();
+        rm = transform.parent.parent.GetComponent<RailerMovement>();
     }
     void Update()
     {

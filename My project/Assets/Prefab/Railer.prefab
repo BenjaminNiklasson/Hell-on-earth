@@ -206,6 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8293341772385006140}
+  - component: {fileID: 6478270628582597986}
   m_Layer: 0
   m_Name: LaserOrigin
   m_TagString: LaserOrigin
@@ -228,6 +229,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3155458463450243349}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6478270628582597986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164299962669862418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8a79a894cddff4e84f1bda2396c40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopRotating: 0
 --- !u!1 &8330127110676808297
 GameObject:
   m_ObjectHideFlags: 0

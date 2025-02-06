@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class TankMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] ContactFilter2D groundFilter;
+    Vector2 moveimput;
+    Rigidbody2D rb;
+    bool IsGrounded;
+    GameObject player;
+    [SerializeField] float eSpeed = 1f;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindWithTag("Player");
+    }
+    private void FixedUpdate()
+    {
+        IsGrounded = rb.IsTouching(groundFilter);
+        if (IsGrounded == true)
+        {
+            Vector2 direction = (player.transform.position - transform.position).normalized;
+            rb.MovePosition(rb.position + direction * eSpeed * Time.fixedDeltaTime);
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
