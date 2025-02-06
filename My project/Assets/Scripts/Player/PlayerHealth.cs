@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     {
         invincible = false;
     }
-        
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Hazard"))
@@ -31,13 +31,6 @@ public class PlayerHealth : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-              
-                
-           
-           
-            
         }
     }
-
-    
 }

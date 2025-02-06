@@ -69,6 +69,7 @@ public class RailerMovement : MonoBehaviour
     private void RailerTargeting()
     {
         GameObject targeting = Instantiate(targetingLine, transform.GetChild(0).GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
+        targeting.transform.SetParent(transform.GetChild(0).GetChild(0));
         Debug.Log("Targeting...");
         Invoke("RailerShooting", reloadTime);
     }
