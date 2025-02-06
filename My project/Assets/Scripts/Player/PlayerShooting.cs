@@ -40,7 +40,11 @@ public class PlayerShooting : MonoBehaviour
     bool playerHasShotgun = false;
     bool playerHasMinigun = false;
     bool playerHasPistol = true;
-    // Desides witch type of shooting should be active. Doesent change currently?
+    // Desides witch type of shooting should be active.
+    bool playerHasShotgunEquipped = false;
+    bool playerHasMinigunEquipped = false;
+    bool playerHasPistolEquipped = true;
+    // Desides witch type of shooting should be active.
     bool currentlyShooting = false;
     // Is active while player is pushing down the fire button;
     bool currentlyInvokingWindup = false;
@@ -59,9 +63,9 @@ public class PlayerShooting : MonoBehaviour
         if (currentlyShooting && !isReloading)
         {
             //Checks if we are currently shooting and not reloading. These are in the same so that you cna't negate the windown while reloading by just continuing to press fire.
-            if (playerHasMinigun)
+            if (playerHasMinigunEquipped && playerHasMinigun)
             {
-                // Makes sure we have minigun.
+                // Makes sure we have minigun and the minigun equipped.
                 if (ammo < 1)
                 {
                     ResetAmmo();
@@ -125,7 +129,7 @@ public class PlayerShooting : MonoBehaviour
 
     void OnFire()
     {
-        if (playerHasShotgun)
+        if (playerHasShotgunEquipped && playerHasShotgun)
         {
             if (ammo < 1)
             {
@@ -166,7 +170,7 @@ public class PlayerShooting : MonoBehaviour
                 // Decreases ammo and puts the gun on coldown.
             }
         }
-        else if (playerHasPistol)
+        else if (playerHasPistolEquipped && playerHasPistol)
         {
             if (ammo < 1)
             {
@@ -227,15 +231,15 @@ public class PlayerShooting : MonoBehaviour
 
     private void ResetAmmo()
     {
-        if (playerHasPistol)
+        if (playerHasPistol && playerHasPistolEquipped)
         {
             ammo = pistolAmmoMax;
         }
-        else if (playerHasShotgun)
+        else if (playerHasShotgun && playerHasShotgunEquipped)
         {
             ammo = shotgunAmmoMax;
         }
-        else if (playerHasMinigun)
+        else if (playerHasMinigun && playerHasMinigunEquipped)
         {
             ammo = minigunAmmoMax;
         }
@@ -245,15 +249,15 @@ public class PlayerShooting : MonoBehaviour
     void OnReload()
     {
         ResetAmmo();
-        if (playerHasPistol)
+        if (playerHasPistolEquipped)
         {
             Invoke("ReloadDone", pistolReloadTime);
         }
-        else if (playerHasShotgun)
+        else if (playerHasShotgunEquipped)
         {
             Invoke("ReloadDone", shotgunReloadTime);
         }
-        else if (playerHasMinigun)
+        else if (playerHasMinigunEquipped)
         {
             Invoke("ReloadDone", minigunReloadTime);
         }
@@ -263,24 +267,44 @@ public class PlayerShooting : MonoBehaviour
 
     void OnSwitchToMinigun()
     {
-        playerHasMinigun = true;
-        playerHasPistol = false;
-        playerHasShotgun = false;
-        OnReload();
+        if (playerHasMinigun)
+        {
+            playerHasMinigunEquipped = true;
+            playerHasPistolEquipped = false;
+            playerHasShotgunEquipped = false;
+            OnReload();
+        }
     }
     void OnSwitchToShotgun()
     {
-        playerHasMinigun = false;
-        playerHasPistol = false;
-        playerHasShotgun = true;
-        OnReload();
+        if (playerHasShotgun)
+        {
+            playerHasMinigunEquipped = false;
+            playerHasPistolEquipped = false;
+            playerHasShotgunEquipped = true;
+            OnReload();
+        }
     }
     void OnSwitchToPistol()
     {
-        playerHasMinigun = false;
-        playerHasPistol = true;
-        playerHasShotgun = false;
+        playerHasMinigunEquipped = false;
+        playerHasPistolEquipped = true;
+        playerHasShotgunEquipped = false;
         OnReload();
     }
     // You can switch your current wepon with the buttons 1,2 and 3 but you have to reload when doing so.
+
+    public void ActivateShotgun()
+    {
+        playerHasShotgun = true;
+        OnSwitchToShotgun();
+    }
+    // It activates when the player collides with the shotgunpickup.
+
+    public void ActivateMinigun()
+    {
+        playerHasShotgun = true;
+        OnSwitchToMinigun();
+    }
+    // It activates when the player collides with the minigunpickup.
 }
