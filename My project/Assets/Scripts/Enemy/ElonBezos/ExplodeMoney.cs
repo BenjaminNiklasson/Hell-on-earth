@@ -8,7 +8,7 @@ public class ExplodeMoney : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Explosion = Instantiate(Explosion, transform.position, new Quaternion (0,0,0,0));
-        Destroy(transform.parent);
+        Destroy(transform.parent.gameObject);
         Destroy(gameObject);
     }
 }

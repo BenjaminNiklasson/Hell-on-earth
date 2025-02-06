@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3155458463450243349}
   - component: {fileID: 1146186574579779846}
-  - component: {fileID: 8170298178874064166}
   - component: {fileID: 6490236861547346399}
   m_Layer: 0
   m_Name: Railgun
@@ -87,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8170298178874064166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414592706720684821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a8f0b6a5d4fcba468e016287648d2c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stopAim: 0
 --- !u!114 &6490236861547346399
 MonoBehaviour:
   m_ObjectHideFlags: 0
