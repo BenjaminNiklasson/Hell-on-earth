@@ -261,14 +261,14 @@ public class PlayerShooting : MonoBehaviour
     }
     //Does the same thing as when you lose all your bullets but is conected to a custom input action called Reload that is activated with "R". AKA, you can reload sooner by pressing "R".
 
-    void OnSwitchToMiniGun()
+    void OnSwitchToMinigun()
     {
         playerHasMinigun = true;
         playerHasPistol = false;
         playerHasShotgun = false;
         OnReload();
     }
-    void OnSwitchToShotGun()
+    void OnSwitchToShotgun()
     {
         playerHasMinigun = false;
         playerHasPistol = false;
