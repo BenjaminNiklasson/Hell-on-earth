@@ -303,7 +303,7 @@ public class PlayerShooting : MonoBehaviour
 
     public void ActivateMinigun()
     {
-        playerHasShotgun = true;
+        playerHasMinigun = true;
         OnSwitchToMinigun();
     }
     // It activates when the player collides with the minigunpickup.
