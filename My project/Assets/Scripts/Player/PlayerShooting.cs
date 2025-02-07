@@ -10,6 +10,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] float playerBulletSpeed = 10f;
     //When we add force to our bullet we times the added force with this number.
     [SerializeField] GameObject playerBullet;
+    [SerializeField] GameObject playerMinigunBullet;
     [SerializeField] GameObject playerGun;
     [SerializeField] int pistolAmmoMax = 20;
     [SerializeField] int shotgunAmmoMax = 3;
@@ -84,7 +85,7 @@ public class PlayerShooting : MonoBehaviour
                     float randomOffset = Random.Range(-minigunSpreadDegrees, minigunSpreadDegrees);
                     Quaternion bulletSpawnRotation = Quaternion.Euler(0, 0, baseRotationZ + randomOffset);
                     
-                    GameObject bullet = Instantiate(playerBullet, playerGun.transform.position, bulletSpawnRotation);
+                    GameObject bullet = Instantiate(playerMinigunBullet, playerGun.transform.position, bulletSpawnRotation);
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                     rb.AddForce(transform.up * playerBulletSpeed, ForceMode2D.Impulse);
                     ammo -= 1;
