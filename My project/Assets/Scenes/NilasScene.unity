@@ -293,8 +293,8 @@ Transform:
   m_GameObject: {fileID: 418723832}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3174, y: 0.4588, z: 0}
-  m_LocalScale: {x: 0.8549, y: 4.3376, z: 1}
+  m_LocalPosition: {x: 5.5154, y: 0.4804, z: 0}
+  m_LocalScale: {x: 0.88567644, y: 4.938358, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -388,11 +388,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a02eb2f493e044eba6fd6831fdabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBulletSpeed: 20
-  PlayerBullet: {fileID: 2815490948916353751, guid: b0085f1f6590438448ec56a1b8be78ba, type: 3}
-  PlayerGun: {fileID: 571199307}
-  ammoMax: 20
-  reloadTime: 5
+  playerBulletSpeed: 30
+  playerBullet: {fileID: 2815490948916353751, guid: b0085f1f6590438448ec56a1b8be78ba, type: 3}
+  playerGun: {fileID: 571199307}
+  pistolAmmoMax: 20
+  shotgunAmmoMax: 3
+  minigunAmmoMax: 150
+  pistolReloadTime: 1.5
+  shotgunReloadTime: 2.5
+  minigunReloadTime: 5
+  numShotgunShoots: 6
+  shotgunSpreadDegrees: 15
+  minigunSpreadDegrees: 5
+  shotgunColdownTime: 0.25
+  minMinigunColdownTime: 0.075
+  maxMinigunColdownTime: 1.2
+  coldownChangeRate: 0.3
 --- !u!114 &571199310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: b1dcfeec094cc324ea2849c295f351a3, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 1fc37610211b3cb46abc53a44be73160, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -484,7 +495,7 @@ Transform:
   m_GameObject: {fileID: 571199307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8372, y: -0.3459, z: 0}
+  m_LocalPosition: {x: -2.41, y: -0.24, z: 0}
   m_LocalScale: {x: 0.3286, y: 0.7389, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
