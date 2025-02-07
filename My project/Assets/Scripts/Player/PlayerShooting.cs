@@ -186,12 +186,12 @@ public class PlayerShooting : MonoBehaviour
             }
             else
             {
-                GameObject bullet = Instantiate(playerBullet, playerGun.transform.position, transform.rotation);
+                GameObject bullet = Instantiate(playerBullet, playerGun.transform.position, playerGun.transform.rotation);
                 //We create a bullet at the guns position and rotation as well as saving the information about that bullet in a gameobject variable.
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                 //We grab the rigidbodycomponent from the saved bullet and save it in the variable "rb".
-                rb.AddForce(transform.up * playerBulletSpeed, ForceMode2D.Impulse);
-                ammo -= 1;
+                rb.AddForce(playerGun.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
+                ammo--;
                 //Adds force to the rb of the bullet and increases it acording to bulletSpeed. Also decreses ammo by one.
                 Debug.Log($"The pistol has {ammo} ammo!");
             }
