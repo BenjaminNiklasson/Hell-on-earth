@@ -6,12 +6,7 @@ public class bulletDamage : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject)
+        if (collision.gameObject)
         {
             Destroy(gameObject);
         }

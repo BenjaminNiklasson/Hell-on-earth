@@ -21,6 +21,5 @@ public class RailerLooking : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
             transform.rotation = new Quaternion(rotation.x, rotation.y, 0,0);
         }
-        
     }
 }

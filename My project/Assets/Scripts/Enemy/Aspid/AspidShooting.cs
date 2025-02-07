@@ -25,7 +25,7 @@ public class AspidShooting : MonoBehaviour
 
     private void Update()
     {
-        if(notOnCooldown == true)
+        if(notOnCooldown == true && player != null)
         {
             GameObject aspidProjetile = Instantiate(projectile, transform.position,quaternion.identity);
             Rigidbody2D rb = aspidProjetile.GetComponent<Rigidbody2D>();

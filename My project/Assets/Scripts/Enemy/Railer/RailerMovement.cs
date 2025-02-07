@@ -14,16 +14,18 @@ public class RailerMovement : MonoBehaviour
     public bool isShooting = false;
 
     //variables for shooting
-    [SerializeField] GameObject shootLaser;
-    [SerializeField] GameObject railGun;
+    [SerializeField] GameObject shootLaserLeft;
+    [SerializeField] GameObject shootLaserRight;
     [SerializeField] GameObject targetingLine;
     [SerializeField] float reloadTime = 1.5f;
     RailerLooking rl;
+    RailerOriginRotation ror;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         rl = transform.GetChild(0).GetComponent<RailerLooking>();
+        ror = transform.GetChild(0).GetChild(0).GetComponent<RailerOriginRotation>();
     }
     void Update()
     {
@@ -44,7 +46,7 @@ public class RailerMovement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("AspidAway"))
         {
             tooCloseToPlayer = true;
         }
@@ -66,14 +68,25 @@ public class RailerMovement : MonoBehaviour
     }
     private void RailerTargeting()
     {
-        GameObject targeting = Instantiate(targetingLine, railGun.transform.position, railGun.transform.rotation);
+        GameObject targeting = Instantiate(targetingLine, transform.GetChild(0).GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
+        targeting.transform.SetParent(transform.GetChild(0).GetChild(0));
         Debug.Log("Targeting...");
         Invoke("RailerShooting", reloadTime);
     }
+    GameObject laser;
     private void RailerShooting()
     {
-        GameObject laser = Instantiate(shootLaser, railGun.transform.position, railGun.transform.rotation);
+        if (transform.localScale.x == -1)
+        {
+            laser = Instantiate(shootLaserRight, transform.GetChild(0).GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
+        }
+        else if (transform.localScale.x == 1)
+        {
+            laser = Instantiate(shootLaserLeft, transform.GetChild(0).GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
+        }
+        laser.transform.SetParent(transform.GetChild(0).GetChild(0));
         rl.stopAim = true;
+        ror.stopRotating = true;
         Debug.Log("FIRE!");
         Invoke("Falsify", 4f);
     }
@@ -81,5 +94,7 @@ public class RailerMovement : MonoBehaviour
     {
         isShooting = false;
         rl.stopAim = false;
+        ror.stopRotating = false;
+        Debug.Log("Falsifying");
     }
 }
