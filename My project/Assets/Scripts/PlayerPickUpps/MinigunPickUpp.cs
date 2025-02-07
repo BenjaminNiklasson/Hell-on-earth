@@ -8,7 +8,7 @@ public class MinigunPickUpp : MonoBehaviour
     {
         if (collision.gameObject)
         {
-            //FindFirstObjectByType<GameSession>().ActivateMinigun();
+            FindFirstObjectByType<GameSession>().ActivateMinigun();
             FindFirstObjectByType<PlayerShooting>().ActivateMinigun();
             Destroy(gameObject);
             Debug.Log("Has collided");

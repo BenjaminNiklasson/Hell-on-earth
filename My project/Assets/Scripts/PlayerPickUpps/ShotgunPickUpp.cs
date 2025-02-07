@@ -8,7 +8,7 @@ public class ShotgunPickUpp : MonoBehaviour
     {
         if (collision.gameObject)
         {
-            //FindFirstObjectByType<GameSession>().ActivateShotgun();
+            FindFirstObjectByType<GameSession>().ActivateShotgun();
             FindFirstObjectByType<PlayerShooting>().ActivateShotgun();
             Destroy(gameObject);
             Debug.Log("Has collided");
