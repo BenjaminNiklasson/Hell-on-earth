@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f5c8cd137956b9c4ba2a1318c02df2e7
+guid: 89de66b40bf111e4ca56863ea50b0dd1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: angel legs idle spirtesheet (256x256)_0
+      name: angell idle torso and legs animation 256x256_0
       rect:
         serializedVersion: 2
-        x: 74
+        x: 19
         y: 256
-        width: 179
-        height: 223
+        width: 182
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ddb4e0d9dd13304d9c6bdefb616b5fb
-      internalID: 361777961
+      spriteID: c9dbbee61a81ddf4b96c7cef47fcdee4
+      internalID: -129581762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: angel legs idle spirtesheet (256x256)_1
+      name: angell idle torso and legs animation 256x256_1
       rect:
         serializedVersion: 2
-        x: 331
+        x: 252
         y: 256
-        width: 128
-        height: 140
+        width: 207
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a6451c589510884f9200525c78a0e98
-      internalID: -1595867877
+      spriteID: 3c2e1b0dfb55c2743b846ddd598ca12b
+      internalID: -1014177830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: angel legs idle spirtesheet (256x256)_2
+      name: angell idle torso and legs animation 256x256_2
       rect:
         serializedVersion: 2
-        x: 75
+        x: 10
         y: 0
-        width: 130
-        height: 138
+        width: 195
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55a8f96325c130944b43da72e3e1d3a0
-      internalID: -324228663
+      spriteID: 5168389e8d1134449b20037f1a55a342
+      internalID: -1120152899
       vertices: []
       indices: 
       edges: []
@@ -170,9 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      angel legs idle spirtesheet (256x256)_0: 361777961
-      angel legs idle spirtesheet (256x256)_1: -1595867877
-      angel legs idle spirtesheet (256x256)_2: -324228663
+      angell idle torso and legs animation 256x256_0: -129581762
+      angell idle torso and legs animation 256x256_1: -1014177830
+      angell idle torso and legs animation 256x256_2: -1120152899
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

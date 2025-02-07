@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3bba7360928cb9c4da925eede3d24151
+guid: 1f7e67f1e667cf6439df3937e88a33f6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,70 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: angel torso idle spritesheet (256x256)_0
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 330
-        width: 164
-        height: 165
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 755f4b07af02aa842a5cc9295b4b96d8
-      internalID: -1890189370
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angel torso idle spritesheet (256x256)_1
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 328
-        width: 170
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 797c57eb5cc7f5c4abe26e0fdbf24507
-      internalID: 826297601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angel torso idle spritesheet (256x256)_2
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 74
-        width: 181
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb5d58756d278b741bc13854ea800348
-      internalID: -1061699607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -169,10 +106,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      angel torso idle spritesheet (256x256)_0: -1890189370
-      angel torso idle spritesheet (256x256)_1: 826297601
-      angel torso idle spritesheet (256x256)_2: -1061699607
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
