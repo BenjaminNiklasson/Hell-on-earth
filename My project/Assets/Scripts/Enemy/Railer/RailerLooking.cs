@@ -9,6 +9,7 @@ public class RailerLooking : MonoBehaviour
     GameObject player;
     RailerMovement rm;
     public bool stopAim = false;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
