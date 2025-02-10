@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 16063a2a4fd9b06459e2657e4ee42627
+guid: 3d092d01680a48e439f0ab0c3343ec69
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1024
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bat enemy (mouth only)_0
+      name: angel arm idle spirtesheet (256x256)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
+        x: 77
+        y: 351
+        width: 51
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18bff8c761a6b444c8cc35dbbad38c75
-      internalID: 1746033436
+      spriteID: 4dd6d626bf7f0fb429aba5d276c73020
+      internalID: 264034378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat enemy (mouth only)_1
+      name: angel arm idle spirtesheet (256x256)_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 334
+        y: 350
+        width: 50
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 516253e7f7551d148a82421abd508e00
-      internalID: 1001225085
+      spriteID: 8fbd9c6f7e915f145aec05c7c7f65591
+      internalID: -1588863454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat enemy (mouth only)_2
+      name: angel arm idle spirtesheet (256x256)_2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 256
-        width: 256
-        height: 256
+        x: 78
+        y: 91
+        width: 50
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,113 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92fd2be54b36ecf45bcdafc002014437
-      internalID: -109135976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bat enemy (mouth only)_3
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2057699cc149ee646923fa6ce2e38af0
-      internalID: 1132811222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bat enemy (mouth only)_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d488d09bc24a8144e8e8daff0bff6716
-      internalID: 1596608115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bat enemy (mouth only)_5
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea857771658e51847a7599abe240c1ea
-      internalID: 1783820373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bat enemy (mouth only)_6
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d02e32ebef06754d967bb41c7af33c2
-      internalID: 892997765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bat enemy (mouth only)_7
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a1c952086fe98f418f9cb804ce0d06a
-      internalID: 1771185387
+      spriteID: a1808925630dc344ca4558ae622a00b8
+      internalID: 1145324158
       vertices: []
       indices: 
       edges: []
@@ -275,14 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bat enemy (mouth only)_0: 1746033436
-      Bat enemy (mouth only)_1: 1001225085
-      Bat enemy (mouth only)_2: -109135976
-      Bat enemy (mouth only)_3: 1132811222
-      Bat enemy (mouth only)_4: 1596608115
-      Bat enemy (mouth only)_5: 1783820373
-      Bat enemy (mouth only)_6: 892997765
-      Bat enemy (mouth only)_7: 1771185387
+      angel arm idle spirtesheet (256x256)_0: 264034378
+      angel arm idle spirtesheet (256x256)_1: -1588863454
+      angel arm idle spirtesheet (256x256)_2: 1145324158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

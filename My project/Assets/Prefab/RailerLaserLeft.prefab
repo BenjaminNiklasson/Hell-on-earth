@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1557490280276120641}
   - component: {fileID: 5265581471084270717}
   - component: {fileID: 4644913793941771427}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RailerLaserLeft
   m_TagString: Hazard
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a91beed57690f41b3db09d2b65bb6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawnTimer: 1.5
+  despawnTimer: 1
 --- !u!61 &5265581471084270717
 BoxCollider2D:
   m_ObjectHideFlags: 0

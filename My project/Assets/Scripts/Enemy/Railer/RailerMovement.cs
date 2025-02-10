@@ -19,13 +19,11 @@ public class RailerMovement : MonoBehaviour
     [SerializeField] GameObject targetingLine;
     [SerializeField] float reloadTime = 1.5f;
     RailerLooking rl;
-    RailerOriginRotation ror;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         rl = transform.GetChild(0).GetComponent<RailerLooking>();
-        ror = transform.GetChild(0).GetChild(0).GetComponent<RailerOriginRotation>();
     }
     void Update()
     {
@@ -57,7 +55,7 @@ public class RailerMovement : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("AspidAway"))
         {
             tooCloseToPlayer = false;
         }
@@ -86,7 +84,6 @@ public class RailerMovement : MonoBehaviour
         }
         laser.transform.SetParent(transform.GetChild(0).GetChild(0));
         rl.stopAim = true;
-        ror.stopRotating = true;
         Debug.Log("FIRE!");
         Invoke("Falsify", 4f);
     }
@@ -94,7 +91,6 @@ public class RailerMovement : MonoBehaviour
     {
         isShooting = false;
         rl.stopAim = false;
-        ror.stopRotating = false;
         Debug.Log("Falsifying");
     }
 }

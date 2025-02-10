@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 16063a2a4fd9b06459e2657e4ee42627
+guid: 89de66b40bf111e4ca56863ea50b0dd1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1024
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bat enemy (mouth only)_0
+      name: angell idle torso and legs animation 256x256_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 256
-        width: 256
-        height: 256
+        width: 182
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18bff8c761a6b444c8cc35dbbad38c75
-      internalID: 1746033436
+      spriteID: c9dbbee61a81ddf4b96c7cef47fcdee4
+      internalID: -129581762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat enemy (mouth only)_1
+      name: angell idle torso and legs animation 256x256_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 252
         y: 256
-        width: 256
-        height: 256
+        width: 207
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,62 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 516253e7f7551d148a82421abd508e00
-      internalID: 1001225085
+      spriteID: 3c2e1b0dfb55c2743b846ddd598ca12b
+      internalID: -1014177830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat enemy (mouth only)_2
+      name: angell idle torso and legs animation 256x256_2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92fd2be54b36ecf45bcdafc002014437
-      internalID: -109135976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bat enemy (mouth only)_3
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2057699cc149ee646923fa6ce2e38af0
-      internalID: 1132811222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bat enemy (mouth only)_4
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 10
         y: 0
-        width: 256
-        height: 256
+        width: 195
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,71 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d488d09bc24a8144e8e8daff0bff6716
-      internalID: 1596608115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bat enemy (mouth only)_5
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea857771658e51847a7599abe240c1ea
-      internalID: 1783820373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bat enemy (mouth only)_6
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d02e32ebef06754d967bb41c7af33c2
-      internalID: 892997765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bat enemy (mouth only)_7
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a1c952086fe98f418f9cb804ce0d06a
-      internalID: 1771185387
+      spriteID: 5168389e8d1134449b20037f1a55a342
+      internalID: -1120152899
       vertices: []
       indices: 
       edges: []
@@ -275,14 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bat enemy (mouth only)_0: 1746033436
-      Bat enemy (mouth only)_1: 1001225085
-      Bat enemy (mouth only)_2: -109135976
-      Bat enemy (mouth only)_3: 1132811222
-      Bat enemy (mouth only)_4: 1596608115
-      Bat enemy (mouth only)_5: 1783820373
-      Bat enemy (mouth only)_6: 892997765
-      Bat enemy (mouth only)_7: 1771185387
+      angell idle torso and legs animation 256x256_0: -129581762
+      angell idle torso and legs animation 256x256_1: -1014177830
+      angell idle torso and legs animation 256x256_2: -1120152899
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
