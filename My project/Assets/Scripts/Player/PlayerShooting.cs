@@ -87,7 +87,7 @@ public class PlayerShooting : MonoBehaviour
                     
                     GameObject bullet = Instantiate(playerMinigunBullet, playerGun.transform.position, bulletSpawnRotation);
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-                    rb.AddForce(transform.up * playerBulletSpeed, ForceMode2D.Impulse);
+                    rb.AddForce(bullet.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
                     ammo -= 1;
                     gunColdown = true;
                     Invoke("gunColdownDone", currentMinigunColdownTime);
@@ -249,6 +249,7 @@ public class PlayerShooting : MonoBehaviour
 
     void OnReload()
     {
+        Debug.Log("STRDYFUGH");
         ResetAmmo();
         if (playerHasPistolEquipped)
         {

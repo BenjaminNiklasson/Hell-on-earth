@@ -52,9 +52,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1557490280276120641, guid: daf7d9f4e52be82418643f200a95ad9e, type: 3}
+      propertyPath: despawnTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2903161646669262640, guid: daf7d9f4e52be82418643f200a95ad9e, type: 3}
       propertyPath: m_Name
       value: RailerLaserRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903161646669262640, guid: daf7d9f4e52be82418643f200a95ad9e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
