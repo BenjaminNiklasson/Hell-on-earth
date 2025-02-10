@@ -122,9 +122,10 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &519420028
-GameObject:
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD:My project/Assets/Scenes/MainMenuScene.unity
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -268,3 +269,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1686747674}
+=======
+  m_Roots: []
+>>>>>>> 2c8700e4c3dc5a32c8549ff83335c00ecae3aef3:My project/Assets/Scenes/SampleScene.unity
