@@ -249,6 +249,7 @@ public class PlayerShooting : MonoBehaviour
 
     void OnReload()
     {
+        Debug.Log("STRDYFUGH");
         ResetAmmo();
         if (playerHasPistolEquipped)
         {
