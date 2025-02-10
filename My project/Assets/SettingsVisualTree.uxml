@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=18b0c0a991961f043a7ef60270d1dbda&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; align-items: center;">
+        <ui:Label tabindex="-1" text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingsHeader" class="Header" style="max-height: 250px;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: center; align-items: stretch; flex-shrink: 0;">
+            <ui:VisualElement style="flex-grow: 1; align-items: center; max-width: 960px;">
+                <ui:Label tabindex="-1" text="Keybinds" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SubHeader" />
+                <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                    <ui:VisualElement style="flex-grow: 1;">
+                        <ui:VisualElement style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Button text="Edit Keybinds" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button" style="width: 250px; height: 100px; font-size: 35px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="SoundSettingsContainer" style="flex-grow: 1; align-items: center; width: auto; max-width: 960px;">
+                <ui:Label tabindex="-1" text="Sounds" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SoundSetiingsHeader" class="SubHeader" />
+                <ui:Label tabindex="-1" text="Master Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MasterVolumeHeader" class="SubSubHeader" />
+                <ui:Slider high-value="100" name="MasterVolumeSlider" class="SoundSlider" />
+                <ui:Label tabindex="-1" text="Music Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MusicVolumeHeader" class="SubSubHeader" />
+                <ui:Slider high-value="100" name="MusicVolumeSlider" class="SoundSlider" />
+                <ui:Label tabindex="-1" text="SFX Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SfxVolumeHeader" class="SubSubHeader" />
+                <ui:Slider high-value="100" name="SfxVolumeSlider" class="SoundSlider" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackButton" class="Button" style="max-width: 400px; max-height: 150px;" />
+    </ui:VisualElement>
+</ui:UXML>
