@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class TankMovement : MonoBehaviour
 {
-    [SerializeField] ContactFilter2D groundFilter;
-    Vector2 moveimput;
     Rigidbody2D rb;
-    bool IsGrounded;
+    bool IsGrounded = false;
     GameObject player;
     [SerializeField] float eSpeed = 1f;
     void Start()
@@ -17,16 +15,27 @@ public class TankMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        IsGrounded = rb.IsTouching(groundFilter);
         if (IsGrounded == true)
         {
             Vector2 direction = (player.transform.position - transform.position).normalized;
+            direction.y = 0;
             rb.MovePosition(rb.position + direction * eSpeed * Time.fixedDeltaTime);
+            Debug.Log("Is Moving");
         }
     }
 
-    void Update()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            IsGrounded = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            IsGrounded = false;
+        }
     }
 }
