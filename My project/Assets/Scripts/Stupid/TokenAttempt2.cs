@@ -1,13 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class TokenAttempt2 : MonoBehaviour
 {
+
+    VisualElement _root;
+
+    private void Awake()
+    {
+        _root = GetComponent<UIDocument>().rootVisualElement;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        UnsignedIntegerField playerHeartField = _root.Q<UnsignedIntegerField>("PlayerHeartField");
+        VisualElement playerHeartContainer = _root.Q<VisualElement>("PlayerHeartContainer");
+        playerHeartField.RegisterCallback<NavigationSubmitEvent>(evt => CreatePlayerHearts(playerHeartContainer, playerHeartField.value));
+    }
+
+    private void CreatePlayerHearts(VisualElement playerHeartContainer, uint playerHearts)
+    {
+        playerHeartContainer.Clear();
+        for (int i = 0; i < playerHearts; i++)
+        {
+            VisualElement playerHeart = new VisualElement();
+            playerHeart.AddToClassList("playerHeart");
+            playerHeartContainer.Add(playerHeart);
+        }
     }
 
     // Update is called once per frame
