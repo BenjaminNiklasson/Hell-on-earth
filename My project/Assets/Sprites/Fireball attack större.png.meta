@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 463ad1bda50ee624bb9347213a6365ae
-=======
-guid: d008251af99e05e4ca99074499c2cde8
->>>>>>> 3ef1fdfc9fdf31640364b9ab22134e7f047a5d86
+guid: 16db15a31b30f784391b875c8f72b3ed
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 768
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +95,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "Fireball attack st\xF6rre_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 618
+        width: 768
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556f5f50256a0374294dde9ec5a9df08
+      internalID: 853645549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Fireball attack st\xF6rre_1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 468
+        width: 768
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff91d1af896fe054c891b65982c30307
+      internalID: 1666579247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Fireball attack st\xF6rre_2"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 768
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80acaa93eeef05a4d90a6836cde3a84d
+      internalID: 2140450155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Fireball attack st\xF6rre_3"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 768
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286ba500d33d9df45b00d83505724a99
+      internalID: -436756058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -110,7 +190,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Fireball attack st\xF6rre_0": 853645549
+      "Fireball attack st\xF6rre_1": 1666579247
+      "Fireball attack st\xF6rre_2": 2140450155
+      "Fireball attack st\xF6rre_3": -436756058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
