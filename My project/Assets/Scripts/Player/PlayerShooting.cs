@@ -11,7 +11,12 @@ public class PlayerShooting : MonoBehaviour
     //When we add force to our bullet we times the added force with this number.
     [SerializeField] GameObject playerBullet;
     [SerializeField] GameObject playerMinigunBullet;
+    [SerializeField] GameObject playerShotgunBullet;
     [SerializeField] GameObject playerGun;
+    //[SerializeField] SpriteRenderer spriteRenderer;
+    //[SerializeField] Sprite shotgun;
+    //[SerializeField] Sprite minigun;
+    //[SerializeField] Sprite pistol;
     [SerializeField] int pistolAmmoMax = 20;
     [SerializeField] int shotgunAmmoMax = 3;
     [SerializeField] int minigunAmmoMax = 100;
@@ -158,7 +163,7 @@ public class PlayerShooting : MonoBehaviour
                     float randomOffset = Random.Range(-shotgunSpreadDegrees, shotgunSpreadDegrees);
                     Quaternion bulletSpawnRotation = Quaternion.Euler(0, 0, baseRotationZ + randomOffset);
 
-                    GameObject bullet = Instantiate(playerBullet, playerGun.transform.position, bulletSpawnRotation);
+                    GameObject bullet = Instantiate(playerShotgunBullet, playerGun.transform.position, bulletSpawnRotation);
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                     rb.AddForce(bullet.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
                     // Spawns one bullet per itteration of the forloop.
@@ -274,6 +279,7 @@ public class PlayerShooting : MonoBehaviour
             playerHasMinigunEquipped = true;
             playerHasPistolEquipped = false;
             playerHasShotgunEquipped = false;
+            //spriteRenderer.sprite = minigun;
             OnReload();
         }
     }
@@ -284,6 +290,7 @@ public class PlayerShooting : MonoBehaviour
             playerHasMinigunEquipped = false;
             playerHasPistolEquipped = false;
             playerHasShotgunEquipped = true;
+            //spriteRenderer.sprite = shotgun;
             OnReload();
         }
     }
@@ -292,9 +299,9 @@ public class PlayerShooting : MonoBehaviour
         playerHasMinigunEquipped = false;
         playerHasPistolEquipped = true;
         playerHasShotgunEquipped = false;
-        OnReload();
+        //spriteRenderer.sprite = pistol;
     }
-    // You can switch your current wepon with the buttons 1,2 and 3 but you have to reload when doing so.
+    // You can switch your current wepon with the buttons 1,2 and 3 but you have to reload when doing so. You also switch to the guns sprite;
 
     public void ActivateShotgun()
     {
