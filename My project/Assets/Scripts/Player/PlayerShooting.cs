@@ -13,10 +13,10 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] GameObject playerMinigunBullet;
     [SerializeField] GameObject playerShotgunBullet;
     [SerializeField] GameObject playerGun;
-    //[SerializeField] SpriteRenderer spriteRenderer;
-    //[SerializeField] Sprite shotgun;
-    //[SerializeField] Sprite minigun;
-    //[SerializeField] Sprite pistol;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Sprite shotgun;
+    [SerializeField] Sprite minigun;
+    [SerializeField] Sprite pistol;
     [SerializeField] int pistolAmmoMax = 20;
     [SerializeField] int shotgunAmmoMax = 3;
     [SerializeField] int minigunAmmoMax = 100;
@@ -89,7 +89,7 @@ public class PlayerShooting : MonoBehaviour
                     float baseRotationZ = playerGun.transform.rotation.eulerAngles.z;
                     float randomOffset = Random.Range(-minigunSpreadDegrees, minigunSpreadDegrees);
                     Quaternion bulletSpawnRotation = Quaternion.Euler(0, 0, baseRotationZ + randomOffset);
-                    
+                    Vector3 position = new Vector3(playerGun.transform.position.x - 100000000000000000, playerGun.transform.position.y, playerGun.transform.position.z);
                     GameObject bullet = Instantiate(playerMinigunBullet, playerGun.transform.position, bulletSpawnRotation);
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                     rb.AddForce(bullet.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
@@ -279,7 +279,7 @@ public class PlayerShooting : MonoBehaviour
             playerHasMinigunEquipped = true;
             playerHasPistolEquipped = false;
             playerHasShotgunEquipped = false;
-            //spriteRenderer.sprite = minigun;
+            spriteRenderer.sprite = minigun;
             OnReload();
         }
     }
@@ -290,7 +290,7 @@ public class PlayerShooting : MonoBehaviour
             playerHasMinigunEquipped = false;
             playerHasPistolEquipped = false;
             playerHasShotgunEquipped = true;
-            //spriteRenderer.sprite = shotgun;
+            spriteRenderer.sprite = shotgun;
             OnReload();
         }
     }
@@ -299,7 +299,7 @@ public class PlayerShooting : MonoBehaviour
         playerHasMinigunEquipped = false;
         playerHasPistolEquipped = true;
         playerHasShotgunEquipped = false;
-        //spriteRenderer.sprite = pistol;
+        spriteRenderer.sprite = pistol;
     }
     // You can switch your current wepon with the buttons 1,2 and 3 but you have to reload when doing so. You also switch to the guns sprite;
 
