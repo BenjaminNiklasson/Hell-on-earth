@@ -130,7 +130,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.923318, y: 2.9544072, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.14285715, y: 0.14285715, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7640489765135318663}
@@ -241,8 +241,8 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  moveSpeed: 10
-  jumpSpeed: 10
+  moveSpeed: 1.4285715
+  jumpSpeed: 1.428571
   maxNumberOfJumps: 1
 --- !u!114 &9177094098391412175
 MonoBehaviour:
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a02eb2f493e044eba6fd6831fdabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBulletSpeed: 30
+  playerBulletSpeed: 4.285714
   playerBullet: {fileID: 2815490948916353751, guid: b0085f1f6590438448ec56a1b8be78ba, type: 3}
   playerMinigunBullet: {fileID: 8131637755876086314, guid: 87fb0bafee6d5174aa2932970a9b8409, type: 3}
   playerShotgunBullet: {fileID: 2815490948916353751, guid: a74f58dee5628954392f7227549f249a, type: 3}
