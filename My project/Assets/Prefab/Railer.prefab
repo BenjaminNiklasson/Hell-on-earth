@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 6240009722833002309}
   - component: {fileID: 5776906813517804426}
   - component: {fileID: 8271388457297367487}
+  - component: {fileID: 2405917615086877839}
   m_Layer: 0
   m_Name: Railer
   m_TagString: Untagged
@@ -335,7 +336,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2c83d115d76b4ce46b4d9590e4a800dd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -345,7 +346,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5945060828077413366
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -468,3 +469,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.99999976}
   m_EdgeRadius: 0
+--- !u!114 &2405917615086877839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330127110676808297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adba765539feaca4395ad59bd39ebf49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyIsAAspid: 0
+  enemyIsATank: 0
+  enemyIsARailgunner: 1
+  AspidHealth: 3
+  TankHealth: 30
+  RailgunnerHealth: 6
