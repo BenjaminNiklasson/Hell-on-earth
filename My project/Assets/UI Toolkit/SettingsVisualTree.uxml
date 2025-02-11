@@ -8,45 +8,45 @@
                 <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 290px; min-height: 290px;">
                     <ui:VisualElement style="flex-grow: 1;">
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="D" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:Button text="D" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
                             <ui:Label tabindex="-1" text="Walk Right" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 30px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="A" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:Button text="A" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
                             <ui:Label tabindex="-1" text="Walk Left" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 30px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="Space" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 15px;" />
+                            <ui:Button text="Space" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 15px;" />
                             <ui:Label tabindex="-1" text="Jump" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 30px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="E" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:Button text="E" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
                             <ui:Label tabindex="-1" text="Interact" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 30px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="Esc" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 25px;" />
+                            <ui:Button text="Esc" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 25px;" />
                             <ui:Label tabindex="-1" text="Pause Game" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 30px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement style="flex-grow: 1;">
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="LMB" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 20px;" />
+                            <ui:Button text="LMB" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 20px;" />
                             <ui:Label tabindex="-1" text="Shoot Weapon" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 30px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="R" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:Button text="R" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
                             <ui:Label tabindex="-1" text="Reload Weapon" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 30px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="1" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:Button text="1" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
                             <ui:Label tabindex="-1" text="Equip Pistol" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 30px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="2" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:Button text="2" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
                             <ui:Label tabindex="-1" text="Equip Shotgun" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 30px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="3" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:Button text="3" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
                             <ui:Label tabindex="-1" text="Equip Minigun" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 30px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                     </ui:VisualElement>
