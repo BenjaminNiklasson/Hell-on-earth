@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331371991}
   - component: {fileID: 331371990}
+  - component: {fileID: 331371993}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -153,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: fa48b35b579fd6441af55347371cb46a, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: fa915f3563232004db5c00607047d084, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: dcde5a731c91a2d4596fd574a631d657, type: 3}
   m_SortingOrder: 0
 --- !u!4 &331371991
 Transform:
@@ -170,6 +171,116 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331371993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331371989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84068c9ad3872844789b00a4b1b95a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _document: {fileID: 331371990}
+  _buttonEvents:
+  - _buttonName: StartGameButton
+    _unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 331371993}
+          m_TargetAssemblyTypeName: OscarScript, Assembly-CSharp
+          m_MethodName: LoadScene
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: HUDVisualTree
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _buttonName: LevelSelectButton
+    _unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 331371993}
+          m_TargetAssemblyTypeName: OscarScript, Assembly-CSharp
+          m_MethodName: SwitchMenu
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: LevelSelectVisualTree
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _buttonName: SettingsButton
+    _unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 331371993}
+          m_TargetAssemblyTypeName: OscarScript, Assembly-CSharp
+          m_MethodName: SwitchMenu
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: SettingsVisualTree
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _buttonName: SBackButton
+    _unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 331371993}
+          m_TargetAssemblyTypeName: OscarScript, Assembly-CSharp
+          m_MethodName: SwitchMenu
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: MainMenuVisualTree
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _buttonName: LSBackButton
+    _unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 331371993}
+          m_TargetAssemblyTypeName: OscarScript, Assembly-CSharp
+          m_MethodName: SwitchMenu
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: MainMenuVisualTree
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _buttonName: QuitGameButton
+    _unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 331371993}
+          m_TargetAssemblyTypeName: OscarScript, Assembly-CSharp
+          m_MethodName: Quit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: MainMenuVisualTree
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1210248305
 GameObject:
   m_ObjectHideFlags: 0
