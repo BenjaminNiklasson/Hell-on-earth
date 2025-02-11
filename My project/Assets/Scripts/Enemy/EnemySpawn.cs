@@ -20,11 +20,23 @@ public class EnemySpawn : MonoBehaviour
     Vector2 screenBounds;
     Vector2 spawnPosition;
     int currentWave = 0;
+    Vector2 minBounds;
+    Vector2 maxBounds;
+    Vector2 center;
+    Vector2 size;
+
 
     // Start is called before the first frame update
     void Start()
     {
         SpawnEnemy();
+        Collider2D myCollider = GetComponent<Collider2D>();
+        Bounds colliderBounds = myCollider.bounds;
+
+        minBounds = colliderBounds.min; // Bottom-left
+        maxBounds = colliderBounds.max; // Top-right
+        center = colliderBounds.center; // Center position
+        size = colliderBounds.size; // Width & Height
     }
 
     void SpawnEnemy()
@@ -55,16 +67,21 @@ public class EnemySpawn : MonoBehaviour
                                 spawnPosition = new Vector2(-screenBounds.x - spawnDistance, Random.Range(-screenBounds.y, screenBounds.y));
                                 break;
                         }
-                        Instantiate(aspid, spawnPosition, transform.rotation);
-                        wavePoints[currentWave]--;
+                        GameObject currentAspid = Instantiate(aspid, spawnPosition, transform.rotation);
+                        if (currentAspid.transform.position.x < maxBounds.x && currentAspid.transform.position.x > minBounds.x && currentAspid.transform.position.y < maxBounds.y && currentAspid.transform.position.y > minBounds.y) 
+                        {
+                            Invoke("SpawnEnemy", spawnTime);
+                            wavePoints[currentWave]--;
+                        }
+                        else
+                        {
+                            Destroy(currentAspid);
+                            Invoke("SpawnEnemy", 0);
+                        }
                         if (wavePoints[currentWave] < 1)
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
-                        }
-                        else
-                        {
-                            Invoke("SpawnEnemy", spawnTime);
                         }
                         break;
                     }
@@ -86,24 +103,29 @@ public class EnemySpawn : MonoBehaviour
                                 spawnPosition = new Vector2(Random.Range(-screenBounds.x, (-screenBounds.x - spawnDistance)), ((screenBounds.y - screenDifferens.y) / 2) + screenDifferens.y);
                                 break;
                         }
-                        Instantiate(tank, spawnPosition, transform.rotation);
-                        wavePoints[currentWave] -= 3;
+                        GameObject currentTank = Instantiate(tank, spawnPosition, transform.rotation);
+                        if (currentTank.transform.position.x < maxBounds.x && currentTank.transform.position.x > minBounds.x && currentTank.transform.position.y < maxBounds.y && currentTank.transform.position.y > minBounds.y)
+                        {
+                            Invoke("SpawnEnemy", spawnTime);
+                            wavePoints[currentWave] -= 3;
+                        }
+                        else
+                        {
+                            Destroy(currentTank);
+                            Invoke("SpawnEnemy", 0);
+                        }
                         if (wavePoints[currentWave] < 1)
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
                         }
-                        else
-                        {
-                            Invoke("SpawnEnemy", spawnTime);
-                        }
+                        break;
                     }
                     else
                     {
                         Invoke("SpawnEnemy", 0);
                         break;
                     }
-                    break;
                 case 2:
                     if (railgunnerAvailable[currentWave])
                     {
@@ -117,16 +139,21 @@ public class EnemySpawn : MonoBehaviour
                                 spawnPosition = new Vector2(Random.Range(-screenBounds.x, (-screenBounds.x - spawnDistance)), ((screenBounds.y - screenDifferens.y) / 2) + screenDifferens.y);
                                 break;
                         }
-                        Instantiate(railgunner, spawnPosition, transform.rotation);
-                        wavePoints[currentWave] -= 2;
+                        GameObject currentRailer = Instantiate(railgunner, spawnPosition, transform.rotation);
+                        if (currentRailer.transform.position.x < maxBounds.x && currentRailer.transform.position.x > minBounds.x && currentRailer.transform.position.y < maxBounds.y && currentRailer.transform.position.y > minBounds.y)
+                        {
+                            Invoke("SpawnEnemy", spawnTime);
+                            wavePoints[currentWave] -= 2;
+                        }
+                        else
+                        {
+                            Destroy(currentRailer);
+                            Invoke("SpawnEnemy", 0);
+                        }
                         if (wavePoints[currentWave] < 1)
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
-                        }
-                        else
-                        {
-                            Invoke("SpawnEnemy", spawnTime);
                         }
                         break;
                     }
