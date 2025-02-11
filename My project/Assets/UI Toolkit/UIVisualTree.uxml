@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="MainMenuVisualTree" src="project://database/Assets/UI%20Toolkit/MainMenuVisualTree.uxml?fileID=9197481963319205126&amp;guid=fa915f3563232004db5c00607047d084&amp;type=3#MainMenuVisualTree" />
+    <ui:Template name="LevelSelectVisualTree" src="project://database/Assets/UI%20Toolkit/LevelSelectVisualTree.uxml?fileID=9197481963319205126&amp;guid=0724363098b90174ea079099b21da06f&amp;type=3#LevelSelectVisualTree" />
+    <ui:Template name="SettingsVisualTree" src="project://database/Assets/UI%20Toolkit/SettingsVisualTree.uxml?fileID=9197481963319205126&amp;guid=747a82ed56ad6254592b4f2159e20ebc&amp;type=3#SettingsVisualTree" />
+    <ui:Instance template="MainMenuVisualTree" name="MainMenuVisualTree" style="position: absolute; width: 100%; height: 100%;" />
+    <ui:Instance template="LevelSelectVisualTree" name="LevelSelectVisualTree" style="width: 100%; height: 100%; position: absolute; display: none;" />
+    <ui:Instance template="SettingsVisualTree" name="SettingsVisualTree" style="display: none; position: absolute; width: 100%; height: 100%;" />
+</ui:UXML>
