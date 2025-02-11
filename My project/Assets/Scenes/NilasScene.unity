@@ -651,7 +651,8 @@ GameObject:
   m_Component:
   - component: {fileID: 946751122}
   - component: {fileID: 946751121}
-  m_Layer: 0
+  - component: {fileID: 946751123}
+  m_Layer: 13
   m_Name: SpawnSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +677,7 @@ MonoBehaviour:
   railgunnerAvailable: 0001
   aspid: {fileID: 2571326966528516529, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
   tank: {fileID: 6713328149867435175, guid: 2de1703976723cc4e9e97e0ec5a2117a, type: 3}
-  railgunner: {fileID: 0}
+  railgunner: {fileID: 8330127110676808297, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
   coldownBetweenWaves: 5
   minSpawntime: 1
   maxSpawntime: 3
@@ -690,12 +691,57 @@ Transform:
   m_GameObject: {fileID: 946751120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4683341, y: -0.024754923, z: -0.027744329}
+  m_LocalPosition: {x: 1.4683341, y: -0.02475492, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &946751123
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946751120}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.4656501, y: 20.747164}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.057026, y: 61.978657}
+  m_EdgeRadius: 0
 --- !u!1001 &1366773666
 PrefabInstance:
   m_ObjectHideFlags: 0
