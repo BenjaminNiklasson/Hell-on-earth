@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=18b0c0a991961f043a7ef60270d1dbda&amp;type=3#MainMenuStyle" />
     <ui:VisualElement style="flex-grow: 1; max-width: 800px; align-items: center;">
         <ui:Label tabindex="-1" text="Paused" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SubHeader" style="-unity-slice-top: 0; margin-top: 200px; margin-right: 0; margin-bottom: 100px; margin-left: 0; font-size: 100px;" />
-        <ui:Button text="Back to Game" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button" style="margin-bottom: 100px;" />
+        <ui:Button text="Back to Game" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button" style="margin-bottom: 100px; font-size: 55px;" />
         <ui:Button text="Quit to Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button" />
     </ui:VisualElement>
 </ui:UXML>
