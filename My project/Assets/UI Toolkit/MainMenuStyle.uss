@@ -118,4 +118,15 @@
     height: 60px;
     margin-right: 10px;
     min-width: 50px;
+    min-height: 50px;
+    flex-shrink: 1;
+}
+
+.WeaponHUD {
+    width: 500px;
+    height: 200px;
+    max-height: 200px;
+    max-width: 500px;
+    margin-left: 20px;
+    flex-direction: row;
 }
