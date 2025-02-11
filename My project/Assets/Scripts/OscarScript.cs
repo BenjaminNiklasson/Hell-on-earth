@@ -74,31 +74,6 @@ public class OscarScript : MonoBehaviour
     {
         _buttonEvents.ForEach(button => button.Inactivate(_document));
     }
-    VisualElement _root;
-
-    private void Awake()
-    {
-        _root = GetComponent<UIDocument>().rootVisualElement;
-    }
-    private void Start()
-    {
-        UnsignedIntegerField playerHeartField = _root.Q<UnsignedIntegerField>("PlayerHeartField");
-        VisualElement playerHeartContainer = _root.Q<VisualElement>("PlayerHeartContainer");
-        playerHeartField.RegisterCallback<NavigationSubmitEvent>(evt => CreatePlayerHearts(playerHeartContainer, playerHeartField.value));
-    }
-
-    private void CreatePlayerHearts(VisualElement playerHeartContainer, uint playerHearts)
-    {
-        playerHeartContainer.Clear();
-        for (int i = 0; i < playerHearts; i++)
-        {
-            VisualElement playerHeart = new VisualElement();
-            playerHeart.AddToClassList("playerHeart");
-            playerHeartContainer.Add(playerHeart);
-        }
-    }
-
-
 
 
 
