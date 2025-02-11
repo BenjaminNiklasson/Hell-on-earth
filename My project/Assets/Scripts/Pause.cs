@@ -2,24 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Pause : MonoBehaviour
 {
+    [SerializeField] UIDocument _document;
     bool paused = false;
+    string pauseMenu = "PausedVisualTree";
+    string HUD = "HUDVisualTree";
     void OnPause()
     {
+        Debug.Log("yibeee");
         if (paused == false)
         {
             Debug.Log("THE WORLD!!!");
-            Time.timeScale = 0;
             paused = true;
+            Time.timeScale = 0;
+            SwitchMenu(pauseMenu);
         }
         else
         {
             Debug.Log("LET THERE BE LIGHT!!!");
             Time.timeScale = 1;
             paused = false;
+            SwitchMenu(HUD);
         }
         
+    }
+    VisualElement _curMenu = null;
+
+    public void SwitchMenu(string menuName)
+    {
+        if (_curMenu != null)
+        {
+            _curMenu.style.display = DisplayStyle.None;
+        }
+        _curMenu = _document.rootVisualElement.Q<VisualElement>(menuName);
+        _curMenu.style.display = DisplayStyle.Flex;
     }
 }
