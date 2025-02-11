@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="HUDVisualTree" src="project://database/Assets/UI%20Toolkit/HUDVisualTree.uxml?fileID=9197481963319205126&amp;guid=751f9ea4d7133c74a8b8f2ef7f6384ee&amp;type=3#HUDVisualTree" />
+    <ui:Template name="PausedVisualTree" src="project://database/Assets/UI%20Toolkit/PausedVisualTree.uxml?fileID=9197481963319205126&amp;guid=a7039c70e3b5a054680c73f3eed6bae3&amp;type=3#PausedVisualTree" />
+    <ui:Instance template="HUDVisualTree" name="HUDVisualTree" style="position: absolute; width: 100%; height: 100%;" />
+    <ui:Instance template="PausedVisualTree" name="PausedVisualTree" style="position: absolute; width: 100%; height: 100%; display: none;" />
+</ui:UXML>
