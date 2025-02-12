@@ -23,14 +23,14 @@ public class TokenAttempt2 : MonoBehaviour
         playerHeartField.RegisterCallback<NavigationSubmitEvent>(evt => CreatePlayerHearts(playerHeartContainer, playerHeartField.value));
     }
 
-    private void CreatePlayerHearts(VisualElement playerHeartContainer, uint playerHearts)
+    private void CreatePlayerHearts(VisualElement playerHeartContainer, uint PlayerHearts)
     {
         playerHeartContainer.Clear();
-        for (int i = 0; i < playerHearts; i++)
+        for (int i = 0; i < PlayerHearts; i++)
         {
-            VisualElement playerHeart = new VisualElement();
-            playerHeart.AddToClassList("playerHeart");
-            playerHeartContainer.Add(playerHeart);
+            VisualElement PlayerHeart = new VisualElement();
+            PlayerHeart.AddToClassList("playerHeart");
+            playerHeartContainer.Add(PlayerHeart);
         }
     }
 
