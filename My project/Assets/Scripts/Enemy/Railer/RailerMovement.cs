@@ -74,11 +74,11 @@ public class RailerMovement : MonoBehaviour
     GameObject laser;
     private void RailerShooting()
     {
-        if (transform.localScale.x == -1)
+        if (transform.localScale.x < 0)
         {
             laser = Instantiate(shootLaserRight, transform.GetChild(0).GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
         }
-        else if (transform.localScale.x == 1)
+        else if (transform.localScale.x > 0)
         {
             laser = Instantiate(shootLaserLeft, transform.GetChild(0).GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
         }

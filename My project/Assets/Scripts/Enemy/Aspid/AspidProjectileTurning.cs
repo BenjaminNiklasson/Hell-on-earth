@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 public class AspidProjectileTurning : MonoBehaviour
 {
     GameObject player;
-    [SerializeField] int xScale = 1;
-    [SerializeField] int yScale = 1;
+    [SerializeField] float xScale = 1;
+    [SerializeField] float yScale = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +24,4 @@ public class AspidProjectileTurning : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
