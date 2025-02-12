@@ -19,8 +19,8 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="PlayerHeartContainer" style="flex-grow: 0; width: 600px; height: 50px; max-width: 600px; max-height: 100px; margin-top: 20px; margin-left: 20px; flex-direction: row; align-items: center; flex-wrap: wrap;" />
-        <ui:VisualElement name="notPlayerHeartContainer" style="flex-grow: 1; position: absolute; overflow: hidden; margin-left: 540px; width: 600px; height: 50px; margin-top: 20px; flex-direction: row;">
+        <ui:VisualElement name="PlayerHeartContainer" style="flex-grow: 1; width: 620px; height: 50px; max-width: 600px; max-height: 100px; margin-top: 20px; margin-left: 20px; flex-direction: row; align-items: stretch; flex-wrap: nowrap; min-width: 600px; overflow: visible;" />
+        <ui:VisualElement name="notPlayerHeartContainer" style="flex-grow: 1; position: absolute; overflow: hidden; margin-left: 540px; width: 600px; height: 50px; margin-top: 20px; flex-direction: row; visibility: visible;">
             <ui:VisualElement class="notPlayerHeart" style="flex-grow: 1;" />
             <ui:VisualElement class="notPlayerHeart" style="flex-grow: 1;" />
             <ui:VisualElement class="notPlayerHeart" style="flex-grow: 1;" />
@@ -32,7 +32,7 @@
             <ui:VisualElement class="notPlayerHeart" style="flex-grow: 1;" />
             <ui:VisualElement class="notPlayerHeart" style="flex-grow: 1;" />
         </ui:VisualElement>
-        <ui:UnsignedIntegerField label="Unsigned Integer Field" value="42" name="PlayerHeartField" style="height: 85px; width: 288px;" />
+        <ui:UnsignedIntegerField label="Unsigned Integer Field" value="11" name="PlayerHeartField" style="height: 85px; width: 288px;" />
     </ui:VisualElement>
     <ui:VisualElement style="flex-grow: 1; align-items: flex-start; flex-direction: row; visibility: hidden;">
         <ui:VisualElement style="flex-grow: 1;">

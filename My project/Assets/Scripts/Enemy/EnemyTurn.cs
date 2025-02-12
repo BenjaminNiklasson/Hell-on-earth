@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyTurn : MonoBehaviour
 {
     GameObject player;
-    [SerializeField] int scaleChange = -1;
-    [SerializeField] int scaleY;
+    [SerializeField] float scaleChange = -1;
+    [SerializeField] float scaleY;
     void Start()
     {
         player = GameObject.FindWithTag("Player");

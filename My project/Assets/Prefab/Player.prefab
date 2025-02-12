@@ -241,8 +241,8 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  moveSpeed: 1.4285715
-  jumpSpeed: 1.428571
+  moveSpeed: 1.428571
+  jumpSpeed: 2.857142
   maxNumberOfJumps: 1
 --- !u!114 &9177094098391412175
 MonoBehaviour:
