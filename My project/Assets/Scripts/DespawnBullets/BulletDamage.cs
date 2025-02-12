@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class bulletDamage : MonoBehaviour
 {
+    [SerializeField] float despawnColdown = 3;
+    bool isCurrentleInviseble = false;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject)
@@ -16,7 +19,22 @@ public class bulletDamage : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        isCurrentleInviseble = true;
+        Invoke("DespawnColdown", despawnColdown);
+        //Adds a delay to the onBecomeInvisible
+    }
+
+    private void OnBecameVisible()
+    {
+        isCurrentleInviseble = false;
+    }
+
+    void DespawnColdown()
+    {
+        if (isCurrentleInviseble)
+        {
+            Destroy(gameObject);
+        }
         // Destroy the bullet off-screan.
     }
 }
