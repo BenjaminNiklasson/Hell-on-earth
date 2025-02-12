@@ -241,8 +241,8 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  moveSpeed: 1.4285715
-  jumpSpeed: 1.428571
+  moveSpeed: 1.428571
+  jumpSpeed: 2.857142
   maxNumberOfJumps: 1
 --- !u!114 &9177094098391412175
 MonoBehaviour:
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31358d2e7906f77468efa9fc02f81378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 1
+  playerHealth: 10
   invincibilityTime: 2
 --- !u!70 &573641182300016247
 CapsuleCollider2D:
