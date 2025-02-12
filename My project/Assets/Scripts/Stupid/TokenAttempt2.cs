@@ -7,6 +7,8 @@ public class TokenAttempt2 : MonoBehaviour
 {
 
     VisualElement _root;
+    UnsignedIntegerField playerHeartField;
+    VisualElement playerHeartContainer;
 
     private void Awake()
     {
@@ -35,6 +37,6 @@ public class TokenAttempt2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        playerHeartField.RegisterCallback<NavigationSubmitEvent>(evt => CreatePlayerHearts(playerHeartContainer, playerHeartField.value));
     }
 }

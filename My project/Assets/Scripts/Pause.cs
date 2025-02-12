@@ -6,10 +6,14 @@ using UnityEngine.UIElements;
 
 public class Pause : MonoBehaviour
 {
-    [SerializeField] UIDocument _document;
+    UIDocument _document;
     bool paused = false;
     string pauseMenu = "PausedVisualTree";
     string HUD = "HUDVisualTree";
+    private void Start()
+    {
+        _document = transform.GetChild(0).GetComponent<UIDocument>();
+    }
     void OnPause()
     {
         Debug.Log("yibeee");
