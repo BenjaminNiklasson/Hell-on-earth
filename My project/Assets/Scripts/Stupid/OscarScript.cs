@@ -36,10 +36,11 @@ public class OscarScript : MonoBehaviour
 {
     [SerializeField] UIDocument _document;
     [SerializeField] List<ButtonEvent> _buttonEvents;
-
+    GameObject spawnSys;
 
 
     VisualElement _curMenu = null;
+    Label waveLabel;
 
     VisualElement _root;
     private void Awake()
@@ -59,6 +60,7 @@ public class OscarScript : MonoBehaviour
 
     void Start()
     {
+        // Level Name
         Label levelName = _root.Q<Label>("LevelName");
 
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -78,6 +80,9 @@ public class OscarScript : MonoBehaviour
                 break;
         }
 
+        //Wave Name
+        waveLabel = _root.Q<Label>("WaveName");
+        spawnSys = GameObject.FindWithTag("EnemySpawnSystem");
     }
     public void LoadScene(int buildIndex)
     {
@@ -106,7 +111,11 @@ public class OscarScript : MonoBehaviour
         _buttonEvents.ForEach(button => button.Inactivate(_document));
     }
 
-
+    private void Update()
+    {
+        string waveString = $"Wave {spawnSys.GetComponent<EnemySpawn>().currentWave}/{spawnSys.GetComponent<EnemySpawn>().maxWaves}";
+        waveLabel.text = waveString;
+    }
 
 
 }
