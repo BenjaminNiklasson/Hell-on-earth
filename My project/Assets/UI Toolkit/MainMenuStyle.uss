@@ -1,12 +1,12 @@
 .Header {
-    width: 250px;
-    height: 50px;
+    width: 1000px;
+    height: 250px;
     align-items: auto;
     justify-content: flex-start;
     align-self: auto;
     flex-direction: column;
     -unity-text-align: middle-center;
-    font-size: 50px;
+    font-size: 150px;
     color: rgb(255, 238, 0);
     -unity-text-outline-color: rgb(221, 68, 0);
     -unity-text-outline-width: 2px;
@@ -154,6 +154,16 @@
 }
 
 .shotgunAmmo {
+    margin-left: 0;
+    width: 24px;
+    height: 48px;
+    max-width: 24px;
+    max-height: 48px;
+    min-height: 48px;
+    min-width: 24px;
+    background-image: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-4528830608231651361&guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&type=3#arrow-up@2x");
+    -unity-background-image-tint-color: rgb(181, 160, 55);
+    margin-right: 10px;
 }
 
 .WeaponHUD {
