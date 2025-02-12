@@ -9,10 +9,12 @@ public class TokenAttempt2 : MonoBehaviour
     VisualElement _root;
     UnsignedIntegerField playerHeartField;
     VisualElement playerHeartContainer;
+    GameObject player;
 
     private void Awake()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
+        player = GameObject.FindWithTag("Player");
     }
 
     // Start is called before the first frame update
@@ -20,13 +22,12 @@ public class TokenAttempt2 : MonoBehaviour
     {
         UnsignedIntegerField playerHeartField = _root.Q<UnsignedIntegerField>("PlayerHeartField");
         VisualElement playerHeartContainer = _root.Q<VisualElement>("PlayerHeartContainer");
-        playerHeartField.RegisterCallback<NavigationSubmitEvent>(evt => CreatePlayerHearts(playerHeartContainer, playerHeartField.value));
     }
 
     private void CreatePlayerHearts(VisualElement playerHeartContainer, uint PlayerHearts)
     {
         playerHeartContainer.Clear();
-        for (int i = 0; i < PlayerHearts; i++)
+        for (int i = 0; i < (player.GetComponent<PlayerHealth>().GetHealth()); i++)
         {
             VisualElement PlayerHeart = new VisualElement();
             PlayerHeart.AddToClassList("playerHeart");
@@ -37,6 +38,6 @@ public class TokenAttempt2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerHeartField.RegisterCallback<NavigationSubmitEvent>(evt => CreatePlayerHearts(playerHeartContainer, playerHeartField.value));
+        CreatePlayerHearts(playerHeartContainer, playerHeartField.value);
     }
 }
