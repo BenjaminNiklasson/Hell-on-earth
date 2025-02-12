@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32898e107901d554c8a4eb4b64a40478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eSpeed: 1.5
+  eSpeed: 0.21428572
 --- !u!114 &5069306957636428138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTimeBtwShoots: 5
-  projectile: {fileID: 3024880035879918553, guid: 3387898e48ae26741b52e36f2d81551c, type: 3}
+  projectile: {fileID: 4409351429836231330, guid: 092ff2fd36eab0b4e85b7b2602e715e1, type: 3}
   Speed: 0.1428571
 --- !u!114 &5174803229284659173
 MonoBehaviour:

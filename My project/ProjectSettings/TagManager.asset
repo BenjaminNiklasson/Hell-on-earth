@@ -12,6 +12,8 @@ TagManager:
   - AspidAway
   - Bullet
   - MinigunBullet
+  - Undefined
+  - EnemySpawnSystem
   layers:
   - Default
   - TransparentFX

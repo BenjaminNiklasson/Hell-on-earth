@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 [System.Serializable]
 
@@ -12,6 +13,8 @@ public class ButtonEvent
     [SerializeField] string _buttonName = "";
     [SerializeField] UnityEvent _unityEvent;
     Button _button;
+
+
 
     public void Activate(UIDocument document)
     {
@@ -38,6 +41,12 @@ public class OscarScript : MonoBehaviour
 
     VisualElement _curMenu = null;
 
+    VisualElement _root;
+    private void Awake()
+    {
+        _root = GetComponent<UIDocument>().rootVisualElement;
+    }
+
     public void SwitchMenu(string menuName)
     {
         if (_curMenu != null)
@@ -48,6 +57,28 @@ public class OscarScript : MonoBehaviour
         _curMenu.style.display = DisplayStyle.Flex;
     }
 
+    void Start()
+    {
+        Label levelName = _root.Q<Label>("LevelName");
+
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        switch (currentSceneIndex)
+        {
+            case 2:
+                levelName.text = "1 - Street";
+                break;
+            case 3:
+                levelName.text = "2 - Office";
+                break;
+            case 4:
+                levelName.text = "3 - Hell";
+                break;
+            case 5:
+                levelName.text = "4 - Bossfight";
+                break;
+        }
+
+    }
     public void LoadScene(int buildIndex)
     {
         SceneManager.LoadScene(buildIndex);

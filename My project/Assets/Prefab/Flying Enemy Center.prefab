@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4004442276811839631}
   - component: {fileID: 5472930388839881269}
   - component: {fileID: 761677402313748976}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flying Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 2198437307927532550}
   - component: {fileID: 9180127344832020988}
   - component: {fileID: 632483723795820834}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flying Enemy Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
