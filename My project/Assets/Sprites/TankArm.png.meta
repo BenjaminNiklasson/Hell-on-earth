@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 22660c4e0118afb42a8cd0dd08376219
+guid: b71f4131d08e848458dbdf3ea36404a6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1024
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "tanck skis+ f\xE4rg klar  men ej arm 2.0_0"
+      name: Arm till boss klar 2.0_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de350921206e6a44ca2d4c10ef7ee0a3
-      internalID: -1230778183
+      spriteID: 41e4846741e5b934482da54a0d7f9c0b
+      internalID: 1030538388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "tanck skis+ f\xE4rg klar  men ej arm 2.0_1"
+      name: Arm till boss klar 2.0_1
       rect:
         serializedVersion: 2
         x: 384
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e00be9e328749446b258846c86ad4ca
-      internalID: 772319162
+      spriteID: 3b8fe881bd63b6d4e8ef89493a09f45f
+      internalID: -1413860983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "tanck skis+ f\xE4rg klar  men ej arm 2.0_2"
+      name: Arm till boss klar 2.0_2
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1e47d2c1dcd6544cae2c9a84ff8c606
-      internalID: 1437378373
+      spriteID: e7c5a37a9e675d54591607d4c00f518b
+      internalID: -2045240238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "tanck skis+ f\xE4rg klar  men ej arm 2.0_3"
+      name: Arm till boss klar 2.0_3
       rect:
         serializedVersion: 2
         x: 384
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92bf43af14d435e46a648f5a87a51c3c
-      internalID: 211289730
+      spriteID: 290c97df207cc8642a489b335efe8ca8
+      internalID: 285579015
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "tanck skis+ f\xE4rg klar  men ej arm 2.0_0": -1230778183
-      "tanck skis+ f\xE4rg klar  men ej arm 2.0_1": 772319162
-      "tanck skis+ f\xE4rg klar  men ej arm 2.0_2": 1437378373
-      "tanck skis+ f\xE4rg klar  men ej arm 2.0_3": 211289730
+      Arm till boss klar 2.0_0: 1030538388
+      Arm till boss klar 2.0_1: -1413860983
+      Arm till boss klar 2.0_2: -2045240238
+      Arm till boss klar 2.0_3: 285579015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -239,8 +239,8 @@ MonoBehaviour:
       m_Bits: 0
     minDepth: 0
     maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
+    minNormalAngle: 45
+    maxNormalAngle: -45
   moveSpeed: 1.428571
   jumpSpeed: 2.857142
   maxNumberOfJumps: 1
