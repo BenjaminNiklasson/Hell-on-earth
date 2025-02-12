@@ -153,6 +153,20 @@
 .pistolAmmo {
 }
 
+.notPistolAmmo {
+    background-image: url("project://database/Assets/Sprites/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
+    width: 10px;
+    height: 20px;
+    max-width: 10px;
+    -unity-background-image-tint-color: rgb(181, 160, 55);
+    rotate: 180deg;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-right: 2px;
+}
+
 .shotgunAmmo {
     margin-left: 0;
     width: 24px;
@@ -164,6 +178,26 @@
     background-image: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-4528830608231651361&guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&type=3#arrow-up@2x");
     -unity-background-image-tint-color: rgb(181, 160, 55);
     margin-right: 10px;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.notShotgunAmmo {
+    margin-left: 0;
+    width: 24px;
+    height: 48px;
+    max-width: 24px;
+    max-height: 48px;
+    min-height: 48px;
+    min-width: 24px;
+    background-image: url("project://database/Assets/Sprites/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
+    -unity-background-image-tint-color: rgb(181, 160, 55);
+    margin-right: 10px;
+    -unity-background-scale-mode: scale-and-crop;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    rotate: 180deg;
 }
 
 .WeaponHUD {
