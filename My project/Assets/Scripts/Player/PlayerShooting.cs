@@ -66,68 +66,71 @@ public class PlayerShooting : MonoBehaviour
 
     private void Update()
     {
-        if (currentlyShooting && !isReloading)
+        if (Time.timeScale != 0)
         {
-            //Checks if we are currently shooting and not reloading. These are in the same so that you cna't negate the windown while reloading by just continuing to press fire.
-            if (playerHasMinigunEquipped && playerHasMinigun)
+            if (currentlyShooting && !isReloading)
             {
-                // Makes sure we have minigun and the minigun equipped.
-                if (ammo < 1)
+                //Checks if we are currently shooting and not reloading. These are in the same so that you cna't negate the windown while reloading by just continuing to press fire.
+                if (playerHasMinigunEquipped && playerHasMinigun)
                 {
-                    ResetAmmo();
-                    Invoke("ReloadDone", minigunReloadTime);
-                    isReloading = true;
-                    //If our ammo is 0 or less we start reloading, reset our ammo and makes sure we will stop reloading after reloadTime seconds.
-                }
-                if (gunColdown)
-                {
-                    return;
-                    //Makes it so that you can't shoot while on coldown.
-                }
-                else
-                {
-                    float baseRotationZ = playerGun.transform.rotation.eulerAngles.z;
-                    float randomOffset = Random.Range(-minigunSpreadDegrees, minigunSpreadDegrees);
-                    Quaternion bulletSpawnRotation = Quaternion.Euler(0, 0, baseRotationZ + randomOffset);
-                    Vector3 position = new Vector3(playerGun.transform.position.x - 100000000000000000, playerGun.transform.position.y, playerGun.transform.position.z);
-                    GameObject bullet = Instantiate(playerMinigunBullet, playerGun.transform.position, bulletSpawnRotation);
-                    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-                    rb.AddForce(bullet.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
-                    ammo -= 1;
-                    gunColdown = true;
-                    Invoke("gunColdownDone", currentMinigunColdownTime);
-
-                    // Spawns one bullet per itteration of the forloop.
-                    // First we get the rotation of the wepon, then randomly alters it by a number between the positive and negative version of the firearc.
-                    // Lastly we instantiate the bullet with the randomly given rotation and gives it force in that direction.
-                    // Decreases ammo and puts the gun on coldown.
-                }
-                if (isReloading)
-                {
-                    return;
-                }
-                else if (currentMinigunColdownTime >= minMinigunColdownTime)
-                {
-                    if (currentlyInvokingWindup == false)
+                    // Makes sure we have minigun and the minigun equipped.
+                    if (ammo < 1)
                     {
-                        Invoke("DecreaseGunColdown", coldownChangeRate);
-                        currentlyInvokingWindup = true;
-                        // When we arren't reloading and we arent at our minimum coldowntime we increas our coldowntime and make sure we can't invoke the method that decreases the coldown time until coldownchangerate seconds have passed.
+                        ResetAmmo();
+                        Invoke("ReloadDone", minigunReloadTime);
+                        isReloading = true;
+                        //If our ammo is 0 or less we start reloading, reset our ammo and makes sure we will stop reloading after reloadTime seconds.
+                    }
+                    if (gunColdown)
+                    {
+                        return;
+                        //Makes it so that you can't shoot while on coldown.
+                    }
+                    else
+                    {
+                        float baseRotationZ = playerGun.transform.rotation.eulerAngles.z;
+                        float randomOffset = Random.Range(-minigunSpreadDegrees, minigunSpreadDegrees);
+                        Quaternion bulletSpawnRotation = Quaternion.Euler(0, 0, baseRotationZ + randomOffset);
+                        Vector3 position = new Vector3(playerGun.transform.position.x - 100000000000000000, playerGun.transform.position.y, playerGun.transform.position.z);
+                        GameObject bullet = Instantiate(playerMinigunBullet, playerGun.transform.position, bulletSpawnRotation);
+                        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                        rb.AddForce(bullet.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
+                        ammo -= 1;
+                        gunColdown = true;
+                        Invoke("gunColdownDone", currentMinigunColdownTime);
+
+                        // Spawns one bullet per itteration of the forloop.
+                        // First we get the rotation of the wepon, then randomly alters it by a number between the positive and negative version of the firearc.
+                        // Lastly we instantiate the bullet with the randomly given rotation and gives it force in that direction.
+                        // Decreases ammo and puts the gun on coldown.
+                    }
+                    if (isReloading)
+                    {
+                        return;
+                    }
+                    else if (currentMinigunColdownTime >= minMinigunColdownTime)
+                    {
+                        if (currentlyInvokingWindup == false)
+                        {
+                            Invoke("DecreaseGunColdown", coldownChangeRate);
+                            currentlyInvokingWindup = true;
+                            // When we arren't reloading and we arent at our minimum coldowntime we increas our coldowntime and make sure we can't invoke the method that decreases the coldown time until coldownchangerate seconds have passed.
+                        }
                     }
                 }
             }
-        }
-        else
-        {
-            if (currentMinigunColdownTime < maxMinigunColdownTime)
+            else
             {
-                Debug.Log("currentMinigunColdownTime < maxMinigunColdownTime");
-                if (currentlyInvokingWindup == false)
+                if (currentMinigunColdownTime < maxMinigunColdownTime)
                 {
-                    Invoke("IncreaseGunColdown", coldownChangeRate);
-                    currentlyInvokingWindup = true;
-                    Debug.Log("currentlyInvokingWindup == false");
-                    // Increses the coldowntime instead. Always does this except when you are fireing.
+                    Debug.Log("currentMinigunColdownTime < maxMinigunColdownTime");
+                    if (currentlyInvokingWindup == false)
+                    {
+                        Invoke("IncreaseGunColdown", coldownChangeRate);
+                        currentlyInvokingWindup = true;
+                        Debug.Log("currentlyInvokingWindup == false");
+                        // Increses the coldowntime instead. Always does this except when you are fireing.
+                    }
                 }
             }
         }
@@ -135,70 +138,73 @@ public class PlayerShooting : MonoBehaviour
 
     void OnFire()
     {
-        if (playerHasShotgunEquipped && playerHasShotgun)
+        if (Time.timeScale != 0)
         {
-            if (ammo < 1)
+            if (playerHasShotgunEquipped && playerHasShotgun)
             {
-                ResetAmmo();
-                Invoke("ReloadDone", shotgunReloadTime);
-                isReloading = true;
-                //If our ammo is 0 or less we start reloading, reset our ammo and makes sure we will stop reloading after reloadTime seconds.
-            }
-            if (isReloading)
-            {
-                return;
-                //Makes it so that you can't shoot while reloading.
-            }
-            else if (gunColdown)
-            {
-                return;
-                //Makes it so that you can't shoot while on coldown.
-            }
-            else
-            {
-                for (int i = 0; i < numShotgunShoots; i++)
+                if (ammo < 1)
                 {
-                    Debug.Log("Pang!");
-                    float baseRotationZ = playerGun.transform.rotation.eulerAngles.z;
-                    float randomOffset = Random.Range(-shotgunSpreadDegrees, shotgunSpreadDegrees);
-                    Quaternion bulletSpawnRotation = Quaternion.Euler(0, 0, baseRotationZ + randomOffset);
-
-                    GameObject bullet = Instantiate(playerShotgunBullet, playerGun.transform.position, bulletSpawnRotation);
-                    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-                    rb.AddForce(bullet.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
-                    // Spawns one bullet per itteration of the forloop.
-                    // First we get the rotation of the wepon, then randomly alters it by a number between the positive and negative version of the firearc.
-                    // Lastly we instantiate the bullet with the randomly given rotation and gives it force in that direction.
+                    ResetAmmo();
+                    Invoke("ReloadDone", shotgunReloadTime);
+                    isReloading = true;
+                    //If our ammo is 0 or less we start reloading, reset our ammo and makes sure we will stop reloading after reloadTime seconds.
                 }
-                ammo -= 1;
-                gunColdown = true;
-                Invoke("gunColdownDone", shotgunColdownTime);
-                // Decreases ammo and puts the gun on coldown.
+                if (isReloading)
+                {
+                    return;
+                    //Makes it so that you can't shoot while reloading.
+                }
+                else if (gunColdown)
+                {
+                    return;
+                    //Makes it so that you can't shoot while on coldown.
+                }
+                else
+                {
+                    for (int i = 0; i < numShotgunShoots; i++)
+                    {
+                        Debug.Log("Pang!");
+                        float baseRotationZ = playerGun.transform.rotation.eulerAngles.z;
+                        float randomOffset = Random.Range(-shotgunSpreadDegrees, shotgunSpreadDegrees);
+                        Quaternion bulletSpawnRotation = Quaternion.Euler(0, 0, baseRotationZ + randomOffset);
+
+                        GameObject bullet = Instantiate(playerShotgunBullet, playerGun.transform.position, bulletSpawnRotation);
+                        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                        rb.AddForce(bullet.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
+                        // Spawns one bullet per itteration of the forloop.
+                        // First we get the rotation of the wepon, then randomly alters it by a number between the positive and negative version of the firearc.
+                        // Lastly we instantiate the bullet with the randomly given rotation and gives it force in that direction.
+                    }
+                    ammo -= 1;
+                    gunColdown = true;
+                    Invoke("gunColdownDone", shotgunColdownTime);
+                    // Decreases ammo and puts the gun on coldown.
+                }
             }
-        }
-        else if (playerHasPistolEquipped && playerHasPistol)
-        {
-            if (ammo < 1)
+            else if (playerHasPistolEquipped && playerHasPistol)
             {
-                ResetAmmo();
-                Invoke("ReloadDone", pistolReloadTime);
-                isReloading = true;
-                //If our ammo is 0 or less we start reloading, reset our ammo and makes sure we will stop reloading after reloadTime seconds.
-            }
-            if (isReloading)
-            {
-                return;
-            }
-            else
-            {
-                GameObject bullet = Instantiate(playerBullet, playerGun.transform.position, playerGun.transform.rotation);
-                //We create a bullet at the guns position and rotation as well as saving the information about that bullet in a gameobject variable.
-                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-                //We grab the rigidbodycomponent from the saved bullet and save it in the variable "rb".
-                rb.AddForce(playerGun.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
-                ammo--;
-                //Adds force to the rb of the bullet and increases it acording to bulletSpeed. Also decreses ammo by one.
-                Debug.Log($"The pistol has {ammo} ammo!");
+                if (ammo < 1)
+                {
+                    ResetAmmo();
+                    Invoke("ReloadDone", pistolReloadTime);
+                    isReloading = true;
+                    //If our ammo is 0 or less we start reloading, reset our ammo and makes sure we will stop reloading after reloadTime seconds.
+                }
+                if (isReloading)
+                {
+                    return;
+                }
+                else
+                {
+                    GameObject bullet = Instantiate(playerBullet, playerGun.transform.position, playerGun.transform.rotation);
+                    //We create a bullet at the guns position and rotation as well as saving the information about that bullet in a gameobject variable.
+                    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                    //We grab the rigidbodycomponent from the saved bullet and save it in the variable "rb".
+                    rb.AddForce(playerGun.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
+                    ammo--;
+                    //Adds force to the rb of the bullet and increases it acording to bulletSpeed. Also decreses ammo by one.
+                    Debug.Log($"The pistol has {ammo} ammo!");
+                }
             }
         }
     }
