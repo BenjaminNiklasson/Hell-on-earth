@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 
 public class PlayerShooting : MonoBehaviour
@@ -278,6 +279,8 @@ public class PlayerShooting : MonoBehaviour
     }
     //Does the same thing as when you lose all your bullets but is conected to a custom input action called Reload that is activated with "R". AKA, you can reload sooner by pressing "R".
 
+
+
     void OnSwitchToMinigun()
     {
         if (playerHasMinigun)
@@ -312,37 +315,75 @@ public class PlayerShooting : MonoBehaviour
     }
     // You can switch your current wepon with the buttons 1,2 and 3 but you have to reload when doing so. You also switch to the guns sprite;
 
+    VisualElement _root;
+
+    private void Awake()
+    {
+        _root = GetComponent<UIDocument>().rootVisualElement;
+    }
+
     void SwitcGunHUD()
     {
+        VisualElement bigPistolIcon = _root.Q<VisualElement>("BigPistolIcon");
+        VisualElement smallPistolIcon = _root.Q<VisualElement>("SmallPistolIcon");
+        VisualElement bigShotgunIcon = _root.Q<VisualElement>("BigShotgunIcon");
+        VisualElement smallShotgunIcon = _root.Q<VisualElement>("SmallShotgunIcon");
+        VisualElement bigMinigunIcon = _root.Q<VisualElement>("BigMinigunIcon");
+        VisualElement smallMinigunIcon = _root.Q<VisualElement>("SmallMinigunIcon");
+        VisualElement emptyIcon1 = _root.Q<VisualElement>("EmptyIcon1");
+        VisualElement emptyIcon2 = _root.Q<VisualElement>("EmptyIcon2");
+
+        bigPistolIcon.style.display = DisplayStyle.None;
+        smallPistolIcon.style.display = DisplayStyle.None;
+        bigShotgunIcon.style.display = DisplayStyle.None;
+        smallShotgunIcon.style.display = DisplayStyle.None;
+        bigMinigunIcon.style.display = DisplayStyle.None;
+        smallMinigunIcon.style.display = DisplayStyle.None;
+        emptyIcon1.style.display = DisplayStyle.None;
+        emptyIcon2.style.display = DisplayStyle.None;
+
+
         if (playerHasPistolEquipped)
         {
             if (playerHasMinigun)
             {
-
+                bigPistolIcon.style.display = DisplayStyle.Flex;
+                smallShotgunIcon.style.display = DisplayStyle.Flex;
+                smallMinigunIcon.style.display = DisplayStyle.Flex;
             }
             else if (playerHasShotgun)
             {
-
+                bigPistolIcon.style.display = DisplayStyle.Flex;
+                smallShotgunIcon.style.display = DisplayStyle.Flex;
+                emptyIcon1.style.display = DisplayStyle.Flex;
             }
             else
             {
-
+                bigPistolIcon.style.display = DisplayStyle.Flex;
+                emptyIcon1.style.display = DisplayStyle.Flex;
+                emptyIcon2.style.display = DisplayStyle.Flex;
             }
         }
         else if (playerHasShotgunEquipped)
         {
             if (playerHasMinigun)
             {
-
+                smallPistolIcon.style.display = DisplayStyle.Flex;
+                bigShotgunIcon.style.display = DisplayStyle.Flex;
+                smallMinigunIcon.style.display = DisplayStyle.Flex;
             }
             else
             {
-
+                smallPistolIcon.style.display = DisplayStyle.Flex;
+                bigShotgunIcon.style.display = DisplayStyle.Flex;
+                emptyIcon1.style.display = DisplayStyle.Flex;
             }
         }
         else if (playerHasMinigunEquipped)
         {
-
+            smallPistolIcon.style.display = DisplayStyle.Flex;
+            smallShotgunIcon.style.display = DisplayStyle.Flex;
+            bigMinigunIcon.style.display = DisplayStyle.Flex;
         }
     }
     
