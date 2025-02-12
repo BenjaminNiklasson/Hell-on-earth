@@ -146,6 +146,8 @@
     min-width: 50px;
     min-height: 50px;
     overflow: hidden;
+    display: flex;
+    visibility: visible;
 }
 
 .WeaponHUD {
