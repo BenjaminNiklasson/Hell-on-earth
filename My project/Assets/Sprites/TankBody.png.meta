@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 22660c4e0118afb42a8cd0dd08376219
+guid: bddfa6b855b825a40bd65c106eb74f61
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1024
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "tanck skis+ f\xE4rg klar  men ej arm 2.0_0"
+      name: "tanck skis+ f\xE4rg klar  INGEN ARM 2,0_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de350921206e6a44ca2d4c10ef7ee0a3
-      internalID: -1230778183
+      spriteID: e2c7c8e860146904ca77f2236f9a5dc8
+      internalID: 824994170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "tanck skis+ f\xE4rg klar  men ej arm 2.0_1"
+      name: "tanck skis+ f\xE4rg klar  INGEN ARM 2,0_1"
       rect:
         serializedVersion: 2
         x: 384
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e00be9e328749446b258846c86ad4ca
-      internalID: 772319162
+      spriteID: 297ad3f7de31b67488a7a874f2ce8776
+      internalID: -288093160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "tanck skis+ f\xE4rg klar  men ej arm 2.0_2"
+      name: "tanck skis+ f\xE4rg klar  INGEN ARM 2,0_2"
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1e47d2c1dcd6544cae2c9a84ff8c606
-      internalID: 1437378373
+      spriteID: 692d7ad00d3cf0845a2cf566ad512d6e
+      internalID: 1764687469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "tanck skis+ f\xE4rg klar  men ej arm 2.0_3"
+      name: "tanck skis+ f\xE4rg klar  INGEN ARM 2,0_3"
       rect:
         serializedVersion: 2
         x: 384
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92bf43af14d435e46a648f5a87a51c3c
-      internalID: 211289730
+      spriteID: e941fc64d8fac5249baa9f2a4f0f0ea1
+      internalID: -1922623926
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "tanck skis+ f\xE4rg klar  men ej arm 2.0_0": -1230778183
-      "tanck skis+ f\xE4rg klar  men ej arm 2.0_1": 772319162
-      "tanck skis+ f\xE4rg klar  men ej arm 2.0_2": 1437378373
-      "tanck skis+ f\xE4rg klar  men ej arm 2.0_3": 211289730
+      "tanck skis+ f\xE4rg klar  INGEN ARM 2,0_0": 824994170
+      "tanck skis+ f\xE4rg klar  INGEN ARM 2,0_1": -288093160
+      "tanck skis+ f\xE4rg klar  INGEN ARM 2,0_2": 1764687469
+      "tanck skis+ f\xE4rg klar  INGEN ARM 2,0_3": -1922623926
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
