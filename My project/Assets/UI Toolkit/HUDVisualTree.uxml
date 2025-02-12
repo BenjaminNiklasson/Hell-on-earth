@@ -20,8 +20,8 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="PlayerHealthBar" style="flex-grow: 1; flex-direction: row; position: absolute; width: 600px; min-width: 600px; left: 540px; justify-content: space-between;">
-            <ui:VisualElement name="PlayerHeartContainer" style="flex-grow: 1; width: auto; height: 50px; max-width: 600px; max-height: 100px; margin-top: 20px; margin-left: 0; flex-direction: row; align-items: stretch; flex-wrap: nowrap; min-width: 0; overflow: visible; flex-shrink: 0; flex-basis: auto;" />
-            <ui:VisualElement name="notPlayerHeartContainer" style="flex-grow: 0; position: relative; overflow: hidden; margin-left: 0; width: 600px; height: 50px; margin-top: 20px; flex-direction: row-reverse; visibility: visible; max-width: 600px; min-width: 0; -unity-background-scale-mode: stretch-to-fill;">
+            <ui:VisualElement name="PlayerHeartContainer" style="flex-grow: 1; width: -9px; height: 50px; max-width: 600px; max-height: 100px; margin-top: 20px; margin-left: 0; flex-direction: row; align-items: stretch; flex-wrap: nowrap; min-width: 0; overflow: visible; flex-shrink: 0; flex-basis: auto;" />
+            <ui:VisualElement name="notPlayerHeartContainer" style="flex-grow: 0; position: relative; overflow: hidden; margin-left: 0; width: 597px; height: 50px; margin-top: 20px; flex-direction: row-reverse; visibility: visible; max-width: 600px; min-width: 0; -unity-background-scale-mode: stretch-to-fill;">
                 <ui:VisualElement class="notPlayerHeart" style="flex-grow: 1;" />
                 <ui:VisualElement class="notPlayerHeart" style="flex-grow: 1;" />
                 <ui:VisualElement class="notPlayerHeart" style="flex-grow: 1;" />
