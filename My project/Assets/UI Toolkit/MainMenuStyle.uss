@@ -9,8 +9,8 @@
     font-size: 150px;
     color: rgb(255, 238, 0);
     -unity-text-outline-color: rgb(221, 68, 0);
-    -unity-text-outline-width: 5px;
-    text-shadow: 0 5px 0 rgba(0, 0, 0, 0);
+    -unity-text-outline-width: 2px;
+    text-shadow: 0 5px 0 rgb(0, 0, 0);
 }
 
 .Button {
@@ -114,8 +114,191 @@
     border-right-width: 5px;
     border-bottom-width: 5px;
     border-left-width: 5px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
     min-width: 50px;
+    min-height: 50px;
+    flex-shrink: 1;
+    max-width: 50px;
+    max-height: 50px;
+    overflow: visible;
+    flex-grow: 1;
+}
+
+.notPlayerHeart {
+    border-left-width: 1px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(181, 160, 55);
+    max-height: 50px;
+    margin-right: 10px;
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+    background-image: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1304905567622442630&guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&type=3#arrow-down@2x");
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    max-width: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    overflow: hidden;
+    display: flex;
+    visibility: visible;
+}
+
+.pistolAmmo {
+}
+
+.shotgunAmmo {
+    margin-left: 0;
+    width: 24px;
+    height: 48px;
+    max-width: 24px;
+    max-height: 48px;
+    min-height: 48px;
+    min-width: 24px;
+    background-image: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-4528830608231651361&guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&type=3#arrow-up@2x");
+    -unity-background-image-tint-color: rgb(181, 160, 55);
+    margin-right: 10px;
+}
+
+.WeaponHUD {
+    width: 500px;
+    height: 200px;
+    max-height: 200px;
+    max-width: 500px;
+    margin-left: 20px;
+    flex-direction: row;
+}
+
+.LevelSelectButton {
+    width: 50px;
+    height: 50px;
+    max-width: initial;
+    min-width: initial;
+    max-height: initial;
+    min-height: initial;
+    margin-bottom: 10px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-image: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1087164816274819069&guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&type=3#arrow-right@2x");
+    background-color: rgb(255, 238, 0);
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+}
+
+#MinigunAmmoContainer .unity-progress-bar__container {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 30px;
+    min-height: 30px;
+    background-color: rgb(133, 117, 40);
+    border-left-color: rgba(133, 117, 40, 0);
+    border-right-color: rgba(133, 117, 40, 0);
+    border-top-color: rgba(133, 117, 40, 0);
+    border-bottom-color: rgba(133, 117, 40, 0);
+    justify-content: flex-start;
+    align-items: stretch;
+    align-self: auto;
+    flex-shrink: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    overflow: hidden;
+    translate: -3px 0;
+}
+
+#MinigunAmmoContainer .unity-progress-bar__background {
+    background-color: rgb(133, 117, 40);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-left-color: rgba(133, 117, 40, 0);
+    border-right-color: rgba(133, 117, 40, 0);
+    border-top-color: rgba(133, 117, 40, 0);
+    border-bottom-color: rgba(133, 117, 40, 0);
+    transform-origin: right bottom;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    align-self: auto;
+    -unity-background-scale-mode: stretch-to-fill;
+    overflow: visible;
+    height: 30px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    min-height: 30px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 120px;
+    translate: 0 0;
+}
+
+#MinigunAmmoContainer .unity-progress-bar__progress {
+    height: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    scale: 1 1;
+    translate: 0 0;
+    transform-origin: left;
+    background-color: rgb(181, 160, 55);
+    -unity-text-align: upper-left;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    min-width: 0;
+    visibility: visible;
+    overflow: hidden;
+    flex-grow: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
 }
