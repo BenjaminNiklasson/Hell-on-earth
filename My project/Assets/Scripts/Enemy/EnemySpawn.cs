@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -19,11 +20,12 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] float spawnDistance;
     Vector2 screenBounds;
     Vector2 spawnPosition;
-    int currentWave = 0;
+    public int currentWave = 0;
     Vector2 minBounds;
     Vector2 maxBounds;
     Vector2 center;
     Vector2 size;
+    public int maxWaves;
 
 
     // Start is called before the first frame update
@@ -32,6 +34,7 @@ public class EnemySpawn : MonoBehaviour
         SpawnEnemy();
         Collider2D myCollider = GetComponent<Collider2D>();
         Bounds colliderBounds = myCollider.bounds;
+        maxWaves = wavePoints.Count();
 
         minBounds = colliderBounds.min; // Bottom-left
         maxBounds = colliderBounds.max; // Top-right
