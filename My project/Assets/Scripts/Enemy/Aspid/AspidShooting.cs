@@ -10,10 +10,9 @@ public class AspidShooting : MonoBehaviour
     bool notOnCooldown = true;
     public GameObject projectile;
     GameObject player;
-   [SerializeField] public float Speed;
-
-    
+    [SerializeField] public float Speed;
     private Vector2 target;
+    public bool isShooting = false;
 
 
     private void Start()
@@ -27,19 +26,29 @@ public class AspidShooting : MonoBehaviour
     {
         if(notOnCooldown == true && player != null)
         {
-            GameObject aspidProjetile = Instantiate(projectile, transform.position,quaternion.identity);
-            Rigidbody2D rb = aspidProjetile.GetComponent<Rigidbody2D>();
-            target = new Vector2(player.transform.position.x, player.transform.position.y);
-            Vector2 direcetion = new Vector2(target.x - transform.position.x , target.y - transform.position.y );
-            rb.AddForce(direcetion * Speed, ForceMode2D.Impulse);
+            isShooting = true;
             notOnCooldown = false;
-            Invoke("AfterCooldown", startTimeBtwShoots);
+            Invoke("Falsify", 0.25f);
+            Invoke("Shoot", 0);
         }
     }
 
     void AfterCooldown()
     {
         notOnCooldown = true;
+        isShooting = false;
     }
-    
+    void Shoot()
+    {
+        GameObject aspidProjetile = Instantiate(projectile, transform.position, quaternion.identity);
+        Rigidbody2D rb = aspidProjetile.GetComponent<Rigidbody2D>();
+        target = new Vector2(player.transform.position.x, player.transform.position.y);
+        Vector2 direcetion = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
+        rb.AddForce(direcetion * Speed, ForceMode2D.Impulse);
+        Invoke("AfterCooldown", startTimeBtwShoots);
+    }
+    void Falsify()
+    {
+        isShooting = false;
+    }
 }

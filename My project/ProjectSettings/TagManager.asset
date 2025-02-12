@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - gun
   - LaserOrigin
+  - AspidAway
+  - Bullet
+  - MinigunBullet
   layers:
   - Default
   - TransparentFX
@@ -20,10 +23,10 @@ TagManager:
   - EnemyLayer
   - AspidBullet
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - MoneyRain
+  - EnemyAway
+  - Laser
+  - IgnoreEverything
   - 
   - 
   - 

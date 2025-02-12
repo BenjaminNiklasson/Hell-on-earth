@@ -22,8 +22,14 @@ public class GameSession : MonoBehaviour
 
     void Start()
     {
-        FindFirstObjectByType<PlayerShooting>().ActivateShotgun();
-        FindFirstObjectByType<PlayerShooting>().ActivateMinigun();
+        if (_playerHasShotgun)
+        {
+            FindFirstObjectByType<PlayerShooting>().ActivateShotgun();
+        }
+        if (_playerHasMinigun)
+        {
+            FindFirstObjectByType<PlayerShooting>().ActivateMinigun();
+        }
     }
 
     public void ActivateShotgun()

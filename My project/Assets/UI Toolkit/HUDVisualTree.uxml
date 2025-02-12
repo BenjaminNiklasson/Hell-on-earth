@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=18b0c0a991961f043a7ef60270d1dbda&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement style="flex-grow: 1; height: 200px; max-height: 200px; flex-direction: row;">
+        <ui:VisualElement style="flex-grow: 1; margin-left: 20px; width: 500px; max-width: 500px; flex-direction: row; align-items: flex-start; transition-property: all; transition-duration: 0s; transition-timing-function: ease; transition-delay: 0s; margin-right: 5px;">
+            <ui:VisualElement name="PistolIcon" class="WeaponIcon" style="flex-grow: 1; max-width: 150px; max-height: 150px; min-width: 150px; min-height: 150px; scale: 1 1; transform-origin: left top;">
+                <ui:VisualElement style="flex-grow: 1; margin-top: 15px; margin-right: 15px; margin-bottom: 15px; margin-left: 15px; background-color: rgb(243, 239, 217); border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ShotgunIcon" class="WeaponIcon" style="flex-grow: 1; max-width: 150px; max-height: 150px; min-width: 150px; min-height: 150px; scale: 1 1; transform-origin: left top;">
+                <ui:VisualElement style="flex-grow: 1; margin-top: 15px; margin-right: 15px; margin-bottom: 15px; margin-left: 15px; background-color: rgb(243, 239, 217); border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; transform-origin: left top;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="MinigunIcon" class="WeaponIcon" style="flex-grow: 1; max-height: 150px; max-width: 150px; min-width: 150px; min-height: 150px; border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); scale: 1 1;">
+                <ui:VisualElement style="flex-grow: 1; margin-top: 15px; margin-right: 15px; margin-bottom: 15px; margin-left: 15px; background-color: rgb(243, 239, 217); border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; transform-origin: center; justify-content: space-between; align-items: stretch;">
+                    <ui:VisualElement style="flex-grow: 1; margin-top: 12px; margin-right: 12px; margin-bottom: 12px; margin-left: 12px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="PlayerHeartContainer" style="flex-grow: 0; width: 600px; height: 100px; max-width: 600px; max-height: 100px; margin-top: 20px; margin-left: 20px; flex-direction: row; align-items: center; flex-wrap: wrap;" />
+        <ui:UnsignedIntegerField label="Unsigned Integer Field" value="42" name="PlayerHeartField" style="height: 85px; width: 288px;" />
+    </ui:VisualElement>
+</ui:UXML>

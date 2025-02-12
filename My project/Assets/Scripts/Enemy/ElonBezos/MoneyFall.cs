@@ -12,7 +12,17 @@ public class MoneyFall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int firstRotate = Random.Range(0, 2);
+        int firstRotate = Random.Range(0, 3);
+        switch (firstRotate)
+        {
+            case 1:
+                goingRight = true;
+                break;
+            case 2:
+                goingRight = false;
+                break;
+        }
+
         Invoke("SwitchRotation", switchSpeed/2);
     }
 
