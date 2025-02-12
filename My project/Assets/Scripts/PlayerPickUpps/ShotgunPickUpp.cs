@@ -6,7 +6,7 @@ public class ShotgunPickUpp : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject)
+        if (collision.gameObject.CompareTag("Player"))
         {
             FindFirstObjectByType<GameSession>().ActivateShotgun();
             FindFirstObjectByType<PlayerShooting>().ActivateShotgun();
