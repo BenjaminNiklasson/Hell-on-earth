@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 [System.Serializable]
 
@@ -12,6 +13,24 @@ public class ButtonEvent
     [SerializeField] string _buttonName = "";
     [SerializeField] UnityEvent _unityEvent;
     Button _button;
+
+    void start()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        switch (currentSceneIndex)
+        {
+            case 2:
+
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+        }
+
+    }
 
     public void Activate(UIDocument document)
     {
