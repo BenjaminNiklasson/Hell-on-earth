@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,6 +11,7 @@ public class TokenAttempt2 : MonoBehaviour
     UnsignedIntegerField playerHeartField;
     VisualElement playerHeartContainer;
     VisualElement pistolAmmoContainer;
+    VisualElement shotgunAmmoContainer;
     GameObject player;
 
     private void Awake()
@@ -24,6 +26,7 @@ public class TokenAttempt2 : MonoBehaviour
         playerHeartField = _root.Q<UnsignedIntegerField>("PlayerHeartField");
         playerHeartContainer = _root.Q<VisualElement>("PlayerHeartContainer");
         pistolAmmoContainer = _root.Q<VisualElement>("PistolAmmoContainer");
+        shotgunAmmoContainer = _root.Q<VisualElement>("ShotgunAmmoContainer");
     }
 
     private void CreatePlayerHearts(VisualElement playerHeartContainer)
@@ -54,11 +57,28 @@ public class TokenAttempt2 : MonoBehaviour
             pistolAmmoContainer.Add(NonPistolAmmo);
         }
     }
-
+    private void CreateShotgunAmmo(VisualElement shotgunAmmoContainer)
+    {
+        Debug.Log("shotgunammoui!");
+        shotgunAmmoContainer.Clear();
+        for (int i = 0; i < player.GetComponent<PlayerShooting>().ammo; i++)
+        {
+            VisualElement ShotgunAmmo = new VisualElement();
+            ShotgunAmmo.AddToClassList("shotgunAmmo");
+            shotgunAmmoContainer.Add(ShotgunAmmo);
+        }
+        for (int i = 0; i < 3 - player.GetComponent<PlayerShooting>().ammo; i++)
+        {
+            VisualElement NonShotgunAmmo = new VisualElement();
+            NonShotgunAmmo.AddToClassList("nonShotgunAmmo");
+            shotgunAmmoContainer.Add(NonShotgunAmmo);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
         CreatePlayerHearts(playerHeartContainer);
         CreatePistolAmmo(pistolAmmoContainer);
+        CreateShotgunAmmo(shotgunAmmoContainer);
     }
 }
