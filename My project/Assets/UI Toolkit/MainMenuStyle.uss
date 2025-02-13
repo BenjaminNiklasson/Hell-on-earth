@@ -37,10 +37,11 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     -unity-font-style: normal;
-    background-image: none;
+    background-image: url("project://database/Assets/Sprites/Objects/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
     -unity-background-image-tint-color: rgb(255, 238, 0);
     -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
     -unity-font-definition: initial;
+    -unity-background-scale-mode: scale-and-crop;
 }
 
 .SubHeader {
@@ -59,17 +60,32 @@
     font-size: 80px;
     height: 80px;
     color: rgb(255, 238, 0);
-    -unity-text-outline-width: 1.5px;
+    -unity-text-outline-width: 2px;
     -unity-text-outline-color: rgb(221, 68, 0);
-    text-shadow: 0 2px 100px rgb(0, 0, 0);
+    text-shadow: 0 4px 1000px rgb(0, 0, 0);
     text-overflow: clip;
     -unity-text-align: middle-left;
+    -unity-font-style: bold;
 }
 
 .x3SubHeader {
     -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
     -unity-font-definition: initial;
     font-size: 50px;
+    background-color: rgba(255, 238, 0, 0);
+    border-left-color: rgba(221, 68, 0, 0);
+    border-right-color: rgba(221, 68, 0, 0);
+    border-top-color: rgba(221, 68, 0, 0);
+    border-bottom-color: rgba(221, 68, 0, 0);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    color: rgb(255, 238, 0);
+    -unity-text-outline-width: 2px;
+    -unity-text-outline-color: rgba(221, 68, 0, 0);
+    text-shadow: 0 3px 1000px rgb(0, 0, 0);
+    -unity-font-style: bold;
 }
 
 .SoundSlider {
@@ -107,7 +123,7 @@
     border-bottom-left-radius: 30px;
 }
 
-.SmallButton {
+.Keybind {
     border-left-color: rgb(0, 0, 0);
     border-right-color: rgb(0, 0, 0);
     border-top-color: rgb(0, 0, 0);
@@ -121,10 +137,45 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    margin-right: 10px;
+    max-height: 50px;
+    background-image: url("project://database/Assets/Sprites/Objects/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(255, 238, 0);
+}
+
+.KeybindLabel {
+    -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
+    -unity-font-definition: initial;
+    font-size: 40px;
+    width: 43px;
+    height: 43px;
+    max-width: 43px;
+    max-height: 43px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    -unity-text-align: middle-center;
+    -unity-text-outline-width: 0.5px;
+    -unity-text-outline-color: rgb(0, 0, 0);
 }
 
 .playerHeart {
-    background-image: url("project://database/Assets/Sprites/HeartUIfull.png?fileID=2800000&guid=40b43939feaed344183f9d87de18cd03&type=3#HeartUIfull");
+    background-image: url("project://database/Assets/Sprites/UI/HeartUIfull.png?fileID=2800000&guid=40b43939feaed344183f9d87de18cd03&type=3#HeartUIfull");
     background-color: rgba(255, 255, 255, 0);
     border-left-color: rgba(181, 160, 55, 0);
     border-right-color: rgba(181, 160, 55, 0);
@@ -154,7 +205,7 @@
     max-height: 50px;
     margin-right: 10px;
     -unity-background-image-tint-color: rgb(255, 255, 255);
-    background-image: url("project://database/Assets/Sprites/HeartUIempty.png?fileID=2800000&guid=c5fb8acf25cf39f40aa3b714d8144c4b&type=3#HeartUIempty");
+    background-image: url("project://database/Assets/Sprites/UI/HeartUIempty.png?fileID=2800000&guid=c5fb8acf25cf39f40aa3b714d8144c4b&type=3#HeartUIempty");
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
@@ -171,7 +222,7 @@
 }
 
 .pistolAmmo {
-    background-image: url("project://database/Assets/Sprites/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
+    background-image: url("project://database/Assets/Sprites/Tile/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
     width: 10px;
     height: 20px;
     max-width: 10px;
@@ -187,7 +238,7 @@
 }
 
 .nonPistolAmmo {
-    background-image: url("project://database/Assets/Sprites/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
+    background-image: url("project://database/Assets/Sprites/Tile/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
     width: 10px;
     height: 20px;
     max-width: 10px;
@@ -210,13 +261,18 @@
     max-height: 48px;
     min-height: 48px;
     min-width: 24px;
-    background-image: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-4528830608231651361&guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&type=3#arrow-up@2x");
-    -unity-background-image-tint-color: rgb(181, 160, 55);
+    background-image: url("project://database/Assets/Sprites/Tile/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
+    -unity-background-image-tint-color: rgb(234, 208, 78);
     margin-right: 10px;
     -unity-background-scale-mode: scale-and-crop;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    rotate: 180deg;
 }
 
-.notShotgunAmmo {
+.nonShotgunAmmo {
     margin-left: 0;
     width: 24px;
     height: 48px;
@@ -224,8 +280,8 @@
     max-height: 48px;
     min-height: 48px;
     min-width: 24px;
-    background-image: url("project://database/Assets/Sprites/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
-    -unity-background-image-tint-color: rgb(181, 160, 55);
+    background-image: url("project://database/Assets/Sprites/Tile/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
+    -unity-background-image-tint-color: rgb(133, 117, 40);
     margin-right: 10px;
     -unity-background-scale-mode: scale-and-crop;
     border-top-left-radius: 2px;
@@ -394,7 +450,7 @@
     border-right-width: 2px;
     border-bottom-width: 2px;
     border-left-width: 2px;
-    background-image: url("project://database/Assets/Sprites/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
+    background-image: url("project://database/Assets/Sprites/Objects/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 238, 0);
     scale: 1 1;
@@ -417,7 +473,7 @@
     border-right-width: 2px;
     border-bottom-width: 2px;
     border-left-width: 2px;
-    background-image: url("project://database/Assets/Sprites/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
+    background-image: url("project://database/Assets/Sprites/Objects/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 238, 0);
     scale: 1 1;
@@ -440,7 +496,7 @@
     border-right-width: 2px;
     border-bottom-width: 2px;
     border-left-width: 2px;
-    background-image: url("project://database/Assets/Sprites/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
+    background-image: url("project://database/Assets/Sprites/Objects/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 238, 0);
     scale: 1 1;
@@ -459,7 +515,7 @@
     border-right-color: rgb(221, 68, 0);
     border-top-color: rgb(221, 68, 0);
     border-bottom-color: rgb(221, 68, 0);
-    background-image: url("project://database/Assets/Sprites/Elevatorforeground.png?fileID=2800000&guid=c104ce94a131ec14da6d8970e809423a&type=3#Elevatorforeground");
+    background-image: url("project://database/Assets/Sprites/Background/Elevatorforeground.png?fileID=2800000&guid=c104ce94a131ec14da6d8970e809423a&type=3#Elevatorforeground");
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 255, 170);
 }
@@ -477,7 +533,7 @@
     border-right-color: rgb(221, 68, 0);
     border-top-color: rgb(221, 68, 0);
     border-bottom-color: rgb(221, 68, 0);
-    background-image: url("project://database/Assets/Sprites/Elevatorforeground.png?fileID=2800000&guid=c104ce94a131ec14da6d8970e809423a&type=3#Elevatorforeground");
+    background-image: url("project://database/Assets/Sprites/Background/Elevatorforeground.png?fileID=2800000&guid=c104ce94a131ec14da6d8970e809423a&type=3#Elevatorforeground");
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 255, 170);
 }
@@ -495,7 +551,7 @@
     border-right-color: rgb(221, 68, 0);
     border-top-color: rgb(221, 68, 0);
     border-bottom-color: rgb(221, 68, 0);
-    background-image: url("project://database/Assets/Sprites/Elevatorforeground.png?fileID=2800000&guid=c104ce94a131ec14da6d8970e809423a&type=3#Elevatorforeground");
+    background-image: url("project://database/Assets/Sprites/Background/Elevatorforeground.png?fileID=2800000&guid=c104ce94a131ec14da6d8970e809423a&type=3#Elevatorforeground");
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 255, 170);
 }
