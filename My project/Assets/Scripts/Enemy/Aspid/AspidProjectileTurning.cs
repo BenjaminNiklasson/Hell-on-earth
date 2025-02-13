@@ -23,5 +23,4 @@ public class AspidProjectileTurning : MonoBehaviour
             transform.localScale = new Vector3(-xScale, yScale, 1);
         }
     }
-
 }

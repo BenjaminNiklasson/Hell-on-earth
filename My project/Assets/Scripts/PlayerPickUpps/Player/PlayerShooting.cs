@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -101,7 +102,7 @@ public class PlayerShooting : MonoBehaviour
                         ammo -= 1;
                         gunColdown = true;
                         Invoke("gunColdownDone", currentMinigunColdownTime);
-
+                        _minigunAmmoBar.value = player.GetComponent<PlayerShooting>().ammo;
                         // Spawns one bullet per itteration of the forloop.
                         // First we get the rotation of the wepon, then randomly alters it by a number between the positive and negative version of the firearc.
                         // Lastly we instantiate the bullet with the randomly given rotation and gives it force in that direction.
@@ -318,10 +319,14 @@ public class PlayerShooting : MonoBehaviour
     // You can switch your current wepon with the buttons 1,2 and 3 but you have to reload when doing so. You also switch to the guns sprite;
 
     VisualElement _root;
+    ProgressBar _minigunAmmoBar;
+    GameObject player;
 
     private void Awake()
     {
         _root = UI.GetComponent<UIDocument>().rootVisualElement;
+        _minigunAmmoBar = _root.Q<ProgressBar>("MinigunAmmoContainer");
+        player = GameObject.FindWithTag("Player");
     }
 
     void SwitcGunHUD()

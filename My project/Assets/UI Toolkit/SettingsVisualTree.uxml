@@ -9,45 +9,65 @@
                 <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 290px; min-height: 290px;">
                     <ui:VisualElement style="flex-grow: 1;">
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="D" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:VisualElement class="Keybind" style="flex-grow: 1;">
+                                <ui:Label tabindex="-1" text="D" parse-escape-sequences="true" display-tooltip-when-elided="true" class="KeybindLabel" style="translate: -1px 2px;" />
+                            </ui:VisualElement>
                             <ui:Label tabindex="-1" text="Walk Right" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 40px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="A" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:VisualElement class="Keybind" style="flex-grow: 1;">
+                                <ui:Label tabindex="-1" text="A" parse-escape-sequences="true" display-tooltip-when-elided="true" class="KeybindLabel" style="translate: -1px 1px;" />
+                            </ui:VisualElement>
                             <ui:Label tabindex="-1" text="Walk Left" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 40px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="Space" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 15px;" />
+                            <ui:VisualElement class="Keybind" style="flex-grow: 1;">
+                                <ui:Label tabindex="-1" text="Space" parse-escape-sequences="true" display-tooltip-when-elided="true" class="KeybindLabel" style="font-size: 25px;" />
+                            </ui:VisualElement>
                             <ui:Label tabindex="-1" text="Jump" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 40px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="E" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:VisualElement class="Keybind" style="flex-grow: 1;">
+                                <ui:Label tabindex="-1" text="E" parse-escape-sequences="true" display-tooltip-when-elided="true" class="KeybindLabel" style="translate: -2px 2px;" />
+                            </ui:VisualElement>
                             <ui:Label tabindex="-1" text="Interact" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 40px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="Esc" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 25px;" />
+                            <ui:VisualElement class="Keybind" style="flex-grow: 1;">
+                                <ui:Label tabindex="-1" text="Esc" parse-escape-sequences="true" display-tooltip-when-elided="true" class="KeybindLabel" style="translate: -2px 2px;" />
+                            </ui:VisualElement>
                             <ui:Label tabindex="-1" text="Pause Game" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 40px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement style="flex-grow: 1;">
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="LMB" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 20px;" />
+                            <ui:VisualElement class="Keybind" style="flex-grow: 1;">
+                                <ui:Label tabindex="-1" text="LMB" parse-escape-sequences="true" display-tooltip-when-elided="true" class="KeybindLabel" style="font-size: 25px; translate: -0.5px 1px;" />
+                            </ui:VisualElement>
                             <ui:Label tabindex="-1" text="Shoot Weapon" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 40px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="R" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:VisualElement class="Keybind" style="flex-grow: 1;">
+                                <ui:Label tabindex="-1" text="R" parse-escape-sequences="true" display-tooltip-when-elided="true" class="KeybindLabel" style="translate: -1px 2px;" />
+                            </ui:VisualElement>
                             <ui:Label tabindex="-1" text="Reload Weapon" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 40px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="1" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:VisualElement class="Keybind" style="flex-grow: 1;">
+                                <ui:Label tabindex="-1" text="1" parse-escape-sequences="true" display-tooltip-when-elided="true" class="KeybindLabel" style="translate: -1px 2px;" />
+                            </ui:VisualElement>
                             <ui:Label tabindex="-1" text="Equip Pistol" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 40px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="2" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:VisualElement class="Keybind" style="flex-grow: 1;">
+                                <ui:Label tabindex="-1" text="2" parse-escape-sequences="true" display-tooltip-when-elided="true" class="KeybindLabel" style="translate: -1px 2px;" />
+                            </ui:VisualElement>
                             <ui:Label tabindex="-1" text="Equip Shotgun" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 40px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button text="3" parse-escape-sequences="true" display-tooltip-when-elided="true" class="SmallButton" style="width: 50px; height: 50px; max-width: 50px; max-height: 50px; margin-top: 0; margin-right: 10px; margin-bottom: 10px; margin-left: 0; font-size: 40px;" />
+                            <ui:VisualElement class="Keybind" style="flex-grow: 1;">
+                                <ui:Label tabindex="-1" text="3" parse-escape-sequences="true" display-tooltip-when-elided="true" class="KeybindLabel" style="translate: -1px 2px;" />
+                            </ui:VisualElement>
                             <ui:Label tabindex="-1" text="Equip Minigun" parse-escape-sequences="true" display-tooltip-when-elided="true" class="x3SubHeader" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 190px; height: 50px; max-width: 190px; max-height: 50px; font-size: 40px; -unity-text-align: middle-left;" />
                         </ui:VisualElement>
                     </ui:VisualElement>
@@ -57,11 +77,11 @@
             <ui:VisualElement style="flex-grow: 1; max-width: 200px;" />
             <ui:VisualElement name="SoundSettingsContainer" style="flex-grow: 1; align-items: center; width: auto; max-width: 500px;">
                 <ui:Label tabindex="-1" text="Sounds" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SoundSetiingsHeader" class="SubHeader jimnightshade" style="font-size: 100px; margin-bottom: 10px;" />
-                <ui:Label tabindex="-1" text="Master Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MasterVolumeHeader" class="SubSubHeader jimnightshade" style="font-size: 70px; -unity-text-align: middle-left; -unity-text-outline-width: 2px; translate: 0 0; height: 68px; margin-bottom: 0; margin-top: 18px;" />
+                <ui:Label tabindex="-1" text="Master Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MasterVolumeHeader" class="SubSubHeader jimnightshade" style="font-size: 70px; -unity-text-align: middle-left; -unity-text-outline-width: 2px; translate: 0 0; height: 68px; margin-bottom: 0; margin-top: 18px; -unity-font-style: normal;" />
                 <ui:Slider high-value="100" name="MasterSlider" class="SoundSlider" style="-unity-font-definition: initial; -unity-font: url(&quot;project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=c628f457327923a4fa6b2dd21ea5aa91&amp;type=3#JimNightshade-Regular&quot;);" />
-                <ui:Label tabindex="-1" text="Music Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MusicVolumeHeader" class="SubSubHeader jimnightshade" style="font-size: 70px; -unity-text-align: middle-left; -unity-text-outline-width: 2px; height: 68px; margin-top: 18px; margin-bottom: 0;" />
+                <ui:Label tabindex="-1" text="Music Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MusicVolumeHeader" class="SubSubHeader jimnightshade" style="font-size: 70px; -unity-text-align: middle-left; -unity-text-outline-width: 2px; height: 68px; margin-top: 18px; margin-bottom: 0; -unity-font-style: normal;" />
                 <ui:Slider high-value="100" name="MusicSlider" class="SoundSlider" />
-                <ui:Label tabindex="-1" text="SFX Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SfxVolumeHeader" class="SubSubHeader jimnightshade" style="font-size: 70px; -unity-text-align: middle-left; -unity-text-outline-width: 2px; height: 68px; margin-top: 18px; margin-bottom: 0;" />
+                <ui:Label tabindex="-1" text="SFX Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SfxVolumeHeader" class="SubSubHeader jimnightshade" style="font-size: 70px; -unity-text-align: middle-left; -unity-text-outline-width: 2px; height: 68px; margin-top: 18px; margin-bottom: 0; -unity-font-style: normal;" />
                 <ui:Slider high-value="100" name="SfxSlider" class="SoundSlider" />
             </ui:VisualElement>
         </ui:VisualElement>
