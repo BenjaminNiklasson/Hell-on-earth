@@ -54,7 +54,18 @@ public class EnemySpawn : MonoBehaviour
             float type = Random.Range(0, 18);
             switch (type)
             {
-                case 0-11:
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
                     Debug.Log("0-11");
                     if (aspidAvailable[currentWave])
                     {
@@ -101,7 +112,10 @@ public class EnemySpawn : MonoBehaviour
                         Invoke("SpawnEnemy", 0);
                         break;
                     }
-                case 12-15:
+                case 12:
+                case 13:
+                case 14:
+                case 15:
                     Debug.Log("12-15");
                     if (tankAvailable[currentWave])
                     {
@@ -145,7 +159,9 @@ public class EnemySpawn : MonoBehaviour
                         Invoke("SpawnEnemy", 0);
                         break;
                     }
-                case 16-18:
+                case 16:
+                case 17:
+                case 18:
                     Debug.Log("15-18");
                     if (railgunnerAvailable[currentWave])
                     {
