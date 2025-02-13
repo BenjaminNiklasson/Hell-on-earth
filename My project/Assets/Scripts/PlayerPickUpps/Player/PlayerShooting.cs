@@ -62,6 +62,7 @@ public class PlayerShooting : MonoBehaviour
     // I have a invoke in update, it only ivokes when this bool is false. Otherwise it would start multiple ivokes at once.
     float currentMinigunColdownTime;
     // The actuall coldowntime between shots for minigun. 
+    bool activeReloadWindow = false;
 
     private void Start()
     {
@@ -235,16 +236,21 @@ public class PlayerShooting : MonoBehaviour
         // Same but decreases. I have the numbers 1.25 and 0.8 because 0.8 *1.25 = 0.
     }
 
-    private void ReloadDone()
-    {
-        isReloading = false;
-        //Makes you able to shoot again.
-    }
-
     private void gunColdownDone()
     {
         gunColdown = false;
         // Makes you able to shoot again.
+    }
+
+    private void ReloadDone()
+    {
+        isReloading = false;
+        // Makes you able to shoot again after reload.
+    }
+
+    void ActiveReloadWindowEnd()
+    {
+        activeReloadWindow = false;
     }
 
     private void ResetAmmo()
@@ -266,24 +272,50 @@ public class PlayerShooting : MonoBehaviour
 
     void OnReload()
     {
-        ResetAmmo();
-        if (playerHasPistolEquipped)
+        if (!isReloading && !activeReloadWindow)
         {
-            Invoke("ReloadDone", pistolReloadTime);
+            ResetAmmo();
+            if (playerHasPistolEquipped)
+            {
+                Invoke("ActiveReloadWindowStart", pistolReloadTime/3);
+            }
+            else if (playerHasShotgunEquipped)
+            {
+                Invoke("ActiveReloadWindowStart", shotgunReloadTime/3);
+            }
+            else if (playerHasMinigunEquipped)
+            {
+                Invoke("ActiveReloadWindowStart", minigunReloadTime/3);
+            }
+            isReloading = true;
         }
-        else if (playerHasShotgunEquipped)
+        else
         {
-            Invoke("ReloadDone", shotgunReloadTime);
+            activeReloadWindow = false;
+            isReloading = false;
         }
-        else if (playerHasMinigunEquipped)
-        {
-            Invoke("ReloadDone", minigunReloadTime);
-        }
-        isReloading = true;
     }
     //Does the same thing as when you lose all your bullets but is conected to a custom input action called Reload that is activated with "R". AKA, you can reload sooner by pressing "R".
 
-
+    private void ActiveReloadWindowStart()
+    {
+        if (playerHasPistolEquipped)
+        {
+            Invoke("ReloadDone", (pistolReloadTime / 3) * 2);
+            Invoke("ActiveReloadWindowEnd", (pistolReloadTime / 2) - pistolReloadTime / 3);
+        }
+        else if (playerHasShotgunEquipped)
+        {
+            Invoke("ReloadDone", (shotgunReloadTime / 3) * 2);
+            Invoke("ActiveReloadWindowEnd", (shotgunReloadTime / 2) - shotgunReloadTime / 3);
+        }
+        else if (playerHasMinigunEquipped)
+        {
+            Invoke("ReloadDone", (minigunReloadTime / 3) * 2);
+            Invoke("ActiveReloadWindowEnd", (minigunReloadTime / 2) - minigunReloadTime / 3);
+        }
+        activeReloadWindow = true;
+    }
 
     void OnSwitchToMinigun()
     {
