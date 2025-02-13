@@ -45,7 +45,9 @@ public class PlayerShooting : MonoBehaviour
     // You can only shoot when this is false and it turns true for a while when you lose all ammo.
     bool gunColdown = false;
     // You can only shoot when this is false and it turns true for a while when you shoot with the minigun or shotgun.
-    public int ammo;
+    public int pistolAmmo;
+    public int shotgunAmmo;
+    public int minigunAmmo;
     bool playerHasShotgun = false;
     bool playerHasMinigun = false;
     bool playerHasPistol = true;
@@ -78,7 +80,7 @@ public class PlayerShooting : MonoBehaviour
                 if (playerHasMinigunEquipped && playerHasMinigun)
                 {
                     // Makes sure we have minigun and the minigun equipped.
-                    if (ammo < 1)
+                    if (minigunAmmo < 1)
                     {
                         ResetAmmo();
                         Invoke("ReloadDone", minigunReloadTime);
@@ -99,10 +101,10 @@ public class PlayerShooting : MonoBehaviour
                         GameObject bullet = Instantiate(playerMinigunBullet, playerGun.transform.position, bulletSpawnRotation);
                         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                         rb.AddForce(bullet.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
-                        ammo -= 1;
+                        minigunAmmo -= 1;
                         gunColdown = true;
                         Invoke("gunColdownDone", currentMinigunColdownTime);
-                        _minigunAmmoBar.value = player.GetComponent<PlayerShooting>().ammo;
+                        _minigunAmmoBar.value = player.GetComponent<PlayerShooting>().minigunAmmo;
                         // Spawns one bullet per itteration of the forloop.
                         // First we get the rotation of the wepon, then randomly alters it by a number between the positive and negative version of the firearc.
                         // Lastly we instantiate the bullet with the randomly given rotation and gives it force in that direction.
@@ -146,7 +148,7 @@ public class PlayerShooting : MonoBehaviour
         {
             if (playerHasShotgunEquipped && playerHasShotgun)
             {
-                if (ammo < 1)
+                if (shotgunAmmo < 1)
                 {
                     ResetAmmo();
                     Invoke("ReloadDone", shotgunReloadTime);
@@ -179,7 +181,7 @@ public class PlayerShooting : MonoBehaviour
                         // First we get the rotation of the wepon, then randomly alters it by a number between the positive and negative version of the firearc.
                         // Lastly we instantiate the bullet with the randomly given rotation and gives it force in that direction.
                     }
-                    ammo -= 1;
+                    shotgunAmmo -= 1;
                     gunColdown = true;
                     Invoke("gunColdownDone", shotgunColdownTime);
                     // Decreases ammo and puts the gun on coldown.
@@ -187,7 +189,7 @@ public class PlayerShooting : MonoBehaviour
             }
             else if (playerHasPistolEquipped && playerHasPistol)
             {
-                if (ammo < 1)
+                if (pistolAmmo < 1)
                 {
                     ResetAmmo();
                     Invoke("ReloadDone", pistolReloadTime);
@@ -205,9 +207,9 @@ public class PlayerShooting : MonoBehaviour
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                     //We grab the rigidbodycomponent from the saved bullet and save it in the variable "rb".
                     rb.AddForce(playerGun.transform.up * playerBulletSpeed, ForceMode2D.Impulse);
-                    ammo--;
+                    pistolAmmo--;
                     //Adds force to the rb of the bullet and increases it acording to bulletSpeed. Also decreses ammo by one.
-                    Debug.Log($"The pistol has {ammo} ammo!");
+                    Debug.Log($"The pistol has {pistolAmmo} ammo!");
                 }
             }
         }
@@ -249,22 +251,21 @@ public class PlayerShooting : MonoBehaviour
     {
         if (playerHasPistol && playerHasPistolEquipped)
         {
-            ammo = pistolAmmoMax;
+            pistolAmmo = pistolAmmoMax;
         }
         else if (playerHasShotgun && playerHasShotgunEquipped)
         {
-            ammo = shotgunAmmoMax;
+            shotgunAmmo = shotgunAmmoMax;
         }
         else if (playerHasMinigun && playerHasMinigunEquipped)
         {
-            ammo = minigunAmmoMax;
+            minigunAmmo = minigunAmmoMax;
         }
         // Reloads ammo and makes sure it is as much ammo as the current gun your using.
     }
 
     void OnReload()
     {
-        Debug.Log("STRDYFUGH");
         ResetAmmo();
         if (playerHasPistolEquipped)
         {
@@ -292,7 +293,6 @@ public class PlayerShooting : MonoBehaviour
             playerHasPistolEquipped = false;
             playerHasShotgunEquipped = false;
             spriteRenderer.sprite = minigun;
-            OnReload();
             SwitcGunHUD();
         }
     }
@@ -304,7 +304,6 @@ public class PlayerShooting : MonoBehaviour
             playerHasPistolEquipped = false;
             playerHasShotgunEquipped = true;
             spriteRenderer.sprite = shotgun;
-            OnReload();
             SwitcGunHUD();
         }
     }
