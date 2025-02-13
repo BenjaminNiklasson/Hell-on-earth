@@ -2,8 +2,8 @@
     <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=18b0c0a991961f043a7ef60270d1dbda&amp;type=3#MainMenuStyle" />
     <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; width: auto;">
         <ui:VisualElement style="flex-grow: 1; width: 400px; max-width: 400px; align-items: auto;">
-            <ui:Label tabindex="-1" text="1 - Street" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelName" class="Header" style="margin-top: 20px; margin-right: 20px; margin-bottom: 0; margin-left: 0; font-size: 75px; -unity-text-outline-width: 3px; text-shadow: 0 6px 1000px rgba(0, 0, 0, 0.59); height: 75px; width: 400px; -unity-text-align: middle-right;" />
-            <ui:Label tabindex="-1" text="Wave 3/5" parse-escape-sequences="true" display-tooltip-when-elided="true" name="WaveName" class="Header" style="font-size: 50px; -unity-text-outline-width: 2px; text-shadow: 0 4px 10000px rgba(0, 0, 0, 0.59); -unity-text-align: middle-right; margin-top: 10px; margin-right: 20px; margin-bottom: 0; margin-left: 0; width: 400px; height: 50px;" />
+            <ui:Label tabindex="-1" text="1 - Street" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelName" class="Header" style="margin-top: 20px; margin-right: 20px; margin-bottom: 0; margin-left: 0; font-size: 100px; -unity-text-outline-width: 3px; text-shadow: 0 6px 1000px rgba(0, 0, 0, 0.59); height: 75px; width: 400px; -unity-text-align: middle-right;" />
+            <ui:Label tabindex="-1" text="Wave 3/5" parse-escape-sequences="true" display-tooltip-when-elided="true" name="WaveName" class="Header" style="font-size: 60px; -unity-text-outline-width: 2px; text-shadow: 0 4px 10000px rgba(0, 0, 0, 0.59); -unity-text-align: middle-right; margin-top: 10px; margin-right: 20px; margin-bottom: 0; margin-left: 0; width: 400px; height: 50px;" />
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="PlayerHealthBar" style="flex-grow: 1; flex-direction: row; position: absolute; width: 600px; min-width: 600px; left: 540px; justify-content: space-between;">

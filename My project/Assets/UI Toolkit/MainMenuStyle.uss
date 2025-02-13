@@ -6,11 +6,13 @@
     align-self: auto;
     flex-direction: column;
     -unity-text-align: middle-center;
-    font-size: 150px;
+    font-size: 250px;
     color: rgb(255, 238, 0);
     -unity-text-outline-color: rgb(221, 68, 0);
-    -unity-text-outline-width: 2px;
+    -unity-text-outline-width: 5px;
     text-shadow: 0 5px 0 rgb(0, 0, 0);
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
 }
 
 .Button {
@@ -26,7 +28,7 @@
     height: 150px;
     margin-top: 0;
     margin-bottom: 25px;
-    font-size: 60px;
+    font-size: 100px;
     max-width: 400px;
     max-height: 150px;
     background-color: rgb(255, 238, 0);
@@ -35,21 +37,39 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     -unity-font-style: normal;
+    background-image: none;
+    -unity-background-image-tint-color: rgb(255, 238, 0);
+    -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
+    -unity-font-definition: initial;
 }
 
 .SubHeader {
     width: 250px;
     height: 100px;
     -unity-text-align: middle-center;
-    font-size: 75px;
+    font-size: 100px;
     margin-bottom: 20px;
+    color: rgb(255, 238, 0);
+    -unity-text-outline-width: 3px;
+    -unity-text-outline-color: rgb(221, 68, 0);
+    text-shadow: 0 3px 100px rgb(0, 0, 0);
 }
 
 .SubSubHeader {
-    font-size: 40px;
+    font-size: 80px;
+    height: 80px;
+    color: rgb(255, 238, 0);
+    -unity-text-outline-width: 1.5px;
+    -unity-text-outline-color: rgba(221, 68, 0, 0);
+    text-shadow: 0 2px 100px rgb(0, 0, 0);
+    text-overflow: clip;
+    -unity-text-align: middle-left;
 }
 
 .x3SubHeader {
+    -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
+    -unity-font-definition: initial;
+    font-size: 50px;
 }
 
 .SoundSlider {
@@ -235,6 +255,11 @@
     background-image: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1087164816274819069&guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&type=3#arrow-right@2x");
     background-color: rgb(255, 238, 0);
     -unity-background-image-tint-color: rgb(0, 0, 0);
+}
+
+.jimnightshade {
+    -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
+    -unity-font-definition: initial;
 }
 
 #MinigunAmmoContainer .unity-progress-bar__container {
