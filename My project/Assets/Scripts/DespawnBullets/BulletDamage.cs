@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bulletDamage : MonoBehaviour
 {
-    [SerializeField] float despawnColdown = 3;
+    [SerializeField] float despawnColdown = 0.5f;
     bool isCurrentleInviseble = false;
 
     void OnTriggerEnter2D(Collider2D collision)

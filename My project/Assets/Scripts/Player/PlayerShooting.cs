@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 
 public class PlayerShooting : MonoBehaviour
@@ -42,7 +43,7 @@ public class PlayerShooting : MonoBehaviour
     // You can only shoot when this is false and it turns true for a while when you lose all ammo.
     bool gunColdown = false;
     // You can only shoot when this is false and it turns true for a while when you shoot with the minigun or shotgun.
-    int ammo;
+    public int ammo;
     bool playerHasShotgun = false;
     bool playerHasMinigun = false;
     bool playerHasPistol = true;
@@ -278,6 +279,8 @@ public class PlayerShooting : MonoBehaviour
     }
     //Does the same thing as when you lose all your bullets but is conected to a custom input action called Reload that is activated with "R". AKA, you can reload sooner by pressing "R".
 
+
+
     void OnSwitchToMinigun()
     {
         if (playerHasMinigun)
@@ -287,6 +290,7 @@ public class PlayerShooting : MonoBehaviour
             playerHasShotgunEquipped = false;
             spriteRenderer.sprite = minigun;
             OnReload();
+            SwitcGunHUD();
         }
     }
     void OnSwitchToShotgun()
@@ -298,6 +302,7 @@ public class PlayerShooting : MonoBehaviour
             playerHasShotgunEquipped = true;
             spriteRenderer.sprite = shotgun;
             OnReload();
+            SwitcGunHUD();
         }
     }
     void OnSwitchToPistol()
@@ -306,9 +311,88 @@ public class PlayerShooting : MonoBehaviour
         playerHasPistolEquipped = true;
         playerHasShotgunEquipped = false;
         spriteRenderer.sprite = pistol;
+        SwitcGunHUD();
     }
     // You can switch your current wepon with the buttons 1,2 and 3 but you have to reload when doing so. You also switch to the guns sprite;
 
+    VisualElement _root;
+
+    private void Awake()
+    {
+        _root = GetComponent<UIDocument>().rootVisualElement;
+    }
+
+    void SwitcGunHUD()
+    {
+        VisualElement bigPistolIcon = _root.Q<VisualElement>("BigPistolIcon");
+        VisualElement smallPistolIcon = _root.Q<VisualElement>("SmallPistolIcon");
+        VisualElement bigShotgunIcon = _root.Q<VisualElement>("BigShotgunIcon");
+        VisualElement smallShotgunIcon = _root.Q<VisualElement>("SmallShotgunIcon");
+        VisualElement bigMinigunIcon = _root.Q<VisualElement>("BigMinigunIcon");
+        VisualElement smallMinigunIcon = _root.Q<VisualElement>("SmallMinigunIcon");
+        VisualElement emptyIcon1 = _root.Q<VisualElement>("EmptyIcon1");
+        VisualElement emptyIcon2 = _root.Q<VisualElement>("EmptyIcon2");
+
+        bigPistolIcon.style.display = DisplayStyle.None;
+        smallPistolIcon.style.display = DisplayStyle.None;
+        bigShotgunIcon.style.display = DisplayStyle.None;
+        smallShotgunIcon.style.display = DisplayStyle.None;
+        bigMinigunIcon.style.display = DisplayStyle.None;
+        smallMinigunIcon.style.display = DisplayStyle.None;
+        emptyIcon1.style.display = DisplayStyle.None;
+        emptyIcon2.style.display = DisplayStyle.None;
+        Debug.Log("SwitchHud");
+
+        if (playerHasPistolEquipped)
+        {
+            if (playerHasMinigun)
+            {
+                bigPistolIcon.style.display = DisplayStyle.Flex;
+                smallShotgunIcon.style.display = DisplayStyle.Flex;
+                smallMinigunIcon.style.display = DisplayStyle.Flex;
+                Debug.Log("if (playerHasPistolEquipped) if (playerHasMinigun)");
+            }
+            else if (playerHasShotgun)
+            {
+                bigPistolIcon.style.display = DisplayStyle.Flex;
+                smallShotgunIcon.style.display = DisplayStyle.Flex;
+                emptyIcon1.style.display = DisplayStyle.Flex;
+                Debug.Log("if (playerHasPistolEquipped) if (playerHasShotgun)");
+            }
+            else
+            {
+                bigPistolIcon.style.display = DisplayStyle.Flex;
+                emptyIcon1.style.display = DisplayStyle.Flex;
+                emptyIcon2.style.display = DisplayStyle.Flex;
+                Debug.Log("if (playerHasPistolEquipped)");
+            }
+        }
+        else if (playerHasShotgunEquipped)
+        {
+            if (playerHasMinigun)
+            {
+                smallPistolIcon.style.display = DisplayStyle.Flex;
+                bigShotgunIcon.style.display = DisplayStyle.Flex;
+                smallMinigunIcon.style.display = DisplayStyle.Flex;
+                Debug.Log("if (playerHasShotgunEquipped) if (playerHasShotgun)");
+            }
+            else
+            {
+                smallPistolIcon.style.display = DisplayStyle.Flex;
+                bigShotgunIcon.style.display = DisplayStyle.Flex;
+                emptyIcon1.style.display = DisplayStyle.Flex;
+                Debug.Log("if (playerHasShotgunEquipped)");
+            }
+        }
+        else if (playerHasMinigunEquipped)
+        {
+            smallPistolIcon.style.display = DisplayStyle.Flex;
+            smallShotgunIcon.style.display = DisplayStyle.Flex;
+            bigMinigunIcon.style.display = DisplayStyle.Flex;
+            Debug.Log("if (playerHasMinigunEquipped)");
+        }
+    }
+    
     public void ActivateShotgun()
     {
         playerHasShotgun = true;
