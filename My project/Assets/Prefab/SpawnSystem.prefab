@@ -45,17 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee037b6cfd7f0f42a2274c2da876a57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wavePoints: 1400000014000000
-  aspidAvailable: 0100
-  tankAvailable: 0001
-  railgunnerAvailable: 0001
+  wavePoints: 0500000008000000
+  aspidAvailable: 0101
+  tankAvailable: 
+  railgunnerAvailable: 
   aspid: {fileID: 2571326966528516529, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
   tank: {fileID: 6713328149867435175, guid: 2de1703976723cc4e9e97e0ec5a2117a, type: 3}
   railgunner: {fileID: 8330127110676808297, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
-  coldownBetweenWaves: 5
-  minSpawntime: 1
-  maxSpawntime: 3
-  spawnDistance: 20
+  coldownBetweenWaves: 8
+  minSpawntime: 6
+  maxSpawntime: 8
+  spawnDistance: 5
+  hellmodeOn: 1
+  currentWave: 0
+  maxWaves: 0
 --- !u!61 &3689571002787626246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88,7 +91,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 24.795135, y: 26.947407}
+  m_Offset: {x: 12.861521, y: 4.546571}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -99,5 +102,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 69.58286, y: 63.76409}
+  m_Size: {x: 48.0229, y: 11.203489}
   m_EdgeRadius: 0

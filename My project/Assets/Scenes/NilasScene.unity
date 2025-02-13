@@ -156,9 +156,11 @@ MonoBehaviour:
   enemyIsAAspid: 0
   enemyIsATank: 1
   enemyIsARailgunner: 0
+  enemyIsAElonBezos: 0
   AspidHealth: 3
   TankHealth: 30
   RailgunnerHealth: 6
+  ElonBezosHealth: 666
 --- !u!58 &152569686
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -261,6 +263,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &174381841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8178872707295951787, guid: a602b7be6416b814299e47517bb92a6b, type: 3}
+  m_PrefabInstance: {fileID: 592858731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &300625396
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,9 +740,11 @@ MonoBehaviour:
   enemyIsAAspid: 1
   enemyIsATank: 0
   enemyIsARailgunner: 0
+  enemyIsAElonBezos: 0
   AspidHealth: 3
   TankHealth: 30
   RailgunnerHealth: 6
+  ElonBezosHealth: 666
 --- !u!1 &1169060912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,6 +1182,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6177310201952431760, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 174381841}
     - target: {fileID: 6646267129698961156, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1248,7 +1261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: wavePoints.Array.size
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: tankAvailable.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: wavePoints.Array.data[0]
@@ -1260,11 +1277,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: wavePoints.Array.data[2]
+      value: 68432
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: wavePoints.Array.data[3]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: wavePoints.Array.data[4]
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: aspidAvailable.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: tankAvailable.Array.data[0]
@@ -1275,7 +1300,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: tankAvailable.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: aspidAvailable.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: aspidAvailable.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: aspidAvailable.Array.data[2]
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
@@ -1283,12 +1320,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: railgunnerAvailable.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: railgunnerAvailable.Array.data[1]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: railgunnerAvailable.Array.data[2]
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1265751074486013179, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: m_Name

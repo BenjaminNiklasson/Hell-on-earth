@@ -18,6 +18,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] float minSpawntime;
     [SerializeField] float maxSpawntime;
     [SerializeField] float spawnDistance;
+    [SerializeField] bool hellmodeOn;
     Vector2 screenBounds;
     Vector2 spawnPosition;
     public int currentWave = 0;
@@ -44,19 +45,21 @@ public class EnemySpawn : MonoBehaviour
 
     void SpawnEnemy()
     {
-        if (wavePoints[currentWave] >= 1)
+        if (wavePoints[currentWave] >= 0)
         {
             float spawnTime = Random.Range(minSpawntime, maxSpawntime);
             screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
             Vector2 screenDifferens = new Vector2((screenBounds.x - screenBounds.x), (screenBounds.y - screenBounds.y));
             int lOrR;
 
-            int type = Random.Range(0, 18);
+            float type = Random.Range(0, 18);
             switch (type)
             {
                 case 0-11:
+                    Debug.Log("0-11");
                     if (aspidAvailable[currentWave])
                     {
+                        Debug.Log("TryingAspid");
                         int side = Random.Range(0, 3);
                         switch (side)
                         {
@@ -85,17 +88,25 @@ public class EnemySpawn : MonoBehaviour
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
+                            if (hellmodeOn && currentWave == maxWaves)
+                            {
+                                maxSpawntime = maxSpawntime / 2;
+                                minSpawntime = minSpawntime / 3;
+                            }
                         }
                         break;
                     }
                     else
                     {
+                        Debug.Log("SpawnEnemy()");
                         Invoke("SpawnEnemy", 0);
                         break;
                     }
                 case 12-15:
+                    Debug.Log("12-15");
                     if (tankAvailable[currentWave])
                     {
+                        Debug.Log("TryingTank");
                         lOrR = Random.Range(0, 2);
                         switch (lOrR)
                         {
@@ -121,17 +132,25 @@ public class EnemySpawn : MonoBehaviour
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
+                            if (hellmodeOn && currentWave == maxWaves)
+                            {
+                                maxSpawntime = maxSpawntime / 2;
+                                minSpawntime = minSpawntime / 3;
+                            }
                         }
                         break;
                     }
                     else
                     {
+                        Debug.Log("SpawnEnemy()");
                         Invoke("SpawnEnemy", 0);
                         break;
                     }
                 case 16-18:
+                    Debug.Log("15-18");
                     if (railgunnerAvailable[currentWave])
                     {
+                        Debug.Log("TryingRailer");
                         lOrR = Random.Range(0, 2);
                         switch (lOrR)
                         {
@@ -157,11 +176,17 @@ public class EnemySpawn : MonoBehaviour
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
+                            if (hellmodeOn && currentWave == maxWaves)
+                            {
+                                maxSpawntime = maxSpawntime / 2;
+                                minSpawntime = minSpawntime / 3;
+                            }
                         }
                         break;
                     }
                     else
                     {
+                        Debug.Log("SpawnEnemy()");
                         Invoke("SpawnEnemy", 0);
                         break;
                     }
