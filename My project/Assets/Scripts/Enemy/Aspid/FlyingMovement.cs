@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlyingMovement : MonoBehaviour
 {
     [SerializeField] float rotationSpeed = 3f;
-    void Update()
+    void FixedUpdate()
     {
         transform.Rotate(new Vector3(0, 0, rotationSpeed));
     }
