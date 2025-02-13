@@ -287,7 +287,7 @@ public class PlayerShooting : MonoBehaviour
 
     void OnSwitchToMinigun()
     {
-        if (playerHasMinigun)
+        if (playerHasMinigun && !isReloading)
         {
             playerHasMinigunEquipped = true;
             playerHasPistolEquipped = false;
@@ -298,7 +298,7 @@ public class PlayerShooting : MonoBehaviour
     }
     void OnSwitchToShotgun()
     {
-        if (playerHasShotgun)
+        if (playerHasShotgun && !isReloading)
         {
             playerHasMinigunEquipped = false;
             playerHasPistolEquipped = false;
@@ -309,11 +309,14 @@ public class PlayerShooting : MonoBehaviour
     }
     void OnSwitchToPistol()
     {
-        playerHasMinigunEquipped = false;
-        playerHasPistolEquipped = true;
-        playerHasShotgunEquipped = false;
-        spriteRenderer.sprite = pistol;
-        SwitcGunHUD();
+        if (!isReloading)
+        {
+            playerHasMinigunEquipped = false;
+            playerHasPistolEquipped = true;
+            playerHasShotgunEquipped = false;
+            spriteRenderer.sprite = pistol;
+            SwitcGunHUD();
+        }
     }
     // You can switch your current wepon with the buttons 1,2 and 3 but you have to reload when doing so. You also switch to the guns sprite;
 
