@@ -6,11 +6,13 @@
     align-self: auto;
     flex-direction: column;
     -unity-text-align: middle-center;
-    font-size: 150px;
+    font-size: 250px;
     color: rgb(255, 238, 0);
     -unity-text-outline-color: rgb(221, 68, 0);
-    -unity-text-outline-width: 2px;
+    -unity-text-outline-width: 5px;
     text-shadow: 0 5px 0 rgb(0, 0, 0);
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
 }
 
 .Button {
@@ -26,7 +28,7 @@
     height: 150px;
     margin-top: 0;
     margin-bottom: 25px;
-    font-size: 60px;
+    font-size: 100px;
     max-width: 400px;
     max-height: 150px;
     background-color: rgb(255, 238, 0);
@@ -35,21 +37,39 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     -unity-font-style: normal;
+    background-image: none;
+    -unity-background-image-tint-color: rgb(255, 238, 0);
+    -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
+    -unity-font-definition: initial;
 }
 
 .SubHeader {
     width: 250px;
     height: 100px;
     -unity-text-align: middle-center;
-    font-size: 75px;
+    font-size: 100px;
     margin-bottom: 20px;
+    color: rgb(255, 238, 0);
+    -unity-text-outline-width: 3px;
+    -unity-text-outline-color: rgb(221, 68, 0);
+    text-shadow: 0 3px 100px rgb(0, 0, 0);
 }
 
 .SubSubHeader {
-    font-size: 40px;
+    font-size: 80px;
+    height: 80px;
+    color: rgb(255, 238, 0);
+    -unity-text-outline-width: 1.5px;
+    -unity-text-outline-color: rgb(221, 68, 0);
+    text-shadow: 0 2px 100px rgb(0, 0, 0);
+    text-overflow: clip;
+    -unity-text-align: middle-left;
 }
 
 .x3SubHeader {
+    -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
+    -unity-font-definition: initial;
+    font-size: 50px;
 }
 
 .SoundSlider {
@@ -237,6 +257,11 @@
     -unity-background-image-tint-color: rgb(0, 0, 0);
 }
 
+.jimnightshade {
+    -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
+    -unity-font-definition: initial;
+}
+
 #MinigunAmmoContainer .unity-progress-bar__container {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -335,4 +360,127 @@
     position: absolute;
     right: 0;
     left: 0;
+}
+
+#MasterSlider .unity-base-slider__tracker {
+    height: 30px;
+    justify-content: flex-start;
+    translate: 0 -4px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color: rgb(255, 238, 0);
+    border-left-color: rgb(221, 68, 0);
+    border-right-color: rgb(221, 68, 0);
+    border-top-color: rgb(221, 68, 0);
+    border-bottom-color: rgb(221, 68, 0);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    background-image: url("project://database/Assets/Sprites/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(255, 238, 0);
+    scale: 1 1;
+}
+
+#MusicSlider .unity-base-slider__tracker {
+    height: 30px;
+    justify-content: flex-start;
+    translate: 0 -4px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color: rgb(255, 238, 0);
+    border-left-color: rgb(221, 68, 0);
+    border-right-color: rgb(221, 68, 0);
+    border-top-color: rgb(221, 68, 0);
+    border-bottom-color: rgb(221, 68, 0);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    background-image: url("project://database/Assets/Sprites/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(255, 238, 0);
+    scale: 1 1;
+}
+
+#SfxSlider .unity-base-slider__tracker {
+    height: 30px;
+    justify-content: flex-start;
+    translate: 0 -4px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color: rgb(255, 238, 0);
+    border-left-color: rgb(221, 68, 0);
+    border-right-color: rgb(221, 68, 0);
+    border-top-color: rgb(221, 68, 0);
+    border-bottom-color: rgb(221, 68, 0);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    background-image: url("project://database/Assets/Sprites/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(255, 238, 0);
+    scale: 1 1;
+}
+
+#MasterSlider .unity-base-slider__dragger {
+    background-color: rgb(187, 170, 0);
+    height: 40px;
+    width: 20px;
+    translate: 0 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-left-color: rgb(221, 68, 0);
+    border-right-color: rgb(221, 68, 0);
+    border-top-color: rgb(221, 68, 0);
+    border-bottom-color: rgb(221, 68, 0);
+    background-image: url("project://database/Assets/Sprites/Elevatorforeground.png?fileID=2800000&guid=c104ce94a131ec14da6d8970e809423a&type=3#Elevatorforeground");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(255, 255, 170);
+}
+
+#MusicSlider .unity-base-slider__dragger {
+    background-color: rgb(187, 170, 0);
+    height: 40px;
+    width: 20px;
+    translate: 0 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-left-color: rgb(221, 68, 0);
+    border-right-color: rgb(221, 68, 0);
+    border-top-color: rgb(221, 68, 0);
+    border-bottom-color: rgb(221, 68, 0);
+    background-image: url("project://database/Assets/Sprites/Elevatorforeground.png?fileID=2800000&guid=c104ce94a131ec14da6d8970e809423a&type=3#Elevatorforeground");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(255, 255, 170);
+}
+
+#SfxSlider .unity-base-slider__dragger {
+    background-color: rgb(187, 170, 0);
+    height: 40px;
+    width: 20px;
+    translate: 0 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-left-color: rgb(221, 68, 0);
+    border-right-color: rgb(221, 68, 0);
+    border-top-color: rgb(221, 68, 0);
+    border-bottom-color: rgb(221, 68, 0);
+    background-image: url("project://database/Assets/Sprites/Elevatorforeground.png?fileID=2800000&guid=c104ce94a131ec14da6d8970e809423a&type=3#Elevatorforeground");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(255, 255, 170);
 }
