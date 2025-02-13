@@ -14,6 +14,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] GameObject playerMinigunBullet;
     [SerializeField] GameObject playerShotgunBullet;
     [SerializeField] GameObject playerGun;
+    [SerializeField] GameObject UI;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Sprite shotgun;
     [SerializeField] Sprite minigun;
@@ -63,6 +64,7 @@ public class PlayerShooting : MonoBehaviour
     {
         ResetAmmo();
         currentMinigunColdownTime = maxMinigunColdownTime;
+        SwitcGunHUD();
     }
 
     private void Update()
@@ -319,7 +321,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void Awake()
     {
-        _root = GetComponent<UIDocument>().rootVisualElement;
+        _root = UI.GetComponent<UIDocument>().rootVisualElement;
     }
 
     void SwitcGunHUD()
