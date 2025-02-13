@@ -52,8 +52,9 @@ public class EnemySpawn : MonoBehaviour
             int lOrR;
 
             float type = Random.Range(0, 18);
-            if (type < 12)
+            switch (type)
             {
+                case 0-11:
                     Debug.Log("0-11");
                     if (aspidAvailable[currentWave])
                     {
@@ -92,14 +93,15 @@ public class EnemySpawn : MonoBehaviour
                                 minSpawntime = minSpawntime / 3;
                             }
                         }
+                        break;
                     }
                     else
                     {
                         Debug.Log("SpawnEnemy()");
                         Invoke("SpawnEnemy", 0);
+                        break;
                     }
-            }
-            else if ()
+                case 12-15:
                     Debug.Log("12-15");
                     if (tankAvailable[currentWave])
                     {
