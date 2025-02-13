@@ -51,10 +51,10 @@ public class EnemySpawn : MonoBehaviour
             Vector2 screenDifferens = new Vector2((screenBounds.x - screenBounds.x), (screenBounds.y - screenBounds.y));
             int lOrR;
 
-            int type = Random.Range(0, 3);
+            int type = Random.Range(0, 18);
             switch (type)
             {
-                case 0:
+                case 0-11:
                     if (aspidAvailable[currentWave])
                     {
                         int side = Random.Range(0, 3);
@@ -93,7 +93,7 @@ public class EnemySpawn : MonoBehaviour
                         Invoke("SpawnEnemy", 0);
                         break;
                     }
-                case 1:
+                case 12-15:
                     if (tankAvailable[currentWave])
                     {
                         lOrR = Random.Range(0, 2);
@@ -110,7 +110,7 @@ public class EnemySpawn : MonoBehaviour
                         if (currentTank.transform.position.x < maxBounds.x && currentTank.transform.position.x > minBounds.x && currentTank.transform.position.y < maxBounds.y && currentTank.transform.position.y > minBounds.y)
                         {
                             Invoke("SpawnEnemy", spawnTime);
-                            wavePoints[currentWave] -= 3;
+                            wavePoints[currentWave] -= 4;
                         }
                         else
                         {
@@ -129,7 +129,7 @@ public class EnemySpawn : MonoBehaviour
                         Invoke("SpawnEnemy", 0);
                         break;
                     }
-                case 2:
+                case 16-18:
                     if (railgunnerAvailable[currentWave])
                     {
                         lOrR = Random.Range(0, 2);
@@ -146,7 +146,7 @@ public class EnemySpawn : MonoBehaviour
                         if (currentRailer.transform.position.x < maxBounds.x && currentRailer.transform.position.x > minBounds.x && currentRailer.transform.position.y < maxBounds.y && currentRailer.transform.position.y > minBounds.y)
                         {
                             Invoke("SpawnEnemy", spawnTime);
-                            wavePoints[currentWave] -= 2;
+                            wavePoints[currentWave] -= 3;
                         }
                         else
                         {
