@@ -51,17 +51,26 @@ public class OscarScript : MonoBehaviour
 
     public void Level2Unlock()
     {
-
+        VisualElement lvl2Lock = _root.Q<VisualElement>("Lvl2Lock");
+        Button playLvl2Button = _root.Q<Button>("PlayLvl2Button");
+        lvl2Lock.style.display = DisplayStyle.None;
+        playLvl2Button.style.display = DisplayStyle.Flex;
     }
 
     public void Level3Unlock()
     {
-
+        VisualElement lvl3Lock = _root.Q<VisualElement>("Lvl3Lock");
+        Button playLvl3Button = _root.Q<Button>("PlayLvl3Button");
+        lvl3Lock.style.display = DisplayStyle.None;
+        playLvl3Button.style.display = DisplayStyle.Flex;
     }
 
     public void Level4Unlock()
     {
-
+        VisualElement lvl4Lock = _root.Q<VisualElement>("Lvl4Lock");
+        Button playLvl4Button = _root.Q<Button>("PlayLvl4Button");
+        lvl4Lock.style.display = DisplayStyle.None;
+        playLvl4Button.style.display = DisplayStyle.Flex;
     }
 
     public void SwitchMenu(string menuName)
