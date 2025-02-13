@@ -37,11 +37,16 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     -unity-font-style: normal;
-    background-image: url("project://database/Assets/Sprites/Objects/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
+    background-image: none;
     -unity-background-image-tint-color: rgb(255, 238, 0);
     -unity-font: url("project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=c628f457327923a4fa6b2dd21ea5aa91&type=3#JimNightshade-Regular");
     -unity-font-definition: initial;
     -unity-background-scale-mode: scale-and-crop;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: auto;
 }
 
 .SubHeader {
@@ -148,6 +153,7 @@
     background-image: url("project://database/Assets/Sprites/Objects/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 238, 0);
+    overflow: hidden;
 }
 
 .KeybindLabel {
@@ -578,4 +584,33 @@
     background-image: url("project://database/Assets/Sprites/Background/Elevatorforeground.png?fileID=2800000&guid=c104ce94a131ec14da6d8970e809423a&type=3#Elevatorforeground");
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 255, 170);
+}
+
+.radigntexut {
+    background-image: url("project://database/Assets/Sprites/Objects/Studdsigparasol.png?fileID=2800000&guid=501cb606b780b2d4fbd1e6ba1a5a5d7c&type=3#Studdsigparasol");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(255, 238, 0);
+    scale: 3 5;
+    rotate: 60deg;
+    flex-shrink: 0;
+    width: 350px;
+    height: 100px;
+    position: absolute;
+}
+
+.buttonLabel {
+    margin-top: 0;
+    -unity-text-align: middle-center;
+    width: 400px;
+    height: 150px;
+    flex-shrink: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    align-self: auto;
+    translate: 0 -20px;
 }
