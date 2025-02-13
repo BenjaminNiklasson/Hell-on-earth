@@ -25,32 +25,7 @@
         <ui:VisualElement name="BigPistolIcon" class="WeaponIcon" style="flex-grow: 1; max-width: 200px; max-height: 200px; min-width: 200px; min-height: 150px; scale: 1 1; transform-origin: left top; width: 200px; height: 200px; background-color: rgb(181, 160, 55);">
             <ui:VisualElement style="flex-grow: 1; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px; background-color: rgb(243, 239, 217); border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; width: auto; height: auto; flex-direction: column; align-items: center; justify-content: space-between;">
                 <ui:VisualElement style="flex-grow: 1; width: auto; min-width: 100px; min-height: 100px; background-image: url(&quot;project://database/Assets/Sprites/Pistol%20for%20player,%2064x64.png?fileID=2800000&amp;guid=4cd6472cb4ecc184b8646d1256bb65e0&amp;type=3#Pistol for player, 64x64&quot;); rotate: 75deg; scale: 1.2 1.2; translate: 0 -10px;" />
-                <ui:VisualElement name="PistolAmmoContainer" style="flex-grow: 1; height: 54px; width: 118px; max-height: 54px; min-height: 54px; max-width: 118px; translate: 0 0;">
-                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: 120px; margin-left: 0; height: 22px;">
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                    </ui:VisualElement>
-                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 22px; width: 120px; margin-bottom: 10px;">
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notPistolAmmo" style="flex-grow: 1;" />
-                    </ui:VisualElement>
-                </ui:VisualElement>
+                <ui:VisualElement name="PistolAmmoContainer" style="flex-grow: 1; height: 54px; width: 118px; max-height: 54px; min-height: 54px; max-width: 118px; translate: 0 0; align-items: flex-start; flex-wrap: wrap;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="SmallPistolIcon" class="WeaponIcon" style="flex-grow: 1; max-width: 150px; max-height: 150px; min-width: 150px; min-height: 150px; scale: 1 1; transform-origin: left top; display: none;">
@@ -58,16 +33,11 @@
                 <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Pistol%20for%20player,%2064x64.png?fileID=2800000&amp;guid=4cd6472cb4ecc184b8646d1256bb65e0&amp;type=3#Pistol for player, 64x64&quot;); scale: 1 1; -unity-background-scale-mode: scale-to-fit; rotate: 75deg; translate: 2px -10px;" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="BigShotgunIcon" class="WeaponIcon" style="flex-grow: 1; max-width: 200px; max-height: 200px; min-width: 200px; min-height: 150px; scale: 1 1; transform-origin: left top; width: 200px; height: 200px; background-color: rgb(181, 160, 55); display: none;">
+        <ui:VisualElement name="BigShotgunIcon" class="WeaponIcon" style="flex-grow: 1; max-width: 200px; max-height: 200px; min-width: 200px; min-height: 150px; scale: 1 1; transform-origin: left top; width: 200px; height: 200px; background-color: rgb(181, 160, 55); display: flex;">
             <ui:VisualElement style="flex-grow: 1; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px; background-color: rgb(243, 239, 217); border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; width: auto; height: auto; flex-direction: column; align-items: center; justify-content: space-around;">
                 <ui:VisualElement style="flex-grow: 1; min-width: 100px; min-height: 100px; background-image: url(&quot;project://database/Assets/Sprites/Shotgun%20for%20player,%2064x64%20.png?fileID=2800000&amp;guid=1f7e67f1e667cf6439df3937e88a33f6&amp;type=3#Shotgun for player, 64x64 &quot;); rotate: 75deg; scale: 1.5 1.5;" />
                 <ui:VisualElement name="ShotgunAmmoBar" style="flex-grow: 0; height: 58px; width: 92px; max-height: 58px; min-height: 48px; max-width: 92px; min-width: 92px; flex-direction: row; align-items: flex-start;">
-                    <ui:VisualElement name="ShotgunAmmoContainer" style="flex-grow: 1; flex-shrink: 0; height: 58px; flex-direction: row;" />
-                    <ui:VisualElement style="flex-grow: 0; width: 92px; height: 58px; flex-direction: row; max-width: 92px; overflow: hidden;">
-                        <ui:VisualElement class="notShotgunAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notShotgunAmmo" style="flex-grow: 1;" />
-                        <ui:VisualElement class="notShotgunAmmo" style="flex-grow: 1; scale: 1 1; -unity-background-scale-mode: scale-and-crop;" />
-                    </ui:VisualElement>
+                    <ui:VisualElement name="ShotgunAmmoContainer" style="flex-grow: 1; flex-shrink: 0; height: 58px; flex-direction: row; overflow: hidden; width: 92px; max-width: 92px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

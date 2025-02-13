@@ -44,7 +44,7 @@ public class AspidShooting : MonoBehaviour
         Rigidbody2D rb = aspidProjetile.GetComponent<Rigidbody2D>();
         target = new Vector2(player.transform.position.x, player.transform.position.y);
         Vector2 direcetion = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
-        rb.AddForce(direcetion * Speed, ForceMode2D.Impulse);
+        rb.MovePosition(rb.position + direcetion * Speed * Time.fixedDeltaTime);
         Invoke("AfterCooldown", startTimeBtwShoots);
     }
     void Falsify()
