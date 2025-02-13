@@ -171,20 +171,35 @@
 }
 
 .pistolAmmo {
-}
-
-.notPistolAmmo {
     background-image: url("project://database/Assets/Sprites/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
     width: 10px;
     height: 20px;
     max-width: 10px;
-    -unity-background-image-tint-color: rgb(181, 160, 55);
+    -unity-background-image-tint-color: rgb(234, 208, 78);
     rotate: 180deg;
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     margin-right: 2px;
+    max-height: 20px;
+    margin-bottom: 2px;
+}
+
+.nonPistolAmmo {
+    background-image: url("project://database/Assets/Sprites/Office%20floor%20Tile.png?fileID=2800000&guid=4530ca51e270a164299a83a843a4f170&type=3#Office floor Tile");
+    width: 10px;
+    height: 20px;
+    max-width: 10px;
+    -unity-background-image-tint-color: rgb(133, 117, 40);
+    rotate: 180deg;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-right: 2px;
+    max-height: 20px;
+    margin-bottom: 2px;
 }
 
 .shotgunAmmo {
