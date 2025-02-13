@@ -13,6 +13,7 @@ public class ButtonEvent
     [SerializeField] string _buttonName = "";
     [SerializeField] UnityEvent _unityEvent;
     Button _button;
+    
 
 
 
@@ -46,6 +47,21 @@ public class OscarScript : MonoBehaviour
     private void Awake()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
+    }
+
+    public void Level2Unlock()
+    {
+
+    }
+
+    public void Level3Unlock()
+    {
+
+    }
+
+    public void Level4Unlock()
+    {
+
     }
 
     public void SwitchMenu(string menuName)

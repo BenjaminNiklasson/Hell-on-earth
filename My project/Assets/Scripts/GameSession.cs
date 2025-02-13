@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameSession : MonoBehaviour
 {
     bool _playerHasShotgun = false;
     bool _playerHasMinigun = false;
+    bool level2Unlocked = false;
+    bool level3Unlocked = false;
+    bool level4Unlocked = false;
 
     private void Awake()
     {
@@ -22,6 +27,20 @@ public class GameSession : MonoBehaviour
 
     void Start()
     {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex == 3)
+        {
+            level2Unlocked = true;
+        }
+        if (currentSceneIndex == 4)
+        {
+            level3Unlocked = true;
+        }
+        if (currentSceneIndex == 5)
+        {
+            level4Unlocked = true;
+        }
+
         if (_playerHasShotgun)
         {
             FindFirstObjectByType<PlayerShooting>().ActivateShotgun();
@@ -29,6 +48,19 @@ public class GameSession : MonoBehaviour
         if (_playerHasMinigun)
         {
             FindFirstObjectByType<PlayerShooting>().ActivateMinigun();
+        }
+
+        if (level2Unlocked == true && currentSceneIndex == 1)
+        {
+            FindFirstObjectByType<OscarScript>().Level2Unlock();
+        }
+        if (level3Unlocked == true && currentSceneIndex == 1)
+        {
+            FindFirstObjectByType<OscarScript>().Level3Unlock();
+        }
+        if (level4Unlocked == true && currentSceneIndex == 1)
+        {
+            FindFirstObjectByType<OscarScript>().Level4Unlock();
         }
     }
 
