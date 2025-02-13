@@ -41,16 +41,24 @@ public class TokenAttempt2 : MonoBehaviour
     {
         Debug.Log("pistolammoui!");
         pistolAmmoContainer.Clear();
-        for (int i = 0; i < player.GetComponent<PlayerShooting>().; i++)
+        for (int i = 0; i < player.GetComponent<PlayerShooting>().ammo; i++)
         {
             VisualElement PistolAmmo = new VisualElement();
             PistolAmmo.AddToClassList("pistolAmmo");
             pistolAmmoContainer.Add(PistolAmmo);
         }
+        for (int i = 0; i < 20-player.GetComponent<PlayerShooting>().ammo; i++)
+        {
+            VisualElement NonPistolAmmo = new VisualElement();
+            NonPistolAmmo.AddToClassList("nonPistolAmmo");
+            pistolAmmoContainer.Add(NonPistolAmmo);
+        }
     }
+
     // Update is called once per frame
     void Update()
     {
         CreatePlayerHearts(playerHeartContainer);
+        CreatePistolAmmo(pistolAmmoContainer);
     }
 }

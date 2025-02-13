@@ -43,7 +43,7 @@ public class PlayerShooting : MonoBehaviour
     // You can only shoot when this is false and it turns true for a while when you lose all ammo.
     bool gunColdown = false;
     // You can only shoot when this is false and it turns true for a while when you shoot with the minigun or shotgun.
-    int ammo;
+    public int ammo;
     bool playerHasShotgun = false;
     bool playerHasMinigun = false;
     bool playerHasPistol = true;
