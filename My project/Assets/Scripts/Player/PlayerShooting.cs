@@ -341,7 +341,7 @@ public class PlayerShooting : MonoBehaviour
         smallMinigunIcon.style.display = DisplayStyle.None;
         emptyIcon1.style.display = DisplayStyle.None;
         emptyIcon2.style.display = DisplayStyle.None;
-
+        Debug.Log("SwitchHud");
 
         if (playerHasPistolEquipped)
         {
@@ -350,18 +350,21 @@ public class PlayerShooting : MonoBehaviour
                 bigPistolIcon.style.display = DisplayStyle.Flex;
                 smallShotgunIcon.style.display = DisplayStyle.Flex;
                 smallMinigunIcon.style.display = DisplayStyle.Flex;
+                Debug.Log("if (playerHasPistolEquipped) if (playerHasMinigun)");
             }
             else if (playerHasShotgun)
             {
                 bigPistolIcon.style.display = DisplayStyle.Flex;
                 smallShotgunIcon.style.display = DisplayStyle.Flex;
                 emptyIcon1.style.display = DisplayStyle.Flex;
+                Debug.Log("if (playerHasPistolEquipped) if (playerHasShotgun)");
             }
             else
             {
                 bigPistolIcon.style.display = DisplayStyle.Flex;
                 emptyIcon1.style.display = DisplayStyle.Flex;
                 emptyIcon2.style.display = DisplayStyle.Flex;
+                Debug.Log("if (playerHasPistolEquipped)");
             }
         }
         else if (playerHasShotgunEquipped)
@@ -371,12 +374,14 @@ public class PlayerShooting : MonoBehaviour
                 smallPistolIcon.style.display = DisplayStyle.Flex;
                 bigShotgunIcon.style.display = DisplayStyle.Flex;
                 smallMinigunIcon.style.display = DisplayStyle.Flex;
+                Debug.Log("if (playerHasShotgunEquipped) if (playerHasShotgun)");
             }
             else
             {
                 smallPistolIcon.style.display = DisplayStyle.Flex;
                 bigShotgunIcon.style.display = DisplayStyle.Flex;
                 emptyIcon1.style.display = DisplayStyle.Flex;
+                Debug.Log("if (playerHasShotgunEquipped)");
             }
         }
         else if (playerHasMinigunEquipped)
@@ -384,6 +389,7 @@ public class PlayerShooting : MonoBehaviour
             smallPistolIcon.style.display = DisplayStyle.Flex;
             smallShotgunIcon.style.display = DisplayStyle.Flex;
             bigMinigunIcon.style.display = DisplayStyle.Flex;
+            Debug.Log("if (playerHasMinigunEquipped)");
         }
     }
     
