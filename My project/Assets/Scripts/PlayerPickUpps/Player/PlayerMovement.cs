@@ -14,11 +14,14 @@ public class PlayerMovement : MonoBehaviour
     bool IsGrounded;
     [SerializeField]int maxNumberOfJumps = 1;
     int numberOfJumps = 0;
+    Animator ani;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         //numberOfJumps = maxNumberOfJumps;
+        ani = GetComponent<Animator>();
+        ani.SetBool("IsRunning", false);
     }
 
     void OnFire()
@@ -54,6 +57,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(moveimput.x * moveSpeed, rb.velocity.y);
+        if(moveimput.x !=0)
+        {
+            ani.SetBool("IsRunning", true);
+            transform.localScale = new Vector2(Mathf.Sign(moveimput.x), transform.localScale.y);
+        }
+        else
+        {
+            ani.SetBool("IsRunning", false);
+        }
     }
 }
 
