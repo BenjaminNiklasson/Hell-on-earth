@@ -271,8 +271,10 @@ MonoBehaviour:
   shotgunColdownTime: 0.3
   minMinigunColdownTime: 0.075
   maxMinigunColdownTime: 1.2
-  coldownChangeRate: 0.3
-  ammo: 0
+  coldownChangeRate: 0.1
+  pistolAmmo: 0
+  shotgunAmmo: 0
+  minigunAmmo: 0
 --- !u!95 &5601369443829268522
 Animator:
   serializedVersion: 5
