@@ -11,6 +11,8 @@ public class GameSession : MonoBehaviour
     bool level2Unlocked = false;
     bool level3Unlocked = false;
     bool level4Unlocked = false;
+    public bool _noClip = false;
+    public bool _godMode = false;
 
     private void Awake()
     {
@@ -61,6 +63,14 @@ public class GameSession : MonoBehaviour
         if (level4Unlocked == true && currentSceneIndex == 1)
         {
             FindFirstObjectByType<OscarScript>().Level4Unlock();
+        }
+        if (_godMode == true)
+        {
+            FindFirstObjectByType<PlayerHealth>().GodMode();
+        }
+        if (_noClip == true)
+        {
+            FindFirstObjectByType<PlayerMovement>().NoClip();
         }
     }
 
