@@ -18,6 +18,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] float minSpawntime;
     [SerializeField] float maxSpawntime;
     [SerializeField] float spawnDistance;
+    [SerializeField] bool hellmodeOn;
     Vector2 screenBounds;
     Vector2 spawnPosition;
     public int currentWave = 0;
@@ -31,7 +32,6 @@ public class EnemySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnEnemy();
         Collider2D myCollider = GetComponent<Collider2D>();
         Bounds colliderBounds = myCollider.bounds;
         maxWaves = wavePoints.Count();
@@ -40,23 +40,36 @@ public class EnemySpawn : MonoBehaviour
         maxBounds = colliderBounds.max; // Top-right
         center = colliderBounds.center; // Center position
         size = colliderBounds.size; // Width & Height
+        SpawnEnemy();
     }
 
     void SpawnEnemy()
     {
-        if (wavePoints[currentWave] >= 1)
+        if (wavePoints[currentWave] >= 0)
         {
             float spawnTime = Random.Range(minSpawntime, maxSpawntime);
             screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-            Vector2 screenDifferens = new Vector2((screenBounds.x - screenBounds.x), (screenBounds.y - screenBounds.y));
             int lOrR;
 
-            int type = Random.Range(0, 18);
+            float type = Random.Range(0, 18);
             switch (type)
             {
-                case 0-11:
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                    Debug.Log("0-11");
                     if (aspidAvailable[currentWave])
                     {
+                        Debug.Log("TryingAspid");
                         int side = Random.Range(0, 3);
                         switch (side)
                         {
@@ -85,25 +98,36 @@ public class EnemySpawn : MonoBehaviour
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
+                            if (hellmodeOn && currentWave == maxWaves)
+                            {
+                                maxSpawntime = maxSpawntime / 2;
+                                minSpawntime = minSpawntime / 3;
+                            }
                         }
                         break;
                     }
                     else
                     {
+                        Debug.Log("SpawnEnemy()");
                         Invoke("SpawnEnemy", 0);
                         break;
                     }
-                case 12-15:
+                case 12:
+                case 13:
+                case 14:
+                case 15:
+                    Debug.Log("12-15");
                     if (tankAvailable[currentWave])
                     {
+                        Debug.Log("TryingTank");
                         lOrR = Random.Range(0, 2);
                         switch (lOrR)
                         {
                             case 0:
-                                spawnPosition = new Vector2(Random.Range(screenBounds.x, (screenBounds.x + spawnDistance)), ((screenBounds.y - screenDifferens.y) / 2) + screenDifferens.y);
+                                spawnPosition = new Vector2(Random.Range(screenBounds.x, (screenBounds.x + spawnDistance)), screenBounds.y);
                                 break;
                             case 1:
-                                spawnPosition = new Vector2(Random.Range(-screenBounds.x, (-screenBounds.x - spawnDistance)), ((screenBounds.y - screenDifferens.y) / 2) + screenDifferens.y);
+                                spawnPosition = new Vector2(Random.Range(-screenBounds.x, (-screenBounds.x - spawnDistance)), screenBounds.y);
                                 break;
                         }
                         GameObject currentTank = Instantiate(tank, spawnPosition, transform.rotation);
@@ -121,25 +145,35 @@ public class EnemySpawn : MonoBehaviour
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
+                            if (hellmodeOn && currentWave == maxWaves)
+                            {
+                                maxSpawntime = maxSpawntime / 2;
+                                minSpawntime = minSpawntime / 3;
+                            }
                         }
                         break;
                     }
                     else
                     {
+                        Debug.Log("SpawnEnemy()");
                         Invoke("SpawnEnemy", 0);
                         break;
                     }
-                case 16-18:
+                case 16:
+                case 17:
+                case 18:
+                    Debug.Log("15-18");
                     if (railgunnerAvailable[currentWave])
                     {
+                        Debug.Log("TryingRailer");
                         lOrR = Random.Range(0, 2);
                         switch (lOrR)
                         {
                             case 0:
-                                spawnPosition = new Vector2(Random.Range(screenBounds.x, (screenBounds.x + spawnDistance)), ((screenBounds.y - screenDifferens.y) / 2) + screenDifferens.y);
+                                spawnPosition = new Vector2(Random.Range(screenBounds.x, (screenBounds.x + spawnDistance)), screenBounds.y);
                                 break;
                             case 1:
-                                spawnPosition = new Vector2(Random.Range(-screenBounds.x, (-screenBounds.x - spawnDistance)), ((screenBounds.y - screenDifferens.y) / 2) + screenDifferens.y);
+                                spawnPosition = new Vector2(Random.Range(-screenBounds.x, (-screenBounds.x - spawnDistance)), screenBounds.y);
                                 break;
                         }
                         GameObject currentRailer = Instantiate(railgunner, spawnPosition, transform.rotation);
@@ -157,11 +191,17 @@ public class EnemySpawn : MonoBehaviour
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
+                            if (hellmodeOn && currentWave == maxWaves)
+                            {
+                                maxSpawntime = maxSpawntime / 2;
+                                minSpawntime = minSpawntime / 3;
+                            }
                         }
                         break;
                     }
                     else
                     {
+                        Debug.Log("SpawnEnemy()");
                         Invoke("SpawnEnemy", 0);
                         break;
                     }

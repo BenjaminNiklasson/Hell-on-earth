@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int playerHealth = 1;
     [SerializeField] float invincibilityTime = 2f;
+    [SerializeField] bool godMode;
     bool invincible = false;
+
     void DisableInvincibility()
     {
         invincible = false;
@@ -20,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 return;
             }
-            if (playerHealth > 0)
+            if (playerHealth > 1)
             {
                 playerHealth--;
                 invincible = true;
@@ -29,7 +32,10 @@ public class PlayerHealth : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                if (!godMode)
+                {
+                    SceneManager.LoadScene(2);
+                }
             }
         }
         else
