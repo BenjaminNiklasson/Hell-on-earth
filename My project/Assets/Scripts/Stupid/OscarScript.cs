@@ -147,6 +147,7 @@ public class OscarScript : MonoBehaviour
         pauseVisualTree.style.display = DisplayStyle.None;
         _curMenu = _document.rootVisualElement.Q<VisualElement>("HUDVisualTree");
         _curMenu.style.display = DisplayStyle.Flex;
+        transform.parent.GetComponent<Pause>().paused = false;
         Time.timeScale = 1;
     }
 }
