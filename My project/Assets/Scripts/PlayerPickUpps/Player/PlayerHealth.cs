@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 if (!godMode)
                 {
-                    SceneManager.LoadScene(2);
+                    SceneManager.LoadScene(1);
                 }
             }
         }
