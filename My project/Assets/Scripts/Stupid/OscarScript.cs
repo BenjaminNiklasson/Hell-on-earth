@@ -75,10 +75,12 @@ public class OscarScript : MonoBehaviour
 
     public void SwitchMenu(string menuName)
     {
-        _curMenu.style.display = DisplayStyle.None;
+        if (_curMenu != null)
+        {
+            _curMenu.style.display = DisplayStyle.None;
+        }
         _curMenu = _document.rootVisualElement.Q<VisualElement>(menuName);
         _curMenu.style.display = DisplayStyle.Flex;
-        Time.timeScale = 1;
     }
 
     void Start()
