@@ -64,7 +64,7 @@
         </ui:VisualElement>
         <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LSBackButton" class="Button">
             <ui:VisualElement class="radigntexut" style="flex-grow: 1; rotate: -45deg;" />
-            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" class="buttonLabel" />
+            <ui:Label tabindex="-1" text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" class="buttonLabel" />
         </ui:Button>
     </ui:VisualElement>
 </ui:UXML>

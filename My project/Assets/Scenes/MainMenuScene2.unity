@@ -379,7 +379,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 331371993}
           m_TargetAssemblyTypeName: OscarScript, Assembly-CSharp
-          m_MethodName: Level2Unlock
+          m_MethodName: Level3Unlock
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -391,7 +391,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 331371993}
           m_TargetAssemblyTypeName: OscarScript, Assembly-CSharp
-          m_MethodName: Level2Unlock
+          m_MethodName: Level4Unlock
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
