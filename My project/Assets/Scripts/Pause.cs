@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class Pause : MonoBehaviour
 {
     UIDocument _document;
-    bool paused = false;
+    public bool paused = false;
     string pauseMenu = "PausedVisualTree";
     string HUD = "HUDVisualTree";
     private void Start()

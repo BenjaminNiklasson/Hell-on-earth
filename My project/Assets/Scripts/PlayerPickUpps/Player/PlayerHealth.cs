@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 return;
             }
-            if (playerHealth > 0)
+            if (playerHealth > 1)
             {
                 playerHealth--;
                 invincible = true;
