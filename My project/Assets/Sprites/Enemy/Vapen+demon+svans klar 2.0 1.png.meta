@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e654cbb29c304ed4c9ba633f4a120536
+guid: 7e13a51f6f7088e4a84cb0534332b283
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 384
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EXPLOSION Sheet (384x384)_0
+      name: Vapen+demon+svans klar 2.0_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
-        width: 384
-        height: 384
+        y: 314
+        width: 198
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1d822ee737afa144a800a6e942dee8f
-      internalID: 1076953315
+      spriteID: de3a7321d9bdddb4c944eaf45457d00a
+      internalID: -1549102339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EXPLOSION Sheet (384x384)_1
+      name: Vapen+demon+svans klar 2.0_1
       rect:
         serializedVersion: 2
-        x: 384
-        y: 640
-        width: 384
-        height: 384
+        x: 198
+        y: 314
+        width: 198
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,83 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ac4d2b6ea77b394695f39fb72580587
-      internalID: -1886334201
+      spriteID: 32f28a9fcc14b2748bcbcab2db60fd9e
+      internalID: 24849142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EXPLOSION Sheet (384x384)_2
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 640
-        width: 384
-        height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6aa3591cbebc92b448075f995d6f6951
-      internalID: 1062730068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EXPLOSION Sheet (384x384)_3
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 640
-        width: 384
-        height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3c9607d1a768e345908e43e26c6f2dd
-      internalID: 644698900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EXPLOSION Sheet (384x384)_4
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 640
-        width: 384
-        height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0de4ab3334076384e9f4ecd3c84d0836
-      internalID: -313134439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EXPLOSION Sheet (384x384)_5
+      name: Vapen+demon+svans klar 2.0_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 384
-        height: 384
+        y: 116
+        width: 198
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +153,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7d982ed322a09942b07392f6eb4a43e
-      internalID: 2776668
+      spriteID: 80e89c98f27302b4aaf3c21eb272489d
+      internalID: 375805270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapen+demon+svans klar 2.0_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 116
+        width: 198
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfe92efa1c29db489fb3f83ae9a2843
+      internalID: 872800914
       vertices: []
       indices: 
       edges: []
@@ -233,12 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EXPLOSION Sheet (384x384)_0: 1076953315
-      EXPLOSION Sheet (384x384)_1: -1886334201
-      EXPLOSION Sheet (384x384)_2: 1062730068
-      EXPLOSION Sheet (384x384)_3: 644698900
-      EXPLOSION Sheet (384x384)_4: -313134439
-      EXPLOSION Sheet (384x384)_5: 2776668
+      Vapen+demon+svans klar 2.0_0: -1549102339
+      Vapen+demon+svans klar 2.0_1: 24849142
+      Vapen+demon+svans klar 2.0_2: 375805270
+      Vapen+demon+svans klar 2.0_3: 872800914
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

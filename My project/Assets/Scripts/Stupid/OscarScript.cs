@@ -125,7 +125,13 @@ public class OscarScript : MonoBehaviour
 
     }
 
-
+    public void UnlockAllWeapons()
+    {
+        FindFirstObjectByType<GameSession>().ActivateShotgun();
+        FindFirstObjectByType<PlayerShooting>().ActivateShotgun();
+        FindFirstObjectByType<GameSession>().ActivateMinigun();
+        FindFirstObjectByType<PlayerShooting>().ActivateMinigun();
+    }
 
     private void OnEnable()
     {

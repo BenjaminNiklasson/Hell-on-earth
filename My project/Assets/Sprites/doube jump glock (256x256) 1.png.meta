@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fce916a46eee2b0459b06c887c24d9da
+guid: 991244ecf2a41a3498a989078b1bb032
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,175 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: angell walk spritesheet (256x256)_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9a6f6aba6049a14289aa78417723bc0
-      internalID: 948298083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angell walk spritesheet (256x256)_1
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68fdf423c4577b54aa1c4959f47346b3
-      internalID: -768340929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angell walk spritesheet (256x256)_2
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9972b473339997a4fbc44434397846a1
-      internalID: -439512994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angell walk spritesheet (256x256)_3
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87aa1eed97b4697469db4e1be12089f0
-      internalID: 1737708321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angell walk spritesheet (256x256)_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3542ff2be5a7d2844b572a37ddf393ae
-      internalID: 543662384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angell walk spritesheet (256x256)_5
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31d271b8aed0a724bb2c70bf9bd5444b
-      internalID: -637202077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angell walk spritesheet (256x256)_6
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3707f78cd0c58944a6ed093a49a4feb
-      internalID: 1596999936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angell walk spritesheet (256x256)_7
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df48fa1a971a9884780b9c88120c72b3
-      internalID: 535121498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angell walk spritesheet (256x256)_8
+      name: doube jump glock (256x256)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -279,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40c40b2c75d16b748be14587e0e30d10
-      internalID: 932672957
+      spriteID: 30f2fe783a2dd1441b4db4f54c711cd6
+      internalID: 1467925125
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: angell walk spritesheet (256x256)_9
+      name: doube jump glock (256x256)_1
       rect:
         serializedVersion: 2
         x: 256
@@ -300,8 +132,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d4eec03e6556724090fcefdf7c599f7
-      internalID: 493882380
+      spriteID: 3cc7bbc569c12ab41af30f0afc216ce5
+      internalID: 369165731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doube jump glock (256x256)_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7443c9d778219fb4985a3892cb265913
+      internalID: -1231519203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doube jump glock (256x256)_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d59d106ddb8a70499a69940db9383a0
+      internalID: 522303046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doube jump glock (256x256)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8357516bf4ecd854387d38a04276b837
+      internalID: 743967660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doube jump glock (256x256)_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d877d6c9fcf5e394d9f3e15b6d6072e8
+      internalID: 735018561
       vertices: []
       indices: 
       edges: []
@@ -317,16 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      angell walk spritesheet (256x256)_0: 948298083
-      angell walk spritesheet (256x256)_1: -768340929
-      angell walk spritesheet (256x256)_2: -439512994
-      angell walk spritesheet (256x256)_3: 1737708321
-      angell walk spritesheet (256x256)_4: 543662384
-      angell walk spritesheet (256x256)_5: -637202077
-      angell walk spritesheet (256x256)_6: 1596999936
-      angell walk spritesheet (256x256)_7: 535121498
-      angell walk spritesheet (256x256)_8: 932672957
-      angell walk spritesheet (256x256)_9: 493882380
+      doube jump glock (256x256)_0: 1467925125
+      doube jump glock (256x256)_1: 369165731
+      doube jump glock (256x256)_2: -1231519203
+      doube jump glock (256x256)_3: 522303046
+      doube jump glock (256x256)_4: 743967660
+      doube jump glock (256x256)_5: 735018561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

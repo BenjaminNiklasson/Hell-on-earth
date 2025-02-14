@@ -99,5 +99,15 @@
             <ui:VisualElement class="radigntexut" style="flex-grow: 1; rotate: 45deg;" />
             <ui:Label tabindex="-1" text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" class="buttonLabel" />
         </ui:Button>
+        <ui:VisualElement style="flex-grow: 1; position: absolute; width: 500px; height: 200px; translate: 710px 880px; flex-direction: row; align-items: flex-start;">
+            <ui:Button text="Unlock&#10;All Levels" parse-escape-sequences="true" display-tooltip-when-elided="true" name="UnlockAllWeapons" class="Keybind" style="width: 100px; height: 100px; font-size: 30px; -unity-font-definition: initial; -unity-font: url(&quot;project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=c628f457327923a4fa6b2dd21ea5aa91&amp;type=3#JimNightshade-Regular&quot;); -unity-text-align: middle-center; margin-top: 0; margin-right: 30px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-paragraph-spacing: -20px; max-width: 100px; max-height: 100px; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+                <ui:VisualElement class="SmallStripes" style="flex-grow: 1;" />
+                <ui:Label tabindex="-1" text="Unlock All&#10;Levels" parse-escape-sequences="true" display-tooltip-when-elided="true" class="buttonLabel" style="width: 100px; height: 100px; translate: -6px -4px; -unity-paragraph-spacing: -40px; font-size: 27px;" />
+            </ui:Button>
+            <ui:Button text="Unlock&#10;All Weapons" parse-escape-sequences="true" display-tooltip-when-elided="true" name="UnlockAllLevels" class="Keybind" style="width: 100px; height: 100px; font-size: 30px; -unity-font-definition: initial; -unity-font: url(&quot;project://database/Assets/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=c628f457327923a4fa6b2dd21ea5aa91&amp;type=3#JimNightshade-Regular&quot;); -unity-text-align: middle-center; margin-top: 0; margin-right: 30px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-paragraph-spacing: -20px; max-width: 100px; max-height: 100px; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+                <ui:VisualElement class="SmallStripes" style="flex-grow: 1;" />
+                <ui:Label tabindex="-1" text="Unlock All&#10;Weapons" parse-escape-sequences="true" display-tooltip-when-elided="true" class="buttonLabel" style="width: 100px; height: 100px; translate: -6px -4px; -unity-paragraph-spacing: -40px; font-size: 27px;" />
+            </ui:Button>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
