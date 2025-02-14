@@ -13,6 +13,7 @@ public class ButtonEvent
     [SerializeField] string _buttonName = "";
     [SerializeField] UnityEvent _unityEvent;
     Button _button;
+    
 
 
 
@@ -48,18 +49,41 @@ public class OscarScript : MonoBehaviour
         _root = GetComponent<UIDocument>().rootVisualElement;
     }
 
+    public void Level2Unlock()
+    {
+        VisualElement lvl2Lock = _root.Q<VisualElement>("Lvl2Lock");
+        Button playLvl2Button = _root.Q<Button>("PlayLvl2Button");
+        lvl2Lock.style.display = DisplayStyle.None;
+        playLvl2Button.style.display = DisplayStyle.Flex;
+    }
+
+    public void Level3Unlock()
+    {
+        VisualElement lvl3Lock = _root.Q<VisualElement>("Lvl3Lock");
+        Button playLvl3Button = _root.Q<Button>("PlayLvl3Button");
+        lvl3Lock.style.display = DisplayStyle.None;
+        playLvl3Button.style.display = DisplayStyle.Flex;
+    }
+
+    public void Level4Unlock()
+    {
+        VisualElement lvl4Lock = _root.Q<VisualElement>("Lvl4Lock");
+        Button playLvl4Button = _root.Q<Button>("PlayLvl4Button");
+        lvl4Lock.style.display = DisplayStyle.None;
+        playLvl4Button.style.display = DisplayStyle.Flex;
+    }
+
     public void SwitchMenu(string menuName)
     {
-        if (_curMenu != null)
-        {
-            _curMenu.style.display = DisplayStyle.None;
-        }
+        _curMenu.style.display = DisplayStyle.None;
         _curMenu = _document.rootVisualElement.Q<VisualElement>(menuName);
         _curMenu.style.display = DisplayStyle.Flex;
+        Time.timeScale = 1;
     }
 
     void Start()
     {
+        Time.timeScale = 1;
         // Level Name
         Label levelName = _root.Q<Label>("LevelName");
 
@@ -117,5 +141,13 @@ public class OscarScript : MonoBehaviour
         waveLabel.text = waveString;
     }
 
-
+    public void UnPause()
+    {
+        VisualElement pauseVisualTree = _root.Q<VisualElement>("PausedVisualTree");
+        pauseVisualTree.style.display = DisplayStyle.None;
+        _curMenu = _document.rootVisualElement.Q<VisualElement>("HUDVisualTree");
+        _curMenu.style.display = DisplayStyle.Flex;
+        transform.parent.GetComponent<Pause>().paused = false;
+        Time.timeScale = 1;
+    }
 }

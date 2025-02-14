@@ -7,9 +7,11 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] bool enemyIsAAspid;
     [SerializeField] bool enemyIsATank;
     [SerializeField] bool enemyIsARailgunner;
+    [SerializeField] bool enemyIsAElonBezos;
     [SerializeField] int AspidHealth = 3;
     [SerializeField] int TankHealth = 30;
     [SerializeField] int RailgunnerHealth = 6;
+    [SerializeField] int ElonBezosHealth = 666;
     int _enemyHealth;
 
     private void Start()
@@ -26,6 +28,12 @@ public class EnemyHealth : MonoBehaviour
         {
             _enemyHealth = TankHealth * 2;
         }
+        else if (enemyIsAElonBezos)
+        {
+            _enemyHealth = ElonBezosHealth * 2;
+        }
+        
+          
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

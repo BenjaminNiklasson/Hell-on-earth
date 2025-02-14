@@ -44,13 +44,13 @@ public class TokenAttempt2 : MonoBehaviour
     {
         Debug.Log("pistolammoui!");
         pistolAmmoContainer.Clear();
-        for (int i = 0; i < player.GetComponent<PlayerShooting>().ammo; i++)
+        for (int i = 0; i < player.GetComponent<PlayerShooting>().pistolAmmo; i++)
         {
             VisualElement PistolAmmo = new VisualElement();
             PistolAmmo.AddToClassList("pistolAmmo");
             pistolAmmoContainer.Add(PistolAmmo);
         }
-        for (int i = 0; i < 20-player.GetComponent<PlayerShooting>().ammo; i++)
+        for (int i = 0; i < 20-player.GetComponent<PlayerShooting>().pistolAmmo; i++)
         {
             VisualElement NonPistolAmmo = new VisualElement();
             NonPistolAmmo.AddToClassList("nonPistolAmmo");
@@ -61,13 +61,13 @@ public class TokenAttempt2 : MonoBehaviour
     {
         Debug.Log("shotgunammoui!");
         shotgunAmmoContainer.Clear();
-        for (int i = 0; i < player.GetComponent<PlayerShooting>().ammo; i++)
+        for (int i = 0; i < player.GetComponent<PlayerShooting>().shotgunAmmo; i++)
         {
             VisualElement ShotgunAmmo = new VisualElement();
             ShotgunAmmo.AddToClassList("shotgunAmmo");
             shotgunAmmoContainer.Add(ShotgunAmmo);
         }
-        for (int i = 0; i < 3 - player.GetComponent<PlayerShooting>().ammo; i++)
+        for (int i = 0; i < 3 - player.GetComponent<PlayerShooting>().shotgunAmmo; i++)
         {
             VisualElement NonShotgunAmmo = new VisualElement();
             NonShotgunAmmo.AddToClassList("nonShotgunAmmo");
