@@ -75,10 +75,12 @@ public class OscarScript : MonoBehaviour
 
     public void SwitchMenu(string menuName)
     {
-        _curMenu.style.display = DisplayStyle.None;
+        if (_curMenu != null)
+        {
+            _curMenu.style.display = DisplayStyle.None;
+        }
         _curMenu = _document.rootVisualElement.Q<VisualElement>(menuName);
         _curMenu.style.display = DisplayStyle.Flex;
-        Time.timeScale = 1;
     }
 
     void Start()
@@ -147,6 +149,7 @@ public class OscarScript : MonoBehaviour
         pauseVisualTree.style.display = DisplayStyle.None;
         _curMenu = _document.rootVisualElement.Q<VisualElement>("HUDVisualTree");
         _curMenu.style.display = DisplayStyle.Flex;
+        transform.parent.GetComponent<Pause>().paused = false;
         Time.timeScale = 1;
     }
 }

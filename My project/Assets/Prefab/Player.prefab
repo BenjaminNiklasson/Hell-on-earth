@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4467305072739056847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4970435096448881685}
+  - component: {fileID: 4380503476281536939}
+  m_Layer: 3
+  m_Name: GunEmpty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4970435096448881685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467305072739056847}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.12, y: -0.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7640489765135318663}
+  m_Father: {fileID: 8810435738610709417}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4380503476281536939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467305072739056847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcc5a15efe5eb04eb23a94942b9bd01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6463118139232030348
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +55,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7640489765135318663}
   - component: {fileID: 998869019220112973}
-  - component: {fileID: 191398658950900485}
   m_Layer: 3
   m_Name: PlayerGun
   m_TagString: Untagged
@@ -26,13 +70,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6463118139232030348}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 0.14, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.18, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8810435738610709417}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 4970435096448881685}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &998869019220112973
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -74,7 +118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4cd6472cb4ecc184b8646d1256bb65e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d2f697edda76ce45a0bfe0b342b5281, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,18 +129,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &191398658950900485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6463118139232030348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bcc5a15efe5eb04eb23a94942b9bd01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6646267129698961156
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +166,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7640489765135318663}
+  - {fileID: 4970435096448881685}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &5569777441794125929
@@ -193,6 +225,7 @@ MonoBehaviour:
   moveSpeed: 2.857142
   jumpSpeed: 5.714284
   maxNumberOfJumps: 1
+  noClip: 0
 --- !u!114 &9177094098391412175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 10
   invincibilityTime: 2
+  godMode: 0
 --- !u!114 &1174540432906589151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,9 +290,9 @@ MonoBehaviour:
   playerGun: {fileID: 6463118139232030348}
   UI: {fileID: 0}
   spriteRenderer: {fileID: 998869019220112973}
-  shotgun: {fileID: 21300000, guid: 1f7e67f1e667cf6439df3937e88a33f6, type: 3}
-  minigun: {fileID: 21300000, guid: eda092f90ad6fd5408601df2cf9ddd32, type: 3}
-  pistol: {fileID: 21300000, guid: 4cd6472cb4ecc184b8646d1256bb65e0, type: 3}
+  shotgun: {fileID: 21300000, guid: b01057d5022f68247a1be3eee9c54622, type: 3}
+  minigun: {fileID: 21300000, guid: 74b00e91e49f388488c42bb4a1199170, type: 3}
+  pistol: {fileID: 21300000, guid: 2d2f697edda76ce45a0bfe0b342b5281, type: 3}
   pistolAmmoMax: 20
   shotgunAmmoMax: 3
   minigunAmmoMax: 100

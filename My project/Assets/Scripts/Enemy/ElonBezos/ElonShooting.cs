@@ -9,9 +9,11 @@ public class ElonShooting : MonoBehaviour
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] GameObject player;
     [SerializeField] float spawnDistance = 5f;
+    [SerializeField] float minSpawnTime;
+    [SerializeField] float maxSpawnTime;
     Vector2 screenBounds;
     Vector2 spawnPos;
-    bool bool1 = false;
+    bool isOnColdown = false;
 
     void spawnOrb()
     {
@@ -20,16 +22,17 @@ public class ElonShooting : MonoBehaviour
     
     void Update()
     {
-        if (bool1 == false)
+        if (isOnColdown == false)
         {
+            float spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
             spawnOrb();
-            Invoke("Coldown", 5);
-            bool1 = true;
+            Invoke("Coldown", spawnTime);
+            isOnColdown = true;
         }
     }
     
     void Coldown()
     {
-        bool1 = false;
+        isOnColdown = false;
     }
 }
