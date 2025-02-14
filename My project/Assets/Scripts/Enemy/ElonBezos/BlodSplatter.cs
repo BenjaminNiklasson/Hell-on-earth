@@ -4,14 +4,29 @@ using UnityEngine;
 
 public class BlodSplatter : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] bool isRight;
+    [SerializeField] bool isLeft;
+    [SerializeField] float moveSpeed;
+    Rigidbody2D rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
+    {
+        if (isRight)
+        {
+            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         
     }
