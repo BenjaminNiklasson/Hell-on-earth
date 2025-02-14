@@ -45,14 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee037b6cfd7f0f42a2274c2da876a57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wavePoints: 0500000008000000
+  wavePoints: 040000000a000000
   aspidAvailable: 0101
   tankAvailable: 0000
   railgunnerAvailable: 0000
   aspid: {fileID: 2571326966528516529, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
   tank: {fileID: 6713328149867435175, guid: 2de1703976723cc4e9e97e0ec5a2117a, type: 3}
   railgunner: {fileID: 8330127110676808297, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
-  coldownBetweenWaves: 8
+  coldownBetweenWaves: 14
   minSpawntime: 6
   maxSpawntime: 8
   spawnDistance: 3.5
