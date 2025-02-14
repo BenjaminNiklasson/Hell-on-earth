@@ -19,6 +19,7 @@ public class RailerMovement : MonoBehaviour
     [SerializeField] GameObject targetingLine;
     [SerializeField] float reloadTime = 1.5f;
     RailerLooking rl;
+    Animator ani;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,6 +41,15 @@ public class RailerMovement : MonoBehaviour
                 isShooting = true;
                 RailerTargeting();
             }
+
+        }
+        if (tooCloseToPlayer == true && !isShooting )
+        {
+            ani.SetBool("IsRunning", true);
+        }
+        else
+        {
+            ani.SetBool("IsRunning", false);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
