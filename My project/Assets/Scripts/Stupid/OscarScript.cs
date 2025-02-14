@@ -16,7 +16,6 @@ public class ButtonEvent
     
 
 
-
     public void Activate(UIDocument document)
     {
         if (_button == null)
@@ -44,6 +43,8 @@ public class OscarScript : MonoBehaviour
     Label waveLabel;
 
     VisualElement _root;
+
+    GameObject player;
     private void Awake()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
@@ -109,6 +110,17 @@ public class OscarScript : MonoBehaviour
         //Wave Name
         waveLabel = _root.Q<Label>("WaveName");
         spawnSys = GameObject.FindWithTag("EnemySpawnSystem");
+        GameObject gameSes = GameObject.FindWithTag("GameSession");
+        bool _godMode = FindFirstObjectByType<GameSession>()._godMode;
+        bool _noClip = FindFirstObjectByType<GameSession>()._noClip;
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            Toggle enableGodMode = _root.Q<Toggle>("GodModeToggle");
+            Toggle enableNoClip = _root.Q<Toggle>("NoClipToggle");
+            enableGodMode.RegisterCallback<NavigationSubmitEvent>(evt => _godMode = enableGodMode.value);
+            enableNoClip.RegisterCallback<NavigationSubmitEvent>(evt => _noClip = enableNoClip.value);
+        }
+        
     }
     public void LoadScene(int buildIndex)
     {
@@ -156,4 +168,6 @@ public class OscarScript : MonoBehaviour
         transform.parent.GetComponent<Pause>().paused = false;
         Time.timeScale = 1;
     }
+
+
 }

@@ -100,5 +100,10 @@ public class PlayerMovement : MonoBehaviour
     {
         ani.SetTrigger("Jump");
     }
+
+    public void NoClip()
+    {
+        noClip = true;
+    }
 }
 
