@@ -42,7 +42,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Realod",
+                    "name": "Reload",
                     "type": "Button",
                     "id": "d06c49ce-4126-46a9-a54d-db4dea6c8846",
                     "expectedControlType": "Button",
@@ -370,7 +370,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Realod",
+                    "action": "Reload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

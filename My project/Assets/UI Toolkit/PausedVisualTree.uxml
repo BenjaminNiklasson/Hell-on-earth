@@ -2,7 +2,13 @@
     <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=18b0c0a991961f043a7ef60270d1dbda&amp;type=3#MainMenuStyle" />
     <ui:VisualElement style="flex-grow: 1; align-items: center; width: 800px;">
         <ui:Label tabindex="-1" text="Paused" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Header" style="text-shadow: 0 5px 100000px rgb(0, 0, 0); margin-top: 100px; margin-right: 0; margin-bottom: 80px; margin-left: 0;" />
-        <ui:Button text="Back to Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackToGame" class="Button" style="font-size: 55px; margin-bottom: 100px;" />
-        <ui:Button text="Quit to Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitToMenu" class="Button" />
+        <ui:Button text="Back to Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackToGame" class="Button" style="font-size: 85px; margin-bottom: 100px;">
+            <ui:VisualElement class="radigntexut" style="flex-grow: 1;" />
+            <ui:Label tabindex="-1" text="Back to Game" parse-escape-sequences="true" display-tooltip-when-elided="true" class="buttonLabel" />
+        </ui:Button>
+        <ui:Button text="Quit to Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitToMenu" class="Button" style="font-size: 85px;">
+            <ui:VisualElement class="radigntexut" style="flex-grow: 1; rotate: -45deg;" />
+            <ui:Label tabindex="-1" text="Quit to Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" class="buttonLabel" />
+        </ui:Button>
     </ui:VisualElement>
 </ui:UXML>
