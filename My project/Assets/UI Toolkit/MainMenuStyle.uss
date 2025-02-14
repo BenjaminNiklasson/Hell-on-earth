@@ -334,6 +334,7 @@
     background-color: rgb(255, 238, 0);
     -unity-background-image-tint-color: rgb(0, 0, 0);
     flex-shrink: 0;
+    overflow: hidden;
 }
 
 .LevelSelectLock {
@@ -356,6 +357,7 @@
     border-bottom-left-radius: 6px;
     background-image: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1304905567622442630&guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&type=3#arrow-down@2x");
     -unity-background-image-tint-color: rgb(0, 0, 0);
+    overflow: hidden;
 }
 
 .jimnightshade {
@@ -596,7 +598,7 @@
     width: 350px;
     height: 100px;
     position: absolute;
-    translate: -207px 0;
+    translate: -157px -50px;
 }
 
 .buttonLabel {
