@@ -75,16 +75,15 @@ public class OscarScript : MonoBehaviour
 
     public void SwitchMenu(string menuName)
     {
-        if (_curMenu != null)
-        {
-            _curMenu.style.display = DisplayStyle.None;
-        }
+        _curMenu.style.display = DisplayStyle.None;
         _curMenu = _document.rootVisualElement.Q<VisualElement>(menuName);
         _curMenu.style.display = DisplayStyle.Flex;
+        Time.timeScale = 1;
     }
 
     void Start()
     {
+        Time.timeScale = 1;
         // Level Name
         Label levelName = _root.Q<Label>("LevelName");
 
@@ -142,5 +141,12 @@ public class OscarScript : MonoBehaviour
         waveLabel.text = waveString;
     }
 
-
+    public void UnPause()
+    {
+        VisualElement pauseVisualTree = _root.Q<VisualElement>("PausedVisualTree");
+        pauseVisualTree.style.display = DisplayStyle.None;
+        _curMenu = _document.rootVisualElement.Q<VisualElement>("HUDVisualTree");
+        _curMenu.style.display = DisplayStyle.Flex;
+        Time.timeScale = 1;
+    }
 }
