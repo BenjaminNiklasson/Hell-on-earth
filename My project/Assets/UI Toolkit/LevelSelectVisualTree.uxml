@@ -9,7 +9,7 @@
                     <ui:VisualElement class="LevelSelect" style="flex-grow: 1; width: 500px; height: 290px; max-height: 290px; max-width: 500px; flex-direction: row; align-items: flex-end; translate: 0 20px; overflow: hidden;">
                         <ui:VisualElement style="flex-grow: 1; position: absolute; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Bakgrounds/Street2of3.png?fileID=2800000&amp;guid=53fb50c4c6954e44fa32d6987487763d&amp;type=3#Street2of3&quot;); width: 500px; height: 290px; -unity-background-scale-mode: scale-to-fit; scale: 1 1.3; translate: 0 20px;" />
                         <ui:Label tabindex="-1" text="1 - Street" parse-escape-sequences="true" display-tooltip-when-elided="true" class="jimnightshade SubSubHeader" style="margin-top: 0; margin-right: 285px; margin-bottom: 10px; margin-left: 10px; height: 50px; -unity-text-align: middle-left; width: 100px; font-size: 50px;" />
-                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayLvl1Button" class="LevelSelectButton">
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayLvl1Button" class="LevelSelectButton effect">
                             <ui:VisualElement class="SmallStripes" style="flex-grow: 1; rotate: -45deg;" />
                             <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1087164816274819069&amp;guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&amp;type=3#arrow-right@2x&quot;); scale: 1.5 1.5; -unity-background-image-tint-color: rgb(0, 0, 0); translate: 2px 0;" />
                         </ui:Button>
@@ -23,7 +23,7 @@
                             <ui:VisualElement class="SmallStripes" style="flex-grow: 1; -unity-background-image-tint-color: rgb(136, 119, 0);" />
                             <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1087164816274819069&amp;guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&amp;type=3#arrow-right@2x&quot;); scale: 1 1; -unity-background-image-tint-color: rgb(0, 0, 0); translate: 0 0; rotate: 90deg;" />
                         </ui:VisualElement>
-                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayLvl3Button" class="LevelSelectButton" style="display: none;">
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayLvl3Button" class="LevelSelectButton effect" style="display: none;">
                             <ui:VisualElement class="SmallStripes" style="flex-grow: 1; rotate: 45deg;" />
                             <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1087164816274819069&amp;guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&amp;type=3#arrow-right@2x&quot;); scale: 1.5 1.5; -unity-background-image-tint-color: rgb(0, 0, 0); translate: 2px 0;" />
                         </ui:Button>
@@ -33,13 +33,13 @@
             <ui:VisualElement style="flex-grow: 1;">
                 <ui:VisualElement name="OfficePreview" style="flex-grow: 1; align-items: auto;">
                     <ui:VisualElement class="LevelSelect" style="flex-grow: 1; width: 500px; height: 290px; max-height: 290px; max-width: 500px; flex-direction: row; align-items: flex-end; translate: 0 20px; overflow: hidden;">
-                        <ui:VisualElement style="flex-grow: 1; position: absolute; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Bakgrounds/Street1of3.png?fileID=2800000&amp;guid=3352486403c2c7a4eba65d6c3886b052&amp;type=3#Street1of3&quot;); width: 500px; height: 290px; -unity-background-scale-mode: scale-to-fit; scale: 1 1.3; translate: 0 20px;" />
+                        <ui:VisualElement style="flex-grow: 1; position: absolute; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Bakgrounds/Officebuildingbackground.png?fileID=2800000&amp;guid=e711211e6dc71d34aa550e5555f7bc89&amp;type=3#Officebuildingbackground&quot;); width: 500px; height: 290px; -unity-background-scale-mode: scale-to-fit; scale: 1 1.3; translate: 0 20px;" />
                         <ui:Label tabindex="-1" text="2- Office" parse-escape-sequences="true" display-tooltip-when-elided="true" class="jimnightshade SubSubHeader" style="margin-top: 0; margin-right: 285px; margin-bottom: 10px; margin-left: 10px; height: 50px; -unity-text-align: middle-left; width: 100px; font-size: 50px;" />
                         <ui:VisualElement name="Lvl2Lock" class="LevelSelectLock" style="flex-grow: 0;">
                             <ui:VisualElement class="SmallStripes" style="flex-grow: 1; -unity-background-image-tint-color: rgb(136, 119, 0);" />
                             <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1087164816274819069&amp;guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&amp;type=3#arrow-right@2x&quot;); scale: 1 1; -unity-background-image-tint-color: rgb(0, 0, 0); translate: 0 0; rotate: 90deg;" />
                         </ui:VisualElement>
-                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayLvl2Button" class="LevelSelectButton" style="display: none;">
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayLvl2Button" class="LevelSelectButton effect" style="display: none;">
                             <ui:VisualElement class="SmallStripes" style="flex-grow: 1;" />
                             <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1087164816274819069&amp;guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&amp;type=3#arrow-right@2x&quot;); scale: 1.5 1.5; -unity-background-image-tint-color: rgb(0, 0, 0); translate: 2px 0;" />
                         </ui:Button>
@@ -54,7 +54,7 @@
                             <ui:VisualElement class="SmallStripes" style="flex-grow: 1; -unity-background-image-tint-color: rgb(136, 119, 0); rotate: -45deg;" />
                             <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1087164816274819069&amp;guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&amp;type=3#arrow-right@2x&quot;); scale: 1 1; -unity-background-image-tint-color: rgb(0, 0, 0); translate: 0 0; rotate: 90deg;" />
                         </ui:VisualElement>
-                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayLvl4Button" class="LevelSelectButton" style="display: none;">
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayLvl4Button" class="LevelSelectButton effect" style="display: none;">
                             <ui:VisualElement class="SmallStripes" style="flex-grow: 1; rotate: -45deg;" />
                             <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1087164816274819069&amp;guid=fa5e42f8c8f6ea34bbefb6eddfcc5725&amp;type=3#arrow-right@2x&quot;); scale: 1.5 1.5; -unity-background-image-tint-color: rgb(0, 0, 0); translate: 2px 0;" />
                         </ui:Button>
