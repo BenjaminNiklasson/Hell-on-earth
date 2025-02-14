@@ -288,7 +288,7 @@ MonoBehaviour:
   playerMinigunBullet: {fileID: 8131637755876086314, guid: 87fb0bafee6d5174aa2932970a9b8409, type: 3}
   playerShotgunBullet: {fileID: 2815490948916353751, guid: a74f58dee5628954392f7227549f249a, type: 3}
   playerGun: {fileID: 6463118139232030348}
-  UI: {fileID: 0}
+  UI: {fileID: 7783012457685129692, guid: a602b7be6416b814299e47517bb92a6b, type: 3}
   spriteRenderer: {fileID: 998869019220112973}
   shotgun: {fileID: 21300000, guid: 823452ba8662e2349a19ec944f4063c6, type: 3}
   minigun: {fileID: 21300000, guid: e83e468a24af5dc46b308d1d0968bb8e, type: 3}
