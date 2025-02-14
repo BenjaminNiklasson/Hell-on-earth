@@ -623,7 +623,7 @@
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 238, 0);
     scale: 3 5;
-    rotate: 60deg;
+    rotate: 45deg;
     flex-shrink: 0;
     width: 350px;
     height: 100px;
