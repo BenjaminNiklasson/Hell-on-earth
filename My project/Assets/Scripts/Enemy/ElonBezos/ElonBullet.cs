@@ -13,8 +13,8 @@ public class ElonBullet : MonoBehaviour
         if (collision.CompareTag("Floor"))
         {
             Destroy(gameObject);
-            Instantiate(splashLeft, new Vector3 (transform.position.x - spawndistance, transform.position.y, transform.position.z), transform.rotation);
-            Instantiate(splashRight, new Vector3 (transform.position.x + spawndistance, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(splashLeft, new Vector3 (transform.position.x - spawndistance, transform.position.y + 1, transform.position.z), transform.rotation);
+            Instantiate(splashRight, new Vector3 (transform.position.x + spawndistance, transform.position.y + 1, transform.position.z), transform.rotation);
         }
         else
         {
