@@ -25,6 +25,7 @@ public class RailerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         rl = transform.GetChild(0).GetComponent<RailerLooking>();
+        ani = GetComponent<Animator>();
     }
     void Update()
     {
@@ -45,11 +46,11 @@ public class RailerMovement : MonoBehaviour
         }
         if (tooCloseToPlayer == true && !isShooting )
         {
-            ani.SetBool("IsRunning", true);
+            ani.SetBool("IfWalk", true);
         }
         else
         {
-            ani.SetBool("IsRunning", false);
+            ani.SetBool("IfWalk", false);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 4467305072739056847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.187, y: 0.43, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7640489765135318663}
@@ -70,13 +70,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6463118139232030348}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.18, y: 0.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: -1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4970435096448881685}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &998869019220112973
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 2d2f697edda76ce45a0bfe0b342b5281, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd19d9178b6f8164e8927b2cd05858c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -290,9 +290,9 @@ MonoBehaviour:
   playerGun: {fileID: 6463118139232030348}
   UI: {fileID: 0}
   spriteRenderer: {fileID: 998869019220112973}
-  shotgun: {fileID: 21300000, guid: b01057d5022f68247a1be3eee9c54622, type: 3}
-  minigun: {fileID: 21300000, guid: 74b00e91e49f388488c42bb4a1199170, type: 3}
-  pistol: {fileID: 21300000, guid: 2d2f697edda76ce45a0bfe0b342b5281, type: 3}
+  shotgun: {fileID: 21300000, guid: 823452ba8662e2349a19ec944f4063c6, type: 3}
+  minigun: {fileID: 21300000, guid: e83e468a24af5dc46b308d1d0968bb8e, type: 3}
+  pistol: {fileID: 21300000, guid: bd19d9178b6f8164e8927b2cd05858c0, type: 3}
   pistolAmmoMax: 20
   shotgunAmmoMax: 3
   minigunAmmoMax: 100
@@ -376,7 +376,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
