@@ -1245,6 +1245,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 194283973218478449, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.45277023
+      objectReference: {fileID: 0}
+    - target: {fileID: 194283973218478449, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5436213
+      objectReference: {fileID: 0}
+    - target: {fileID: 194283973218478449, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: m_Offset.x
+      value: 3.210619
+      objectReference: {fileID: 0}
+    - target: {fileID: 194283973218478449, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5822109
+      objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: maxSpawntime
       value: 7
@@ -1303,11 +1319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2895903516031262975, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.558917
+      value: 3.01
       objectReference: {fileID: 0}
     - target: {fileID: 2895903516031262975, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.98
+      value: -3.53
       objectReference: {fileID: 0}
     - target: {fileID: 2895903516031262975, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1340,6 +1356,14 @@ PrefabInstance:
     - target: {fileID: 2895903516031262975, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689571002787626246, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: m_Size.x
+      value: 13.709402
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689571002787626246, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: m_Offset.x
+      value: -4.295228
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
