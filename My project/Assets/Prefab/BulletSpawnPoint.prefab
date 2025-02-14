@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60765c8f20ec6a4bb93cf7cea6f0748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
-  bulletSpawnPoint: {fileID: 0}
+  enemyPrefab: {fileID: 8097938315600444192, guid: 43e417e9922a2b5468679b11d83e2f51, type: 3}
+  player: {fileID: 6646267129698961156, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
   spawnDistance: 5
+  minSpawnTime: 5
+  maxSpawnTime: 10
