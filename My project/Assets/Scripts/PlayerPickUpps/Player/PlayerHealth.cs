@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int playerHealth = 1;
     [SerializeField] float invincibilityTime = 2f;
-    [SerializeField] bool godMode;
+    [SerializeField] public bool godMode;
     bool invincible = false;
 
     void DisableInvincibility()

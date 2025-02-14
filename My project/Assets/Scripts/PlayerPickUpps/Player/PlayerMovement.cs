@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]int maxNumberOfJumps = 1;
     int numberOfJumps = 0;
     Animator ani;
-    [SerializeField] bool noClip;
+    [SerializeField] public bool noClip;
 
     void Start()
     {
