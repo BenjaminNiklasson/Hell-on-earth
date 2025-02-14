@@ -98,10 +98,14 @@ public class EnemySpawn : MonoBehaviour
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
-                            if (hellmodeOn && currentWave == maxWaves)
+                            if (hellmodeOn && (currentWave == maxWaves -1))
                             {
                                 maxSpawntime = maxSpawntime / 2;
                                 minSpawntime = minSpawntime / 3;
+                            }
+                            if (currentWave == maxWaves)
+                            {
+                                Destroy(GetComponent<CapsuleCollider2D>());
                             }
                         }
                         break;
@@ -145,10 +149,14 @@ public class EnemySpawn : MonoBehaviour
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
-                            if (hellmodeOn && currentWave == maxWaves)
+                            if (hellmodeOn && (currentWave == maxWaves - 1))
                             {
                                 maxSpawntime = maxSpawntime / 2;
                                 minSpawntime = minSpawntime / 3;
+                            }
+                            if (currentWave == maxWaves)
+                            {
+                                Destroy(GetComponent<CapsuleCollider2D>());
                             }
                         }
                         break;
@@ -191,10 +199,14 @@ public class EnemySpawn : MonoBehaviour
                         {
                             currentWave = (currentWave + 1);
                             Invoke("SpawnEnemy", coldownBetweenWaves);
-                            if (hellmodeOn && currentWave == maxWaves)
+                            if (hellmodeOn && (currentWave == maxWaves - 1))
                             {
                                 maxSpawntime = maxSpawntime / 2;
                                 minSpawntime = minSpawntime / 3;
+                            }
+                            if (currentWave == maxWaves)
+                            {
+                                Destroy(GetComponent<CapsuleCollider2D>());
                             }
                         }
                         break;
