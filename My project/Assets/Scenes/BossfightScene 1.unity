@@ -330,14 +330,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoneySpawn
       objectReference: {fileID: 0}
-    - target: {fileID: 3861221126382788370, guid: a31b100805f7c3b4ca5492e51c46a04d, type: 3}
-      propertyPath: maxSpawnTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3861221126382788370, guid: a31b100805f7c3b4ca5492e51c46a04d, type: 3}
-      propertyPath: minSpawnTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7854831288468724176, guid: a31b100805f7c3b4ca5492e51c46a04d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.285398
@@ -603,57 +595,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 998869019220112973, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bd19d9178b6f8164e8927b2cd05858c0, type: 3}
-    - target: {fileID: 4970435096448881685, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4970435096448881685, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.187
-      objectReference: {fileID: 0}
-    - target: {fileID: 4970435096448881685, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 6177310201952431760, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: pistol
-      value: 
-      objectReference: {fileID: 21300000, guid: bd19d9178b6f8164e8927b2cd05858c0, type: 3}
-    - target: {fileID: 6177310201952431760, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: minigun
-      value: 
-      objectReference: {fileID: 21300000, guid: e83e468a24af5dc46b308d1d0968bb8e, type: 3}
-    - target: {fileID: 6177310201952431760, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: shotgun
-      value: 
-      objectReference: {fileID: 21300000, guid: 823452ba8662e2349a19ec944f4063c6, type: 3}
     - target: {fileID: 6646267129698961156, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7640489765135318663, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7640489765135318663, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: m_LocalScale.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7640489765135318663, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7640489765135318663, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7640489765135318663, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8810435738610709417, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
       propertyPath: m_LocalPosition.x
