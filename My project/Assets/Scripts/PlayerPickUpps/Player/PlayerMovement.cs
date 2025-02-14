@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(0f, jumpSpeed);
             numberOfJumps -= 1;
+            Invoke(nameof(SetJump), 0.1f);
         }
     }
 
@@ -67,7 +68,9 @@ public class PlayerMovement : MonoBehaviour
         if(IsGrounded ==true)
         {
             numberOfJumps = maxNumberOfJumps;
+            
         }
+        ani.SetBool("IsGrounded", IsGrounded);
     }
 
 
@@ -91,6 +94,11 @@ public class PlayerMovement : MonoBehaviour
         {
             ani.SetBool("IsRunning", false);
         }
+    }
+
+    void SetJump()
+    {
+        ani.SetTrigger("Jump");
     }
 }
 
