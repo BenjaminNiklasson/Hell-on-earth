@@ -47,4 +47,9 @@ public class PlayerHealth : MonoBehaviour
     {
         return playerHealth;
     }
+
+    public void GodMode() 
+    {
+        godMode = true;
+    }
 }
