@@ -106,9 +106,11 @@ MonoBehaviour:
   enemyIsAAspid: 1
   enemyIsATank: 0
   enemyIsARailgunner: 0
+  enemyIsAElonBezos: 0
   AspidHealth: 3
   TankHealth: 30
   RailgunnerHealth: 6
+  ElonBezosHealth: 666
 --- !u!58 &8212094047602576506
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -156,9 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0932b7140dfae674e8fc5cdf0a24a9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwShoots: 2
+  startTimeBtwShoots: 3
   projectile: {fileID: 7346280275693731633, guid: dc02e0270173f3b478519334f6f0e5cd, type: 3}
-  Speed: 1
+  Speed: 8
   isShooting: 0
 --- !u!114 &4004442276811839631
 MonoBehaviour:
