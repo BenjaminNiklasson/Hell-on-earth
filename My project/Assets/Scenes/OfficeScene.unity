@@ -1462,6 +1462,10 @@ PrefabInstance:
       value: 0.5822109
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: aspid
+      value: 
+      objectReference: {fileID: 6515586600524166831, guid: 27feae3e64d2f9946b342286f434980d, type: 3}
+    - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: maxSpawntime
       value: 7
       objectReference: {fileID: 0}
