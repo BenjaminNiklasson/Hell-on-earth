@@ -290,9 +290,9 @@ MonoBehaviour:
   playerGun: {fileID: 6463118139232030348}
   UI: {fileID: 7783012457685129692, guid: a602b7be6416b814299e47517bb92a6b, type: 3}
   spriteRenderer: {fileID: 998869019220112973}
-  shotgun: {fileID: 21300000, guid: 823452ba8662e2349a19ec944f4063c6, type: 3}
-  minigun: {fileID: 21300000, guid: e83e468a24af5dc46b308d1d0968bb8e, type: 3}
-  pistol: {fileID: 21300000, guid: bd19d9178b6f8164e8927b2cd05858c0, type: 3}
+  shotgun: {fileID: 21300000, guid: 792cd4ccc410fa742b4e9ff70b973f2a, type: 3}
+  minigun: {fileID: 21300000, guid: 6b72d6dfc2392974c8665d9b2d35fde4, type: 3}
+  pistol: {fileID: 21300000, guid: 6cb31695cb8d4eb4894bf7668b8f0c32, type: 3}
   pistolAmmoMax: 20
   shotgunAmmoMax: 3
   minigunAmmoMax: 100
