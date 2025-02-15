@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=18b0c0a991961f043a7ef60270d1dbda&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement style="flex-grow: 1; align-items: center; background-image: none; -unity-background-image-tint-color: rgb(64, 64, 64); background-color: rgb(50, 50, 50);">
+        <ui:Label tabindex="-1" text="You Died" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Header" style="margin-top: 150px; margin-right: 0; margin-bottom: 0; margin-left: 0; text-shadow: 0 10000px 10px rgb(0, 0, 0); -unity-text-outline-width: 6px;" />
+        <ui:Button text="Restart Level" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button" style="margin-top: 50px;">
+            <ui:VisualElement class="radigntexut" style="flex-grow: 1; rotate: -45deg;" />
+            <ui:Label tabindex="-1" text="Restart Level" parse-escape-sequences="true" display-tooltip-when-elided="true" class="buttonLabel" style="font-size: 85px;" />
+        </ui:Button>
+        <ui:Button text="Quit to Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button" style="margin-top: 50px;">
+            <ui:VisualElement class="radigntexut" style="flex-grow: 1;" />
+            <ui:Label tabindex="-1" text="Back to Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" class="buttonLabel" style="font-size: 85px;" />
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>
