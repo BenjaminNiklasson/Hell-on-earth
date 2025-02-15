@@ -1742,6 +1742,14 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: tankAvailable.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
+      propertyPath: tankAvailable.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: tankAvailable.Array.data[2]
       value: 1
       objectReference: {fileID: 0}
@@ -1767,11 +1775,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: railgunnerAvailable.Array.data[0]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: railgunnerAvailable.Array.data[1]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: railgunnerAvailable.Array.data[2]

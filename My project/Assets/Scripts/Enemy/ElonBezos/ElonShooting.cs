@@ -23,6 +23,7 @@ public class ElonShooting : MonoBehaviour
     {
         if (isOnColdown == false)
         {
+            Debug.Log("isshooting");
             isOnColdown = true;
             float spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
             spawnOrb(); 
