@@ -50,7 +50,7 @@ MonoBehaviour:
   aspidAvailable: 0101
   tankAvailable: 0000
   railgunnerAvailable: 0000
-  aspid: {fileID: 2571326966528516529, guid: a01fcf122d178824fb4387f6c42f410b, type: 3}
+  aspid: {fileID: 6515586600524166831, guid: 27feae3e64d2f9946b342286f434980d, type: 3}
   tank: {fileID: 6713328149867435175, guid: 2de1703976723cc4e9e97e0ec5a2117a, type: 3}
   railgunner: {fileID: 8330127110676808297, guid: 95036b6b1703a2c42a50dc6fa419508c, type: 3}
   coldownBetweenWaves: 14
