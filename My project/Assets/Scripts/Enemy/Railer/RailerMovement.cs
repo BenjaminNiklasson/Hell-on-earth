@@ -75,6 +75,20 @@ public class RailerMovement : MonoBehaviour
             isGrounded = false;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = false;
+        }
+    }
     private void RailerTargeting()
     {
         GameObject targeting = Instantiate(targetingLine, transform.GetChild(0).GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
