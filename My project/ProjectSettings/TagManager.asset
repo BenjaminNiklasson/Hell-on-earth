@@ -15,6 +15,7 @@ TagManager:
   - Undefined
   - EnemySpawnSystem
   - GameSession
+  - Arm
   layers:
   - Default
   - TransparentFX
