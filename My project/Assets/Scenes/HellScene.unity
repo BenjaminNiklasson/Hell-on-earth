@@ -2106,6 +2106,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.331
       objectReference: {fileID: 0}
+    - target: {fileID: 6177310201952431760, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 1364663789}
     - target: {fileID: 6646267129698961156, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2155,6 +2159,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a01c45eecc2b914eb4f225676085e82, type: 3}
+--- !u!1 &1364663789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8178872707295951787, guid: a602b7be6416b814299e47517bb92a6b, type: 3}
+  m_PrefabInstance: {fileID: 135934781}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1385688257
 GameObject:
   m_ObjectHideFlags: 0
