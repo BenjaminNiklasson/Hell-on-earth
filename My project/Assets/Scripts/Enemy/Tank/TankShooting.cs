@@ -17,14 +17,10 @@ public class TankShooting : MonoBehaviour
     private Vector2 target;
     void Start()
     {
-        GameObject Arm = GameObject.FindWithTag("Arm");
-        ani = Arm.GetComponent<Animator>();
+        ani = transform.GetChild(0).GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         target = new Vector2(player.transform.position.x, player.transform.position.y);
     }
-
-
-   
     void Update()
     {
         if (notOnCooldown == true && player != null)
