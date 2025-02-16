@@ -84,16 +84,6 @@ public class EnemySpawn : MonoBehaviour
                                 break;
                         }
                         GameObject currentAspid = Instantiate(aspid, spawnPosition, transform.rotation);
-                        if (currentAspid.transform.position.x < maxBounds.x && currentAspid.transform.position.x > minBounds.x && currentAspid.transform.position.y < maxBounds.y && currentAspid.transform.position.y > minBounds.y) 
-                        {
-                            Invoke("SpawnEnemy", spawnTime);
-                            wavePoints[currentWave]--;
-                        }
-                        else
-                        {
-                            Destroy(currentAspid);
-                            Invoke("SpawnEnemy", 0);
-                        }
                         if (wavePoints[currentWave] < 1)
                         {
                             currentWave = (currentWave + 1);
@@ -107,6 +97,16 @@ public class EnemySpawn : MonoBehaviour
                             {
                                 Destroy(GetComponent<CapsuleCollider2D>());
                             }
+                        }
+                        else if (currentAspid.transform.position.x < maxBounds.x && currentAspid.transform.position.x > minBounds.x && currentAspid.transform.position.y < maxBounds.y && currentAspid.transform.position.y > minBounds.y)
+                        {
+                            Invoke("SpawnEnemy", spawnTime);
+                            wavePoints[currentWave]--;
+                        }
+                        else
+                        {
+                            Destroy(currentAspid);
+                            Invoke("SpawnEnemy", 0);
                         }
                         break;
                     }
@@ -135,16 +135,6 @@ public class EnemySpawn : MonoBehaviour
                                 break;
                         }
                         GameObject currentTank = Instantiate(tank, spawnPosition, transform.rotation);
-                        if (currentTank.transform.position.x < maxBounds.x && currentTank.transform.position.x > minBounds.x && currentTank.transform.position.y < maxBounds.y && currentTank.transform.position.y > minBounds.y)
-                        {
-                            Invoke("SpawnEnemy", spawnTime);
-                            wavePoints[currentWave] -= 4;
-                        }
-                        else
-                        {
-                            Destroy(currentTank);
-                            Invoke("SpawnEnemy", 0);
-                        }
                         if (wavePoints[currentWave] < 1)
                         {
                             currentWave = (currentWave + 1);
@@ -158,6 +148,16 @@ public class EnemySpawn : MonoBehaviour
                             {
                                 Destroy(GetComponent<CapsuleCollider2D>());
                             }
+                        }
+                        else if (currentTank.transform.position.x < maxBounds.x && currentTank.transform.position.x > minBounds.x && currentTank.transform.position.y < maxBounds.y && currentTank.transform.position.y > minBounds.y)
+                        {
+                            Invoke("SpawnEnemy", spawnTime);
+                            wavePoints[currentWave] -= 4;
+                        }
+                        else
+                        {
+                            Destroy(currentTank);
+                            Invoke("SpawnEnemy", 0);
                         }
                         break;
                     }
@@ -185,16 +185,6 @@ public class EnemySpawn : MonoBehaviour
                                 break;
                         }
                         GameObject currentRailer = Instantiate(railgunner, spawnPosition, transform.rotation);
-                        if (currentRailer.transform.position.x < maxBounds.x && currentRailer.transform.position.x > minBounds.x && currentRailer.transform.position.y < maxBounds.y && currentRailer.transform.position.y > minBounds.y)
-                        {
-                            Invoke("SpawnEnemy", spawnTime);
-                            wavePoints[currentWave] -= 3;
-                        }
-                        else
-                        {
-                            Destroy(currentRailer);
-                            Invoke("SpawnEnemy", 0);
-                        }
                         if (wavePoints[currentWave] < 1)
                         {
                             currentWave = (currentWave + 1);
@@ -208,6 +198,16 @@ public class EnemySpawn : MonoBehaviour
                             {
                                 Destroy(GetComponent<CapsuleCollider2D>());
                             }
+                        }
+                        else if (currentRailer.transform.position.x < maxBounds.x && currentRailer.transform.position.x > minBounds.x && currentRailer.transform.position.y < maxBounds.y && currentRailer.transform.position.y > minBounds.y)
+                        {
+                            Invoke("SpawnEnemy", spawnTime);
+                            wavePoints[currentWave] -= 3;
+                        }
+                        else
+                        {
+                            Destroy(currentRailer);
+                            Invoke("SpawnEnemy", 0);
                         }
                         break;
                     }
