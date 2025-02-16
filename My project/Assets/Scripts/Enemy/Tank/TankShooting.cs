@@ -33,15 +33,24 @@ public class TankShooting : MonoBehaviour
             rb.AddForce(direcetion * Speed, ForceMode2D.Impulse);
             notOnCooldown = false;
             Invoke("AfterCooldown", startTimeBtwShoots);
+<<<<<<< HEAD
+            ani.SetBool("IsShooting", true);
+            Invoke("AfterAnimation", 2);
+=======
             
         }
         else
         {
             ani.SetBool("isShooting", false);
+>>>>>>> 1a8e4c74b5569fab3b347ab1e083ace89555bed0
         }
     }
     void AfterCooldown()
     {
         notOnCooldown = true;
+    }
+    void AfterAnimation()
+    {
+        ani.SetBool("IsShooting", false);
     }
 }
