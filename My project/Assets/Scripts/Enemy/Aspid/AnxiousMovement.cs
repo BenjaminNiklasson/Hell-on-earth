@@ -21,12 +21,12 @@ public class AnxiousMovement : MonoBehaviour
             if (tooCloseToPlayer == false)
             {
                 Vector2 direction = (getAway.transform.position - transform.position).normalized;
-                rb.MovePosition(rb.position + direction * eSpeed * Time.fixedDeltaTime);
+                rb.MovePosition(rb.position * direction * eSpeed * Time.fixedDeltaTime);
             }
             else
             {
                 Vector2 direction = (getAway.transform.position - transform.position).normalized;
-                rb.MovePosition(rb.position - direction * eSpeed * Time.fixedDeltaTime);
+                rb.MovePosition(rb.position * -direction * eSpeed * Time.fixedDeltaTime);
             }
         }
     }
