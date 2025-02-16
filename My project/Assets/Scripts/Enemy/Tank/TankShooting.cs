@@ -17,18 +17,15 @@ public class TankShooting : MonoBehaviour
     private Vector2 target;
     void Start()
     {
-        GameObject Arm = GameObject.FindWithTag("Arm");
-        ani = Arm.GetComponent<Animator>();
+        ani = transform.GetChild(0).GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         target = new Vector2(player.transform.position.x, player.transform.position.y);
     }
-
-
-   
     void Update()
     {
         if (notOnCooldown == true && player != null)
         {
+            ani.SetBool("isShooting", true);
             GameObject aspidProjetile = Instantiate(projectile, transform.position, quaternion.identity);
             Rigidbody2D rb = aspidProjetile.GetComponent<Rigidbody2D>();
             target = new Vector2(player.transform.position.x, player.transform.position.y);
@@ -36,8 +33,16 @@ public class TankShooting : MonoBehaviour
             rb.AddForce(direcetion * Speed, ForceMode2D.Impulse);
             notOnCooldown = false;
             Invoke("AfterCooldown", startTimeBtwShoots);
+<<<<<<< HEAD
             ani.SetBool("IsShooting", true);
             Invoke("AfterAnimation", 2);
+=======
+            
+        }
+        else
+        {
+            ani.SetBool("isShooting", false);
+>>>>>>> 1a8e4c74b5569fab3b347ab1e083ace89555bed0
         }
     }
     void AfterCooldown()

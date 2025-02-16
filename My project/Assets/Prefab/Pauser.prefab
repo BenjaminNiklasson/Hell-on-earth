@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936e559756052c04b8bc56f7309d4285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paused: 0
 --- !u!1 &8178872707295951787
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8178872707295951787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84068c9ad3872844789b00a4b1b95a26, type: 3}
   m_Name: 
@@ -146,8 +147,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 579083816229560889}
           m_TargetAssemblyTypeName: OscarScript, Assembly-CSharp
-          m_MethodName: SwitchMenu
-          m_Mode: 5
+          m_MethodName: UnPause
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -179,7 +180,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8178872707295951787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f67cd10a867fb2d48bcf436f97af17b8, type: 3}
   m_Name: 
