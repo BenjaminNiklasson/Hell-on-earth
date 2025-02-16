@@ -8,9 +8,9 @@ public class TankMovement : MonoBehaviour
     bool IsGrounded = false;
     GameObject player;
     [SerializeField] float eSpeed = 1f;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
     }
     private void FixedUpdate()

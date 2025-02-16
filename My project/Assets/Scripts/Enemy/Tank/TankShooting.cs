@@ -12,10 +12,13 @@ public class TankShooting : MonoBehaviour
     public GameObject projectile;
     GameObject player;
     [SerializeField] public float Speed;
+    Animator ani;
 
     private Vector2 target;
     void Start()
     {
+        GameObject Arm = GameObject.FindWithTag("Arm");
+        ani = Arm.GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         target = new Vector2(player.transform.position.x, player.transform.position.y);
     }
@@ -33,6 +36,11 @@ public class TankShooting : MonoBehaviour
             rb.AddForce(direcetion * Speed, ForceMode2D.Impulse);
             notOnCooldown = false;
             Invoke("AfterCooldown", startTimeBtwShoots);
+            ani.SetBool("isShooting", true);
+        }
+        else
+        {
+            ani.SetBool("isShooting", false);
         }
     }
     void AfterCooldown()

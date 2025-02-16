@@ -107,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 2918692442939826209}
   - component: {fileID: 648234837631229463}
   - component: {fileID: 6778952086569227338}
-  - component: {fileID: 6321600153142696187}
   m_Layer: 0
   m_Name: BatCenter
   m_TagString: Untagged
@@ -167,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c69426c7d79e2d14993c5e90c548bcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 2
+  rotationSpeed: 3
 --- !u!58 &648234837631229463
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -215,34 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2837686d9c0704e45a377ceef05f87d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eSpeed: 1
---- !u!50 &6321600153142696187
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6515586600524166831}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  eSpeed: 3
 --- !u!1 &7109712704930731565
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +229,6 @@ GameObject:
   - component: {fileID: 3697946394005908735}
   - component: {fileID: 2558529527128022935}
   - component: {fileID: 2687081954383061454}
-  - component: {fileID: 4359255904737742442}
   m_Layer: 7
   m_Name: BatBody
   m_TagString: Enemy
@@ -330,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c69426c7d79e2d14993c5e90c548bcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: -2
+  rotationSpeed: -3
 --- !u!212 &2558529527128022935
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -371,7 +342,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -418,30 +389,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!50 &4359255904737742442
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7109712704930731565}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
