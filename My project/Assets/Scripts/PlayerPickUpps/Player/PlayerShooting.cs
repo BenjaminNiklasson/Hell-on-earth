@@ -358,7 +358,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void Awake()
     {
-        _root = UI.GetComponent<UIDocument>().rootVisualElement;
+        _root = GetComponent<UIDocument>().rootVisualElement;
         _minigunAmmoBar = _root.Q<ProgressBar>("MinigunAmmoContainer");
         player = GameObject.FindWithTag("Player");
     }
