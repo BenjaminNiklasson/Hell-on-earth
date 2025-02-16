@@ -16,6 +16,7 @@ public class ElevatorScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             ani.SetBool("GotEntered", true);
+            Destroy(GameObject.FindWithTag("Player"));
             Invoke("SwitchScene", 3f);
         }
     }

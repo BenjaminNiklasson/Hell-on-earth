@@ -26,7 +26,9 @@ public class AnxiousMovement : MonoBehaviour
             else
             {
                 Vector2 direction = (getAway.transform.position - transform.position).normalized;
-                rb.MovePosition(rb.position - direction * eSpeed * Time.fixedDeltaTime);
+                Vector2 movement = rb.position - direction * eSpeed * Time.fixedDeltaTime;
+                rb.MovePosition(movement);
+                transform.GetChild(0).GetComponent<Rigidbody2D>().MovePosition(movement);
             }
         }
     }
