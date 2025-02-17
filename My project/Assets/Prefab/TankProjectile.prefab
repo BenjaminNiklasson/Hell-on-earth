@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 6520958888352938342}
   - component: {fileID: 3011787360566392310}
   - component: {fileID: 1694463600486499061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TankProjectile
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

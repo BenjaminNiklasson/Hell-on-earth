@@ -26,7 +26,7 @@ public class TankShooting : MonoBehaviour
     {
         if (notOnCooldown == true && player != null)
         {
-            ani.SetBool("isShooting", true);
+            ani.SetBool("IsShooting", true);
             TankProjectile = Instantiate(projectile, transform.position, quaternion.identity);
             rb = TankProjectile.GetComponent<Rigidbody2D>();
             target = new Vector2(player.transform.position.x, player.transform.position.y);
@@ -34,7 +34,6 @@ public class TankShooting : MonoBehaviour
             rb.AddForce(new Vector2(direcetion.x + Speed * Time.deltaTime, direcetion.y + Speed * Time.deltaTime), ForceMode2D.Impulse);
             notOnCooldown = false;
             Invoke("AfterCooldown", startTimeBtwShoots);
-            ani.SetBool("IsShooting", true);
             Invoke("AfterAnimation", 2);
         }
         else
