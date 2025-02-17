@@ -253,6 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811353296596319456}
   - component: {fileID: 8239652976084966369}
+  - component: {fileID: 2514222818259758194}
   - component: {fileID: 8599968559167572960}
   - component: {fileID: 3697946394005908735}
   - component: {fileID: 2558529527128022935}
@@ -297,6 +298,26 @@ MonoBehaviour:
   projectile: {fileID: 7346280275693731633, guid: dc02e0270173f3b478519334f6f0e5cd, type: 3}
   Speed: 50
   isShooting: 0
+--- !u!114 &2514222818259758194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7109712704930731565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adba765539feaca4395ad59bd39ebf49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyIsAAspid: 1
+  enemyIsATank: 0
+  enemyIsARailgunner: 0
+  enemyIsAElonBezos: 0
+  AspidHealth: 3
+  TankHealth: 30
+  RailgunnerHealth: 6
+  ElonBezosHealth: 666
 --- !u!95 &8599968559167572960
 Animator:
   serializedVersion: 5

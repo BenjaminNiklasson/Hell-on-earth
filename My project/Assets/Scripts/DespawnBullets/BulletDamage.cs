@@ -7,7 +7,7 @@ public class bulletDamage : MonoBehaviour
     [SerializeField] float despawnColdown = 0.5f;
     bool isCurrentleInviseble = false;
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collider2D collision)
     {
         if (collision.gameObject)
         {
