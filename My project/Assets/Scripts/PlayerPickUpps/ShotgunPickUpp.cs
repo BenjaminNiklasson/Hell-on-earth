@@ -8,10 +8,10 @@ public class ShotgunPickUpp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Has collided");
             FindFirstObjectByType<GameSession>().ActivateShotgun();
             FindFirstObjectByType<PlayerShooting>().ActivateShotgun();
             Destroy(gameObject);
-            Debug.Log("Has collided");
         }
     }
     // When the object collides we unlock the shotgun for the player and save the unlock in gamesession;
