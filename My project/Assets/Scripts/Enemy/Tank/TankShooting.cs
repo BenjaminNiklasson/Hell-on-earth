@@ -38,7 +38,7 @@ public class TankShooting : MonoBehaviour
         }
         else
         {
-            ani.SetBool("isShooting", false);
+            ani.SetBool("IsShooting", false);
         }
     }
     void AfterCooldown()
