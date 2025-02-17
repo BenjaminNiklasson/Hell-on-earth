@@ -1729,15 +1729,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: wavePoints.Array.data[0]
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: wavePoints.Array.data[1]
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: wavePoints.Array.data[2]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1121851438879617517, guid: d6196674988e2ba408410c5fcc2a9fa7, type: 3}
       propertyPath: aspidAvailable.Array.size
