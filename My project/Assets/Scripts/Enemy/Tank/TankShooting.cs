@@ -13,24 +13,25 @@ public class TankShooting : MonoBehaviour
     GameObject player;
     [SerializeField] public float Speed;
     Animator ani;
+    Rigidbody2D rb;
+    GameObject TankProjectile;
 
-    private Vector2 target;
+    Vector2 target;
     void Start()
     {
         ani = transform.GetChild(0).GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
-        target = new Vector2(player.transform.position.x, player.transform.position.y);
     }
     void Update()
     {
         if (notOnCooldown == true && player != null)
         {
             ani.SetBool("isShooting", true);
-            GameObject aspidProjetile = Instantiate(projectile, transform.position, quaternion.identity);
-            Rigidbody2D rb = aspidProjetile.GetComponent<Rigidbody2D>();
+            TankProjectile = Instantiate(projectile, transform.position, quaternion.identity);
+            rb = TankProjectile.GetComponent<Rigidbody2D>();
             target = new Vector2(player.transform.position.x, player.transform.position.y);
             Vector2 direcetion = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
-            rb.AddForce(direcetion * Speed, ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(direcetion.x + Speed * Time.deltaTime, direcetion.y + Speed * Time.deltaTime), ForceMode2D.Impulse);
             notOnCooldown = false;
             Invoke("AfterCooldown", startTimeBtwShoots);
             ani.SetBool("IsShooting", true);

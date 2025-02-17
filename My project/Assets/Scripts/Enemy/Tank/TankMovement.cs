@@ -12,13 +12,14 @@ public class TankMovement : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
     private void FixedUpdate()
     {
         if (IsGrounded == true)
         {
             Vector2 direction = (player.transform.position - transform.position).normalized;
-            direction.y = 0;
+            direction.y =0;
             rb.MovePosition(rb.position + direction * eSpeed * Time.fixedDeltaTime);
             Debug.Log("Is Moving");
         }
